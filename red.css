@@ -1,0 +1,21 @@
+/* CSS Document */
+/* color red */ /* #b41423 */
+
+#logo {
+	background: transparent url(images/logo.png) no-repeat top left;
+}
+#site-title a:hover, .entry-title a:hover {
+	color: #b41423;
+}
+nav, .postformat, .page-header, .widget-title {
+	background: #b41423 url(images/red-line.png) top left repeat-x;
+}
+.left-corner, .right-corner {
+	background: transparent url(images/red-corners.png);
+}
+a, a:hover {
+	color: #b41423;
+}
+.entry-title a:hover, #copy a:hover, .widget ul li a:hover, .comment-i a:hover, .author-i a:hover  {
+	border-bottom:  1px dashed #b41423;
+}
