@@ -1,0 +1,27 @@
+/* CSS Document */
+/* color red */ /* #faa61c */
+
+a, a:hover, #site-title a:hover, .entry-title a:hover, #recentcomments li a, .widget ul li .rsswidget, .edit-i a, .comment-awaiting-moderation  {
+	color: #faa61c;
+}
+nav, .postformat, .page-header, .widget-title {
+	background: #faa61c url(line.png) top left repeat-x;
+}
+.left-corner, .right-corner {
+	background: transparent url(corners.png);
+}
+
+.entry-title a:hover, #copy a:hover, .comment-i a:hover, .author-i a:hover, #recentcomments li:hover  {
+	border-bottom:  1px dashed #faa61c;
+}
+.widget ul li a:hover {
+	border-bottom:  1px dashed #faa61c;
+	color: #faa61c;
+	}
+#submit, #searchform #searchsubmit {
+	background: #faa61c url(line.png) top left repeat-x;
+	border: 1px solid #faa61c;
+}
+#wp-calendar a, #wp-calendar #prev a:hover, #wp-calendar #next a:hover {
+	background: #faa61c url(line.png) bottom left repeat-x;
+	}

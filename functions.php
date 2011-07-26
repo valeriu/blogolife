@@ -6,7 +6,7 @@
  * @subpackage vip
  * @since vip 1.0
  */
- 
+ error_reporting(E_ALL & ~E_NOTICE);
  
 // VARIABLES
 $themename = "Vip";									//Theme Name
@@ -27,15 +27,15 @@ $fe_pathimages = get_template_directory_uri() . '';							//FrontEnd Path
 
 
 //Include Framework [BE]
-//require_once ($be_path . 'fw-setup.php');					// Init
-//require_once ($be_path . 'fw-options.php');					// Framework Init
+require_once ($be_path . 'fw-setup.php');					// Init
+require_once ($be_path . 'fw-options.php');					// Framework Init
 
-// Include Theme specific functionality [FE]
+// Include Theme specific functionality [FE] 
 require_once ($fe_path . 'setup.php');						// Base Init
 require_once ($fe_path . 'widgets-init.php');				// Init widget FE
 //require_once ($fe_path . 'excerpt.php');					// Trim Text
 require_once ($fe_path . 'headerdata.php');					// Include css and js
-//require_once ($fe_path . 'comm.php');						// Comments
+require_once ($fe_path . 'comment.php');						// Comments
 //require_once ($fe_path . 'tab-widget.php');					// Tab widget FE
 //require_once ($fe_path . 'advertising.php');				// Advertising
 ?>

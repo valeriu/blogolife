@@ -221,9 +221,37 @@ function wplook_content_nav( $nav_id ) {
 		<nav id="<?php echo $nav_id; ?>">
 			<div class="nav-previous fleft"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'wplook' ) ); ?></div>
 			<div class="nav-next fright"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'wplook' ) ); ?></div>
+			<div class="left-corner"></div>
 			<div class="clear"></div>
 		</nav><!-- #nav-above -->
 	<?php endif;
+}
+
+/**
+ * Display feed in dashboard
+ */
+
+add_action('wp_dashboard_setup', 'my_dashboard_widgets');
+function my_dashboard_widgets() {
+     global $wp_meta_boxes;
+     unset(
+          $wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'],
+          $wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'],
+          $wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']
+     );
+     wp_add_dashboard_widget( 'dashboard_custom_feed', 'wplook news' , 'dashboard_custom_feed_output' );
+}
+function dashboard_custom_feed_output() {
+     echo '<div class="rss-widget rss-wplook">';
+     wp_widget_rss_output(array(
+          'url' => 'http://feeds.feedburner.com/wplook',
+          'title' => 'wplook news',
+          'items' => 5,
+          'show_summary' => 1,
+          'show_author' => 0,
+          'show_date' => 0
+     ));
+     echo '</div>';
 }
 
 

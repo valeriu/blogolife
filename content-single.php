@@ -1,9 +1,7 @@
 				<section class="primary">
 					<div id="content">
-						<header class="page-header">
-							<h1 class="page-title">Latest Posts</h1>
-							<div class="left-corner"></div>
-						</header>
+			
+			<?php thematic_doctitle(); ?>
 
 			<?php if ( have_posts() ) : ?>
 

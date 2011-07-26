@@ -1,12 +1,26 @@
 <?php
 /**
- * The template for displaying audio
+ * The default template for displaying content
  *
  * @package wplook
  * @subpackage vip
  * @since vip 1.0
  */
 ?>
+				<section class="primary">
+					<div id="content">
+			
+			<?php thematic_doctitle(); ?>
+
+			<?php if ( have_posts() ) : ?>
+
+			<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+
+
+
+
+
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="col1 fleft">
@@ -16,28 +30,24 @@
 				</div>
 			</div>
 			<div class="col2 fright">		
-<header class="entry-header">
+		<header class="entry-header">
 						<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1></header>
-		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-				<div class="entry-content">
-			<?php the_excerpt(); ?>
-		</div><!-- .entry-summary -->
 		
-				<?php elseif ( is_single() ): ?>	
-				<div class="entry-content chat">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wplook' ) ); ?>
+
+		<div class="entry-content">
+			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'wplook' ) . '</span>', 'after' => '</div>' ) ); ?>
 		
-		<!-- .entry-content -->
+			<!-- .entry-content -->
 		<div class="clear"></div>	
 			<div class="entry-utility">
-
+			<?php if ( the_category ( '', ', ' ) ) { ?>
 				<div class="category">
 					<b><?php _e('Category:', 'wplook'); ?></b>
 					<?php the_category(', ') ?>
 					<div class="end"></div>
 				</div>
-
+				<?php } ?>
 				<?php if ( get_the_tag_list( '', ', ' ) ) { ?>
 				<div class="tag"> 
 					<b><?php _e('Tag:', 'wplook'); ?></b>
@@ -48,20 +58,11 @@
 				
 			</div>
 			<!-- .entry-utility -->
-				
+		
 		
 		<div class="clear"></div>
-		</div>
-		<!-- .entry-content -->
-		
-		
-		
-		<?php else : ?>	
-		<div class="entry-content chat">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wplook' ) ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'wplook' ) . '</span>', 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
-		<?php endif; ?>	
+
 			<footer class="entry-meta">
 				<div class="date-i fleft"><?php the_time('F jS, Y') ?></div>
 				<div class="comment-i fleft"><?php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments are off');?></div>
@@ -73,3 +74,15 @@
 		</div>
 		<div class="clear"></div>
 	</article>	
+	
+	
+				
+					
+					<?php comments_template( '', true ); ?>
+
+				<?php endwhile; ?>
+
+			<?php endif; ?>
+
+			</div><!-- #content -->
+		</section><!-- #primary -->

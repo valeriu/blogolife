@@ -1,0 +1,27 @@
+/* CSS Document */
+/* color Pink */ /* #ad3578 */
+
+a, a:hover, #site-title a:hover, .entry-title a:hover, #recentcomments li a, .widget ul li .rsswidget, .edit-i a, .comment-awaiting-moderation  {
+	color: #ad3578;
+}
+nav, .postformat, .page-header, .widget-title {
+	background: #ad3578 url(line.png) top left repeat-x;
+}
+.left-corner, .right-corner {
+	background: transparent url(corners.png);
+}
+
+.entry-title a:hover, #copy a:hover, .comment-i a:hover, .author-i a:hover, #recentcomments li:hover  {
+	border-bottom:  1px dashed #ad3578;
+}
+.widget ul li a:hover {
+	border-bottom:  1px dashed #ad3578;
+	color: #ad3578;
+	}
+#submit, #searchform #searchsubmit {
+	background: #ad3578 url(line.png) top left repeat-x;
+	border: 1px solid #ad3578;
+}
+#wp-calendar a, #wp-calendar #prev a:hover, #wp-calendar #next a:hover {
+	background: #ad3578 url(line.png) bottom left repeat-x;
+}

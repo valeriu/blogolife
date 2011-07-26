@@ -6,7 +6,7 @@
  * @subpackage vip
  * @since vip 1.0
  */
- /*
+
 global $options;
 foreach ($options as $value) {
 	if (isset($value['id']) && get_option( $value['id'] ) === FALSE && isset($value['std'])) {
@@ -14,11 +14,34 @@ foreach ($options as $value) {
 	}
 	elseif (isset($value['id'])) { $$value['id'] = get_option( $value['id'] ); }
 }
- */
+
 // additional js and css
+
 if(	!is_admin()){
-	wp_register_style('stylered', get_template_directory_uri().'/red.css', 'style', '','all');
+	if (get_option(wpl_css) == 'Red' )
+	wp_register_style('stylered', get_template_directory_uri().'/images/red/style.css', 'style', '','all');
 	wp_enqueue_style('stylered');	
+	
+	if (get_option(wpl_css) == 'Pink' )
+	wp_register_style('stylered', get_template_directory_uri().'/images/pink/style.css', 'style', '','all');
+	wp_enqueue_style('stylered');
+	
+	if (get_option(wpl_css) == 'Blue' )
+	wp_register_style('stylered', get_template_directory_uri().'/images/blue/style.css', 'style', '','all');
+	wp_enqueue_style('stylered');
+
+	if (get_option(wpl_css) == 'Black' )
+	wp_register_style('stylered', get_template_directory_uri().'/images/black/style.css', 'style', '','all');
+	wp_enqueue_style('stylered');
+	
+	if (get_option(wpl_css) == 'Orange' )
+	wp_register_style('stylered', get_template_directory_uri().'/images/orange/style.css', 'style', '','all');
+	wp_enqueue_style('stylered');
+	
+	if (get_option(wpl_css) == 'Green' )
+	wp_register_style('stylered', get_template_directory_uri().'/images/green/style.css', 'style', '','all');
+	wp_enqueue_style('stylered');
+	
 	wp_register_style('style', get_template_directory_uri().'/style.css', 'style', '','all');
 	wp_enqueue_style('style');
 	wp_register_style('oswald', 'http://fonts.googleapis.com/css?family=Oswald&amp;v2', 'style', '','all');
@@ -45,72 +68,82 @@ echo '<meta name="description" content="'.$excerpt.'" />';
 // Located in header.php 
 // Creates the content of the Title tag
 // Credits: Tarski Theme
-if (function_exists('childtheme_override_doctitle'))  {
-    function thematic_doctitle() {
-    	childtheme_override_doctitle();
-    }
-} else {
-	function thematic_doctitle() {
-		$site_name = get_bloginfo('name');
-	    $separator = '|';
-	        	
-			if ( is_home() || is_front_page() ) { 
-	      $content = __('Latest post', 'thematic'); 
-	    }
+function thematic_doctitle() {
+					
+	if ( is_home() || is_front_page() ) { 
+	  $content = __('Latest posts', 'wplook'); 
+	}
 
-	    elseif ( is_search() ) { 
-	      $content = __('Search Results for:', 'thematic'); 
-	      $content .= ' ' . esc_html(stripslashes(get_search_query()));
-	    }
-	    elseif ( is_category() ) {
-	      $content = __('Category Archives:', 'thematic');
-	      $content .= ' ' . single_cat_title("", false);;
-	    }
-	    elseif ( is_tag() ) { 
-	      $content = __('Tag Archives:', 'thematic');
-	      $content .= ' ' . thematic_tag_query();
-	    }
-	    elseif ( is_404() ) { 
-	      $content = __('Not Found', 'thematic'); 
-	    }
-	    else { 
-	      $content = ' ';
-	    }
+	elseif ( is_search() ) { 
+	  $content = __('Search Results for:', 'wplook'); 
+	  $content .= ' ' . esc_html(stripslashes(get_search_query()));
+	}
+
+	elseif ( is_category() ) {
+	  $content = __('Category Archives:', 'wplook');
+	  $content .= ' ' . single_cat_title("", false);
+	}
+
+	elseif ( is_day() ) {
+		$content = __( 'Daily Archives:', 'wplook');
+		$content .= ' ' . esc_html(stripslashes( get_the_date()));
+	}
 	
-	    
+	elseif ( is_month() ) {
+		$content = __( 'Monthly Archives:', 'wplook');
+		$content .= ' ' . esc_html(stripslashes( get_the_date( 'F Y' )));
+	}
+	elseif ( is_year()  ) {
+		$content = __( 'Yearly Archives:', 'wplook');
+		$content .= ' ' . esc_html(stripslashes( get_the_date( 'Y' ) ));
+	}		
 	
-	    if($content) {
-	      if ( is_home() || is_front_page() ) {
-	          $elements = array(
-	            'content' => $content
-	          );
-	      }
-	      else {
-	          $elements = array(
-	            'content' => $content
-	          );
-	      }  
-	    } else {
-	      $elements = array(
-	        'site_name' => $site_name
-	      );
-	    }
-	
-	    // Filters should return an array
-	    $elements = apply_filters('thematic_doctitle', $elements);
+	elseif ( is_tag() ) { 
+	  $content = __('Tag Archives:', 'wplook');
+	  $content .= ' ' . single_tag_title( '', false );
+	}
+	elseif (  is_singular()  || is_page() ) { 
+	  $content = ' ';
+	}
+
+	elseif ( is_404() ) { 
+	  $content = __('Not Found', 'wplook'); 
+	}
+	elseif (is_author() ) {
 		
-	    // But if they don't, it won't try to implode
-	    if(is_array($elements)) {
-	      $doctitle = implode(' ', $elements);
-	    }
-	    else {
-	      $doctitle = $elements;
-	    }
-	    
-	    $doctitle = $doctitle;
-	    
-	    echo $doctitle;
-	} // end thematic_doctitle
-}
+		$content = __('Author', 'wplook');
+		$author = get_the_author_meta( 'display_name' );
+		$content .= ' ' . $author;
+
+		}
+//----
+	
+	$elements = array(
+		'content' => $content
+	);
+	  
+   
+
+	// Filters should return an array
+	$elements = apply_filters('thematic_doctitle', $elements);
+	
+	// But if they don't, it won't try to implode
+		if(is_array($elements)) {
+		  $doctitle = implode(' ', $elements);
+		}
+		else {
+		  $doctitle = $elements;
+		}
+
+			if (is_singular() ) {
+			$doctitle = $doctitle;
+			}else {
+				$doctitle = "<header class=\"page-header\"><h1 class=\"page-title\">" . $doctitle . "</h1><div class=\"left-corner\"></div></header>";
+			}
+
+	echo $doctitle;
+
+} // end thematic_doctitle
+
 
 ?>
