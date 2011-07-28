@@ -108,7 +108,7 @@ function wplook_comment_form( $args = array(), $post_id = null ) {
 		'id_submit'            => 'submit',
 		'title_reply'          => __( 'Leave a Comment' ),
 		'title_reply_to'       => __( 'Leave a Reply to %s' ),
-		'cancel_reply_link'    => __( 'Cancel reply' ),
+		'cancel_reply_link'    => __( 'or Cancel reply' ),
 		'label_submit'         => __( 'Send Comment' ),
 	);
 
@@ -118,7 +118,7 @@ function wplook_comment_form( $args = array(), $post_id = null ) {
 		<?php if ( comments_open() ) : ?>
 			<?php do_action( 'comment_form_before' ); ?>
 			<div id="respond">
-				<header class="page-header"><h2 class="page-title"><?php comment_form_title( $args['title_reply'], $args['title_reply_to'] ); ?> or  <?php cancel_comment_reply_link( $args['cancel_reply_link'] ); ?></h2><div class="left-corner"></div></header>
+				<header class="page-header"><h2 class="page-title"><?php comment_form_title( $args['title_reply'], $args['title_reply_to'] ); ?>   <?php cancel_comment_reply_link( $args['cancel_reply_link'] ); ?></h2><div class="left-corner"></div></header>
 				<?php if ( get_option( 'comment_registration' ) && !is_user_logged_in() ) : ?>
 					<?php echo $args['must_log_in']; ?>
 					<?php do_action( 'comment_form_must_log_in_after' ); ?>

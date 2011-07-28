@@ -4,7 +4,7 @@
 a, a:hover, #site-title a:hover, .entry-title a:hover, #recentcomments li a, .widget ul li .rsswidget, .edit-i a, .comment-awaiting-moderation  {
 	color: #faa61c;
 }
-nav, .postformat, .page-header, .widget-title {
+nav, nav ul ul, .postformat, .page-header, .widget-title {
 	background: #faa61c url(line.png) top left repeat-x;
 }
 .left-corner, .right-corner {
@@ -25,3 +25,4 @@ nav, .postformat, .page-header, .widget-title {
 #wp-calendar a, #wp-calendar #prev a:hover, #wp-calendar #next a:hover {
 	background: #faa61c url(line.png) bottom left repeat-x;
 	}
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {color: #faa61c;}

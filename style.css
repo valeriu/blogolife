@@ -56,64 +56,9 @@ Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, ri
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
  -------------------------------------------------------------- */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-font,
-ins,
-kbd,
-q,
-s,
-samp,
-figure,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,
+em,font,ins,kbd,q,s,samp,figure,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,
+caption,tbody,tfoot,thead,tr,th,td {
 	border: 0;
 	font-family: inherit;
 	font-size: 100%;
@@ -166,23 +111,13 @@ a {
 	outline:0 none;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-	display: block;
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,
+section {	display: block;
 }
 
 body {
 	font-family: 'Oswald', sans-serif;
-	background: #f3f3f3 url(images/bg.png) repeat;
+	background: #f3f3f3;
 }
 
 #page {
@@ -257,34 +192,73 @@ a:hover {
 	text-decoration: none;
 }
 
-/* --- --- [ Nav ] --- --- */
 nav {
+	display: block;
 	margin: 10px -10px 0 -10px;
+	font-size: 14px;
 	position: relative;
+	padding: 0 30px;
 }
 
+nav a {
+    color: #fff;
+    text-decoration: none;
+
+}
+nav a:hover {
+		border-bottom: 1px dashed #fff;
+		color: #fff;
+	}
+	
 nav ul {
-	margin: 0px 30px;
+    list-style: none;
+	margin: 0px 0px;
 	padding: 9px 0;
+	min-height: 22px;
 }
 
 nav ul li {
-	display: inline;
-	font-size:  14px;
-	margin-right: 20px;
+    float: left;
+    position: relative;
+    margin-right: 20px;
+}
+	
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 22px;
+    left: 0px;
+    float: left;
+    width: 180px;
+    z-index: 99999;
+
 }
 
-nav ul li a {
-	color: #fff;
-	text-decoration:  none;
+nav ul ul li {
+    min-width: 180px;
+	padding: 0px 0 10px 0;
+
+}
+nav ul ul li a{
+	margin: 10px;
 }
 
-nav ul li a:hover {
-	color: #fff;
-	text-decoration:  none;
-	border-bottom:  1px solid #fff;
+nav ul ul ul {
+    left: 100%;
+    top: 0;
 }
 
+
+nav ul li:hover > ul {
+    display: block;
+}
+nav ul li.current_page_item > a,
+nav ul li.current-menu-ancestor > a,
+nav ul li.current-menu-item > a,
+nav ul li.current-menu-parent > a {
+    border-bottom: 1px dashed #fff;
+	color:#FFF;
+}
 /* --- --- [ nav-below ] --- --- */
 #nav-below {
 	margin: 0px 0 20px 0;
@@ -506,13 +480,163 @@ article {
 	text-decoration: none;
 	border: 0px;
 }
+.entry-content img {max-width:100%}
 
 .entry-content {
 	margin: 20px;
 	color: #666;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size:  15px;
+	line-height:30px;
 }
+.entry-content p{
+	line-height:25px;
+}
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {font-weight:700; margin:10px 0;}
+.entry-content h1 {font-size:24px;}
+.entry-content h2 {font-size:22px;}
+.entry-content h3 {font-size:20px;}
+.entry-content h4 {font-size:18px;}
+.entry-content h5 {font-size:16px;}
+.entry-content h6 {font-size:14px;}
+/*list*/
+.entry-content ul, .entry-content ol {
+	margin: 0 0 10px 2.5em;
+}
+.entry-content ul {
+	list-style: square;
+}
+.entry-content ol {
+	list-style-type: decimal;
+}
+.entry-content ol ol {
+	list-style: upper-alpha;
+}
+.entry-content ol ol ol {
+	list-style: lower-roman;
+}
+.entry-content ol ol ol ol {
+	list-style: lower-alpha;
+}
+.entry-contentul ul, .entry-content ol ol, .entry-content ul ol, .entry-content ol ul {
+	margin-bottom: 0;
+}
+.entry-content dl {
+	margin: 0 10px;
+}
+.entry-content dt {
+	font-weight: bold;
+}
+.entry-content dd {
+	margin-bottom: 10px;
+}
+/*table*/
+.entry-content table,
+.comment-content table {
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 1.625em;
+    width: 100%;
+}
+.entry-content th,
+.comment-content th {
+    color: #666;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    line-height: 2.6em;
+
+}
+.entry-content td,
+.comment-content td {
+    border-top: 1px solid #ddd;
+    padding: 6px 10px 6px 0;
+}
+.comment-content ul,
+.comment-content ol {
+    margin-bottom: 1.625em;
+}
+.comment-content ul ul,
+.comment-content ol ol,
+.comment-content ul ol,
+.comment-content ol ul {
+    margin-bottom: 0;
+}
+/*elements*/
+cite, em, i {
+	font-style: italic;
+}
+
+blockquote em, blockquote i, blockquote cite {
+	font-style: normal;
+}
+blockquote cite {
+	color: #666;
+	font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+pre {
+	background: #f4f4f4;
+	font: 13px "Courier 10 Pitch", Courier, monospace;
+	line-height: 1.5;
+	margin-bottom: 1.625em;
+	overflow: auto;
+	padding: 0.75em 1.625em;
+}
+code, kbd {
+	font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym, dfn {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+address {
+	display: block;
+	margin: 0 0 1.625em;
+}
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 10px;
+	height: 0;
+	line-height: 1;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+
+/* Forms */
+input[type=text],
+input[type=password],
+textarea {
+	background: #fafafa;
+	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	border: 1px solid #ddd;
+	color: #888;
+}
+input[type=text]:focus,
+textarea:focus {
+	color: #373737;
+}
+textarea {
+	padding-left: 3px;
+	width: 98%;
+}
+input[type=text] {
+	padding: 3px;
+}
+.comment-content p label {margin:10px 0 0 0 ;}
 
 .entry-meta {
 	background: transparent url(images/entry-meta.png) center left repeat-x;
@@ -521,13 +645,15 @@ article {
 }
 .entry-utility {
 	margin: 20px 0 0 0;
-	font-size: 12px;
+	font-size: 12px; 
+		line-height: 15px;
 }
 .entry-utility .category{
 	background: transparent url(images/categories.png) left top no-repeat;
-	padding-left: 25px;
+	padding: 0 0 0 25px;
 	float: left;
-	margin: 0 20px 10px 0;
+	margin: 0 20px 0px 0;
+
 	}
 
 .entry-utility .tag{
@@ -604,6 +730,7 @@ img.aligncenter {
 .wp-caption img {
 	margin: 5px 3px 0;
 }
+.wp-caption a img {width:98%}
 
 .wp-caption p.wp-caption-text {
 	color: #888;
@@ -1039,14 +1166,14 @@ aside h3 {
 #wp-calendar #next a {
 	padding-right: 10px;
 	text-align: right;
-	background: #c5d1d9;
+	background: #f0f3f5;
 	color: #666;
 }
 
 #wp-calendar #prev a {
 	padding-left: 10px;
 	text-align: left;
-	background: #c5d1d9;
+	background: #f0f3f5;
 	color: #666;
 }
 #wp-calendar #prev a:hover, #wp-calendar #next a:hover {
