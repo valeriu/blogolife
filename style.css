@@ -1056,7 +1056,10 @@ aside h3 {
 	padding: 8px 0;
 	color: #666;
 }
+.widget ul .children li {
+	border-bottom: none;
 
+}
 
 .widget ul li a {
 	color: #666;

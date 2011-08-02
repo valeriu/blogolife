@@ -9,19 +9,11 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<div class="col1 fleft">
-				<div class="postformat">
-					<div class="format-icon"></div>
-					<div class="left-corner"></div>
-				</div>
-			</div>
-			<div class="col2 fright">		
-				<header class="entry-header">
-					<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1></header>
-		
+<div class="col1 fleft"><div class="postformat"><div class="format-icon"></div><div class="left-corner"></div></div></div>
+<div class="col2 fright">
+<header class="entry-header"><h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1></header>
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
-				<div class="entry-content">
-			<?php the_excerpt(); ?>
+<div class="entry-content"><?php the_excerpt(); ?>
 		</div><!-- .entry-summary -->
 		
 		<?php elseif ( is_single() ): ?>	

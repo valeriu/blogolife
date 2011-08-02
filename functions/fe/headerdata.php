@@ -41,9 +41,11 @@ if(	!is_admin()){
 	if (get_option(wpl_css) == 'Green' )
 	wp_register_style('stylered', get_template_directory_uri().'/images/green/style.css', 'style', '','all');
 	wp_enqueue_style('stylered');
+
+// includem standard, pentru ca nu merge cildren theme
+//	wp_register_style('style', get_template_directory_uri().'/style.css', 'style', '','all');
+//	wp_enqueue_style('style');
 	
-	wp_register_style('style', get_template_directory_uri().'/style.css', 'style', '','all');
-	wp_enqueue_style('style');
 	wp_register_style('oswald', 'http://fonts.googleapis.com/css?family=Oswald&amp;v2', 'style', '','all');
 	wp_enqueue_style('oswald');
 }
