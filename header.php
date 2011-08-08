@@ -38,8 +38,9 @@ foreach ($options as $value) {
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
-<?php wp_head(); ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<?php wp_head(); ?>
+
 <?php echo stripslashes($wpl_ga_code); ?>
 	</head>
 <body <?php body_class('two-column right-sidebar'); ?>>

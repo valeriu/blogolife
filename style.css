@@ -1,7 +1,7 @@
 
 /*
-Theme Name: BlogoLife
-Theme URI: http://wplook.com/BlogoLife
+Theme Name: blogolife
+Theme URI: http://demo.wplook.com/blogolife/
 Author: the wplook team
 Author URI: http://wplook.com/
 Description: The different post formats.
@@ -241,25 +241,6 @@ nav ul li.current-menu-parent > a {
 	padding: 9px 0;
 }
 
-/* --- --- [ Corners ] --- --- */
-
-.left-corner {
-	position: absolute;
-	bottom: -9px;
-	left: 0;
-	width: 9px;
-	height: 9px;
-	background-position: 0px 9px;
-}
-
-.right-corner {
-	position: absolute;
-	bottom: -9px;
-	right: 0;
-	width: 9px;
-	height: 9px;
-	background-position: 9px 9px;
-}
 
 /* header-image */
 #header-image {
@@ -1190,3 +1171,50 @@ aside h3 {
 .alignright {}
 .alignleft {}
 .aligncenter {}
+/* CSS Document */
+/* color red */ /* #b41423 */
+
+a, a:hover, #site-title a:hover, .entry-title a:hover, #recentcomments li a, .widget ul li .rsswidget, .edit-i a, .comment-awaiting-moderation {
+	color: #b41423;
+}
+nav, nav ul ul, .postformat, .page-header, .widget-title {
+	background: #b41423 url(images/red/line.png) top left repeat-x;
+}
+.left-corner, .right-corner {
+	background: transparent url(images/red/corners.png);
+}
+
+.entry-title a:hover, #copy a:hover, .comment-i a:hover, .author-i a:hover, #recentcomments li:hover  {
+	border-bottom:  1px dashed #b41423;
+}
+.widget ul li a:hover {
+	border-bottom:  1px dashed #b41423;
+	color: #b41423;
+	}
+#submit, #searchform #searchsubmit {
+	background: #b41423 url(images/red/line.png) top left repeat-x;
+	border: 1px solid #b41423;
+}
+#wp-calendar a, #wp-calendar #prev a:hover, #wp-calendar #next a:hover {
+	background: #b41423 url(images/red/line.png) bottom left repeat-x;
+	}
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {color: #b41423;}
+/* --- --- [ Corners ] --- --- */
+
+.left-corner {
+	position: absolute;
+	bottom: -9px;
+	left: 0;
+	width: 9px;
+	height: 9px;
+	background-position: 0px 9px;
+}
+
+.right-corner {
+	position: absolute;
+	bottom: -9px;
+	right: 0;
+	width: 9px;
+	height: 9px;
+	background-position: 9px 9px;
+}
