@@ -52,26 +52,36 @@ function wplook_bar_menu() {
 	'title' => __( 'wplook Panel'),
 	'href' => FALSE,
 	'meta' => array('title' => 'wplook Options Panel', 'class' => 'wplookpanel') ) );
+	
 	$wp_admin_bar->add_menu( array(
 	'parent' => 'custom_menu',
-	'title' => __( 'Illusion Options'),
+	'title' => __( 'BlogoLife Options'),
 	'href' => $admin_dir .'admin.php?page=fw-options.php',
-	'meta' => array('title' => 'Illusion - Theme options') ) );
+	'meta' => array('title' => 'BlogoLife - Theme options') ) );
+	
 	$wp_admin_bar->add_menu( array(
 	'parent' => 'custom_menu',
 	'title' => __( 'wplook Themes'),
-	'href' => $admin_dir .'admin.php?page=sub-page2',
+	'href' => 'http://wplook.com/wordpress-themes',
 	'meta' => array('title' => 'Premium Wordpress Themes from wplook')) );
+	
 	$wp_admin_bar->add_menu( array(
 	'parent' => 'custom_menu',
 	'title' => __( 'wplook News'),
-	'href' => $admin_dir .'admin.php?page=sub-page',
+	'href' => 'http://wplook.com/',
 	'meta' => array('title' => 'News and theme updates from wplook') ) );
+
 	$wp_admin_bar->add_menu( array(
 	'parent' => 'custom_menu',
-	'title' => __( 'Like WordPress'),
-	'href' => 'http://likewp.com/?wplook',
-	'meta' => array('target' => 'blank', 'title' => 'We like WordPress news')
+	'title' => __( 'Facebook'),
+	'href' => 'http://www.facebook.com/pages/wplook/217332894973977',
+	'meta' => array('target' => 'blank', 'title' => 'Become a fan on Facebook') ) );
+	
+	$wp_admin_bar->add_menu( array(
+	'parent' => 'custom_menu',
+	'title' => __( 'Twitter'),
+	'href' => 'http://twitter.com/#!/wplook',
+	'meta' => array('target' => 'blank', 'title' => 'Follow us on Twitter')
 		) );
 }
 add_action('admin_bar_menu', 'wplook_bar_menu', '1000');

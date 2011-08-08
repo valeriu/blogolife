@@ -3,8 +3,8 @@
  * The template for displaying Comments.
  *
  * @package wplook
- * @subpackage vip
- * @since vip 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
  */
 ?>
 <a name="comments"></a>

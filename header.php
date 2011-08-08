@@ -3,8 +3,8 @@
  * The header template
  *
  * @package wplook
- * @subpackage vip
- * @since vip 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
  */
 ?>
 <?php global $options;
@@ -31,6 +31,7 @@ foreach ($options as $value) {
 	?></title>
 <?php wplook_meta_description();?>
 
+<meta name="keywords" content="<?php echo $wpl_meta_keywords; ?>" />
 <link rel="shortcut icon" href="<?php echo $wpl_favicon_url; ?>" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <!--[if lt IE 9]>
@@ -41,7 +42,7 @@ foreach ($options as $value) {
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <?php echo stripslashes($wpl_ga_code); ?>
 	</head>
-<body class="two-column right-sidebar" <?php //body_class(); ?>>
+<body <?php body_class('two-column right-sidebar'); ?>>
 <div id="page">
 	<header id="branding">
 <hgroup class="fleft">

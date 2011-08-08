@@ -3,8 +3,8 @@
  * The template for displaying audio
  *
  * @package wplook
- * @subpackage vip
- * @since vip 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
  */
 ?>
 
@@ -94,9 +94,7 @@
 			<div class="comment-i fleft">
 				<?php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments are off');?>
 			</div>
-			<div class="author-i fleft">
-				<?php the_author_posts_link(); ?>
-			</div>
+			<div class="author-i fleft"><?php wplook_get_author();?></div>
 			<?php edit_post_link( __( 'Edit', 'wplook' ), '<div class="edit-i fright">', '</div>' ); ?>
 			<div class="clear"></div>
 		</footer>

@@ -3,20 +3,15 @@
  * Setup
  *
  * @package wplook
- * @subpackage vip
- * @since vip 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
  */
  
 add_action( 'after_setup_theme', 'wplook_setup' );
 if ( ! function_exists( 'wplook_setup' ) ):
 function wplook_setup() {
 	
-	load_theme_textdomain( 'wplook', TEMPLATEPATH . '/languages' );
 
-	$locale = get_locale();
-	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
-	if ( is_readable( $locale_file ) )
-		require_once( $locale_file );	
 	
 // This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
@@ -33,6 +28,7 @@ function register_my_menus() {
 add_action( 'init', 'register_my_menus' );
 
 wp_create_nav_menu( 'WPLOOK Main Menu', array( 'slug' => 'primary' ) );
+	
 
 
 	// The next four constants set how Twenty Eleven supports custom headers.
@@ -173,10 +169,8 @@ endif; // wplook_admin_header_style
 if ( ! function_exists( 'wplook_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
- *
  * Referenced via add_custom_image_header() in wplook_setup().
- *
- * @since Twenty Eleven 1.0
+ * via Twenty Eleven theme
  */
 function wplook_admin_header_image() { ?>
 	<div id="headimg">
@@ -206,8 +200,12 @@ add_theme_support( 'automatic-feed-links' );
 // Add support for a variety of post formats
 add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'  ) );
 	// Add support for custom backgrounds
+	
+define('BACKGROUND_IMAGE', 'http://colorto.me/png/20/rand/rand');
+define('BACKGROUND_COLOR', 'a90');
 
 add_custom_background();
+
 set_post_thumbnail_size( 150, 100, true ); // default Post Thumbnail dimensions (cropped)
 
 
@@ -228,30 +226,39 @@ function wplook_content_nav( $nav_id ) {
 }
 
 /**
+ * Display Autor (microformats)
+ */
+function wplook_get_author() { ?>
+	<span class="vcard"><a class="url fn n" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php echo get_the_author(); ?></a></span>
+<?php
+}
+
+
+/**
  * Display feed in dashboard
  */
 
 add_action('wp_dashboard_setup', 'my_dashboard_widgets');
 function my_dashboard_widgets() {
-     global $wp_meta_boxes;
-     unset(
-          $wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'],
-          $wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'],
-          $wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']
-     );
-     wp_add_dashboard_widget( 'dashboard_custom_feed', 'wplook news' , 'dashboard_custom_feed_output' );
+	global $wp_meta_boxes;
+	unset(
+		$wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'],
+		$wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'],
+		$wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']
+	);
+		wp_add_dashboard_widget( 'dashboard_custom_feed', 'wplook news' , 'dashboard_custom_feed_output' );
 }
 function dashboard_custom_feed_output() {
-     echo '<div class="rss-widget rss-wplook">';
-     wp_widget_rss_output(array(
-          'url' => 'http://feeds.feedburner.com/wplook',
-          'title' => 'wplook news',
-          'items' => 5,
-          'show_summary' => 1,
-          'show_author' => 0,
-          'show_date' => 0
-     ));
-     echo '</div>';
+		echo '<div class="rss-widget rss-wplook">';
+	wp_widget_rss_output(array(
+		'url' => 'http://feeds.feedburner.com/wplook',
+		'title' => 'wplook news',
+		'items' => 5,
+		'show_summary' => 1,
+		'show_author' => 0,
+		'show_date' => 0
+		));
+		echo '</div>';
 }
 
 

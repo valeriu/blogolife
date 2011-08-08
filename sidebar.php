@@ -2,7 +2,7 @@
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 				<aside id="archives" class="widget">
-					<div class="widget-title">	<h3><?php _e( 'Archives', 'twentyeleven' ); ?></h3>
+					<div class="widget-title">	<h3><?php _e( 'Archives', 'wplook' ); ?></h3>
 					<div class="right-corner"></div></div>
 					<ul>
 						<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
@@ -11,7 +11,7 @@
 				</aside>
 
 				<aside id="meta" class="widget">
-					<div class="widget-title">	<h3><?php _e( 'Meta', 'twentyeleven' ); ?></h3>
+					<div class="widget-title">	<h3><?php _e( 'Meta', 'wplook' ); ?></h3>
 					<div class="right-corner"></div></div>
 					<ul>
 						<?php wp_register(); ?>

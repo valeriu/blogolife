@@ -3,8 +3,8 @@
  * Headerdata
  *
  * @package wplook
- * @subpackage vip
- * @since vip 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
  */
 
 global $options;
@@ -42,10 +42,7 @@ if(	!is_admin()){
 	wp_register_style('stylered', get_template_directory_uri().'/images/green/style.css', 'style', '','all');
 	wp_enqueue_style('stylered');
 
-// includem standard, pentru ca nu merge cildren theme
-//	wp_register_style('style', get_template_directory_uri().'/style.css', 'style', '','all');
-//	wp_enqueue_style('style');
-	
+
 	wp_register_style('oswald', 'http://fonts.googleapis.com/css?family=Oswald&amp;v2', 'style', '','all');
 	wp_enqueue_style('oswald');
 }
@@ -113,12 +110,12 @@ function thematic_doctitle() {
 	}
 	elseif (is_author() ) {
 		
-		$content = __('Author', 'wplook');
+		$content = __('Posts by author', 'wplook');
 		$author = get_the_author_meta( 'display_name' );
 		$content .= ' ' . $author;
 
 		}
-//----
+
 	
 	$elements = array(
 		'content' => $content
@@ -145,7 +142,6 @@ function thematic_doctitle() {
 
 	echo $doctitle;
 
-} // end thematic_doctitle
-
+} 
 
 ?>

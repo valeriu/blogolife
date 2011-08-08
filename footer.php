@@ -3,8 +3,8 @@
  * The footer template
  *
  * @package wplook
- * @subpackage vip
- * @since vip 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
  */
 ?>
 </div>

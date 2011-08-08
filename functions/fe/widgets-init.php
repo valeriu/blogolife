@@ -4,8 +4,8 @@
  * Register widget areas.
  *
  * @package wplook
- * @subpackage vip
- * @since vip 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
  */
 function wplook_widgets_init() {
 	// Area 1, located at the top of the sidebar.

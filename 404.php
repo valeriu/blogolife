@@ -4,8 +4,8 @@
  * The 404 template file.
  *
  * @package WPLOOK
- * @subpackage vip
- * @since vip 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
 */
 get_header(); ?>
 
@@ -16,7 +16,7 @@ get_header(); ?>
 	<div class="col1 fleft">
 	<div class="postformat"><div class="format-icon"></div><div class="left-corner"></div></div></div>
 	<div class="col2 fright">
-<div class="entry-content"><p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'twentyeleven' ); ?></p>
+<div class="entry-content"><p><?php _e( 'Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post.', 'wplook' ); ?></p>
 	<?php get_search_form(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-0 -->

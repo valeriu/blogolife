@@ -4,14 +4,14 @@
  * The main template file.
  *
  * @package WPLOOK
- * @subpackage vip
- * @since vip 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
 */
 
 get_header(); ?>
 
 	<?php /*
-	from twentyeleven theme 
+	from wplook theme 
 	
 	*/?>			<section class="primary">
 					<div id="content">
@@ -26,13 +26,13 @@ get_header(); ?>
 			</div>
 			<div class="col2 fright">		
 		<header class="entry-header">
-<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyeleven' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1></header>
+<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'wplook' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1></header>
 <div class="entry-content">
 
 
 							<?php
 								$metadata = wp_get_attachment_metadata();
-								printf( __( 'Original size: <a target="_blank" href="%1$s" title="Link to full-size image">%2$s &times; %3$s</a> in <a href="%4$s" title="Return to %5$s" rel="gallery">%5$s</a>', 'twentyeleven' ),
+								printf( __( 'Original size: <a target="_blank" href="%1$s" title="Link to full-size image">%2$s &times; %3$s</a> in <a href="%4$s" title="Return to %5$s" rel="gallery">%5$s</a>', 'wplook' ),
 								
 									esc_url( wp_get_attachment_url() ),
 									$metadata['width'],
@@ -68,7 +68,7 @@ get_header(); ?>
 	}
 ?>
 								<a href="<?php echo esc_url( $next_attachment_url ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" rel="attachment"><?php
-								$attachment_size = apply_filters( 'twentyeleven_attachment_size', 848 );
+								$attachment_size = apply_filters( 'wplook_attachment_size', 848 );
 								echo wp_get_attachment_image( $post->ID, array( $attachment_size, 1024 ) ); // filterable image width with 1024px limit for image height.
 								?></a>
 
@@ -79,14 +79,14 @@ get_header(); ?>
 
 						<div class="entry-description">
 							<?php the_content(); ?>
-							<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+							<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'wplook' ) . '</span>', 'after' => '</div>' ) ); ?>
 						</div><!-- .entry-description -->
 
 					</div><!-- .entry-content -->
 			<footer class="entry-meta">
 				<div class="date-i fleft"><?php the_time('F jS, Y') ?></div>
 				<div class="comment-i fleft"><?php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments are off');?></div>
-				<div class="author-i fleft"><?php the_author_posts_link(); ?></div>
+				<div class="author-i fleft"><?php wplook_get_author();?></div>
 				<?php edit_post_link( __( 'Edit', 'wplook' ), '<div class="edit-i fright">', '</div>' ); ?>
 			
 				<div class="clear"></div>
@@ -95,16 +95,17 @@ get_header(); ?>
 		<div class="clear"></div>
 				</article><!-- #post-<?php the_ID(); ?> -->
 				
-									
-	
-								<nav id="nav-below">
+		<?php if ( count( $attachments ) > 1 ) { ?>
+			
+			<nav id="nav-below">
 					<div class="nav-previous fleft"><?php previous_image_link( false, __( '&larr; Previous' , 'wplook' ) ); ?></div>
 				<div class="nav-next fright"><?php next_image_link( false, __( 'Next &rarr;' , 'wplook' ) ); ?></div>
 			<div class="left-corner"></div>
 			<div class="clear"></div>
-			</nav><!-- #nav-single -->
+			</nav>
+			<!-- #nav-single -->
 			
-
+			<?php } ?>
 			
 			<?php comments_template( '', true ); ?>
 			

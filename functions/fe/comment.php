@@ -16,7 +16,7 @@ function wplook_comment( $comment, $args, $depth ) {
 		case '' :
 	?>
 	
-						<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+						<li <?php comment_class(vcard); ?> id="comment-<?php comment_ID(); ?>">
 							<div class="col1 fleft">
 								<div class="postformat">
 									<div class="format-icon"><?php echo get_avatar( $comment, 28 ); ?></div>
@@ -89,11 +89,11 @@ function wplook_comment_form( $args = array(), $post_id = null ) {
 	$aria_req = ( $req ? " aria-required='true'" : '' );
 	$fields =  array(
 		'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
-		            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+				'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
 		'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .
-		            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+				'<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
 		'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
-		            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
+				'<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
 	);
 
 	$required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required"><a>*</a></span>' );

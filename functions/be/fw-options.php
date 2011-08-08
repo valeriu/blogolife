@@ -22,7 +22,7 @@ array( "name" => "Start Tabs",
 		"icon" => "layout"),
 
 	// Home
-	array( "name" => "Home",
+	array( "name" => "Welcome",
 			"id" => "tab_menu_0",
 			"type" => "tab",
 			"icon" => "layout",
@@ -68,7 +68,7 @@ array( "name" => "tab_content_0",
 		"icon" => "layout"),
 
 	// Home
-	array( "name" => "Home",
+	array( "name" => "Welcome",
 		"type" => "heading",
 		"icon" => "layout"),
 	
@@ -135,7 +135,7 @@ array( "name" => "tab_content_1",
 array( "name" => "Header Description",
 		"desc" => "Insert the header description, or a banner (468x60) code.",
 		"id" => $shortname."_header_desc",
-		"std" => "<a href=\"http://wplook.com/members/go.php?r=1&i=b2\"><img src=\"http://wplook.com/ads/468x60.png\" border=0 alt=\"Premium Wordpress Themes\" ></a>",
+		"std" => "",
 		"type" => "textarea"),
 
 
@@ -158,13 +158,13 @@ array( "name" => "tab_content_2",
 array( "name" => "<img src='$be_pathimages/icons/twitter.png' />Twitter",
 		"desc" => "Insert the full URL of your <a href='http://twitter.com/wplook' target='_blank'>Twitter</a> profile.",
 		"id" => $shortname."_twitter",
-		"std" => "http://twitter.com/#!/wplook",
+		"std" => "",
 		"type" => "text"),
 	
 	array( "name" => "<img src='$be_pathimages/icons/facebook.png' />Facebook",
 		"desc" => "Insert the full URL of your <a href='http://facebook.com' target='_blank'>Facebook</a> profile, page or group.",
 		"id" => $shortname."_facebook",
-		"std" => "http://www.facebook.com/pages/wplook/217332894973977",
+		"std" => "",
 		"type" => "text"),	
 	
 array( "name" => "<img src='$be_pathimages/icons/linkedin.png' />Linkedin",
@@ -363,7 +363,7 @@ function wpl_admin() {
 
 		<!-- [ Top Menu ]-->
 		<div class="top_menu_fm">
-			<a title="Theme Documentation" target="_blank"class="doc_fm" href="<?php echo $manualurl; ?>">Documentation</a><a title="Product help and support center" target="_blank" class="support_fm" href="http://wplook.com/support">Support</a>
+			<a title="Product help and support center" target="_blank" class="support_fm" href="http://wplook.com/support">Support</a>
 		</div>
 
 
