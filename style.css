@@ -388,7 +388,10 @@ article {
 	font-size: 13px;
 	overflow: auto;
 }
+.chat pre strong {
+	font-weight: bold;
 
+}
 .nr-images {
 	width: 300px;
 	margin-bottom: 10px;
