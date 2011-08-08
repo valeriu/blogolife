@@ -390,7 +390,7 @@ article {
 }
 .chat pre strong {
 	font-weight: bold;
-
+	color: 000;
 }
 .nr-images {
 	width: 300px;
