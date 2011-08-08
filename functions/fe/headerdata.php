@@ -18,9 +18,7 @@ foreach ($options as $value) {
 // additional js and css
 
 if(	!is_admin()){
-	if (get_option(wpl_css) == 'Red' )
-	wp_register_style('stylered', get_template_directory_uri().'/images/red/style.css', 'style', '','all');
-	wp_enqueue_style('stylered');	
+		
 	
 	if (get_option(wpl_css) == 'Pink' )
 	wp_register_style('stylered', get_template_directory_uri().'/images/pink/style.css', 'style', '','all');
