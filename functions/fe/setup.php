@@ -201,8 +201,8 @@ add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'  ) );
 	// Add support for custom backgrounds
 	
-define('BACKGROUND_IMAGE', 'http://colorto.me/png/20/rand/rand');
-define('BACKGROUND_COLOR', 'a90');
+define('BACKGROUND_IMAGE', '/wp-content/themes/blogolife/images/bg.png');
+define('BACKGROUND_COLOR', 'f3f3f3');
 
 add_custom_background();
 

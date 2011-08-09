@@ -26,3 +26,22 @@ nav, nav ul ul, .postformat, .page-header, .widget-title {
 	background: #4a4a4a url(line.png) bottom left repeat-x;
 	}
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {color: #4a4a4a;}
+/* --- --- [ Corners ] --- --- */
+
+.left-corner {
+	position: absolute;
+	bottom: -9px;
+	left: 0;
+	width: 9px;
+	height: 9px;
+	background-position: 0px 9px;
+}
+
+.right-corner {
+	position: absolute;
+	bottom: -9px;
+	right: 0;
+	width: 9px;
+	height: 9px;
+	background-position: 9px 9px;
+}

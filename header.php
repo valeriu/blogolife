@@ -47,7 +47,7 @@ foreach ($options as $value) {
 <div id="page">
 	<header id="branding">
 <hgroup class="fleft">
-	<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" <?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+	<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> - <?php bloginfo('description'); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
 	<h2 id="site-description"><?php bloginfo('description'); ?></h2>
 </hgroup>
 <div class="header-desc fright"><p><?php echo stripslashes($wpl_header_desc); ?></p></div>
