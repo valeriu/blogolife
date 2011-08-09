@@ -109,7 +109,7 @@ function thematic_doctitle() {
 	elseif (is_author() ) {
 		
 		$content = __('Posts by author', 'wplook');
-		$author = get_the_author_meta( 'display_name' );
+		$author =  get_the_author_meta( 'display_name' );
 		$content .= ' ' . $author;
 
 		}

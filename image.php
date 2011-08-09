@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The main template file.
  *
@@ -7,16 +6,10 @@
  * @subpackage BlogoLife
  * @since BlogoLife 1.0
 */
- 
-get_header(); ?>
-
-	<?php /*
-	from wplook theme 
-	
-	*/?>			<section class="primary">
+ get_header(); ?>
+<section class="primary">
 					<div id="content">
 			<?php the_post(); ?>
-
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="format-image">
 			<div class="col1 fleft">
 				<div class="postformat">
@@ -28,8 +21,6 @@ get_header(); ?>
 		<header class="entry-header">
 <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'wplook' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1></header>
 <div class="entry-content">
-
-
 							<?php
 								$metadata = wp_get_attachment_metadata();
 								printf( __( 'Original size: <a target="_blank" href="%1$s" title="Link to full-size image">%2$s &times; %3$s</a> in <a href="%4$s" title="Return to %5$s" rel="gallery">%5$s</a>', 'wplook' ),
@@ -71,17 +62,12 @@ get_header(); ?>
 								$attachment_size = apply_filters( 'wplook_attachment_size', 848 );
 								echo wp_get_attachment_image( $post->ID, array( $attachment_size, 1024 ) ); // filterable image width with 1024px limit for image height.
 								?></a>
-
-
 							</div><!-- .attachment -->
-
 						</div><!-- .entry-attachment -->
-
 						<div class="entry-description">
 							<?php the_content(); ?>
 							<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'wplook' ) . '</span>', 'after' => '</div>' ) ); ?>
 						</div><!-- .entry-description -->
-
 					</div><!-- .entry-content -->
 			<footer class="entry-meta">
 				<div class="date-i fleft"><?php the_time('F jS, Y') ?></div>
@@ -104,19 +90,9 @@ get_header(); ?>
 			<div class="clear"></div>
 			</nav>
 			<!-- #nav-single -->
-			
 			<?php } ?>
-			
 			<?php comments_template( '', true ); ?>
-			
-			
-			
-									
 			</div><!-- #content -->
 		</section><!-- #primary -->				
-				
-				
-
-
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

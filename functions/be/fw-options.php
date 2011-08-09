@@ -8,9 +8,6 @@
 */
 $options = array (
 
-//'.__( 'settings saved.', 'wplook' ).'
-
-
 array( "name" => $themename ." Options",
 	"type" => "title"),
 
@@ -72,17 +69,17 @@ array( "name" => "tab_content_0",
 		"type" => "heading",
 		"icon" => "layout"),
 	
-	array("name" => "First of all, we would like to thank you for choosing Wplook Themes and
+	array("name" => "First of all, we would like to thank you for choosing wplook Themes and
 installing one of our themes &#8211; your choice is greatly appreciated!",
 		"type" => "infotext"),
 	
 	array( "name" => "Follow us on:",
 		"type" => "subheader"),
 	
-	array("name" => "<a href='http://twitter.com/#!/wplook' target='_blank'>Twitter</a>",
+	array("name" => " <script src=\"http://platform.twitter.com/widgets.js\" type=\"text/javascript\"></script> <a href=\"http://twitter.com/share\" class=\"twitter-share-button\" data-via=\"wplook\" data-url=\"http://wplook.com/blogolife\" data-text=\"I use BlogoLife - It is Free, simple and perfect theme for personal blogging.\" >Tweet</a>",
 		"type" => "infotext"),
 	
-	array("name" => "<a href=http://www.facebook.com/pages/wplook/217332894973977' target='_blank'>Facebook</a>",
+	array("name" => "<div id=\"fb-root\"></div><script src=\"http://connect.facebook.net/en_US/all.js?ver=3.2.1#xfbml=1\"></script><fb:like href=\"http://wplook.com/blogolife\" send=\"true\" width=\"400\" show_faces=\"true\" action=\"recommend\" ></fb:like>",
 		"type" => "infotext"),
 
 array( "name" => "tab_content_0",

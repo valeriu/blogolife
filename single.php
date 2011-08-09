@@ -1,14 +1,12 @@
 <?php
-
 /**
- * The main template file.
- *
+ * The single template file.
  * @package WPLOOK
  * @subpackage BlogoLife
  * @since BlogoLife 1.0
 */
 
-get_header(); ?>
-<?php get_template_part('content', 'single' ) ;?>
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+get_header();
+get_template_part('content', 'single' ) ;
+get_sidebar();
+get_footer(); ?>

@@ -1,5 +1,4 @@
 <?php 
-
 /**
  * Register widget areas.
  *
