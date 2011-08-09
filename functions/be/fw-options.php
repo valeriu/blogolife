@@ -3,8 +3,8 @@
  * Framework Options
  *
  * @package wplook
- * @subpackage Illision
- * @since Illusion 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
 */
 $options = array (
 
@@ -106,7 +106,7 @@ array( "name" => "tab_content_1",
 		"id" => $shortname."_css",
 		"std" => "",
 		"class" => "hidden",
-		"options" => array(	'a' => '',
+		"options" => array(	'a' => 'Red',
 							'b' => 'Pink',
 							'c' => 'Blue',
 							'd' => 'Black',

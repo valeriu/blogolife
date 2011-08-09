@@ -2,8 +2,8 @@
 
 /**
  * @package wplook
- * @subpackage Illision
- * @since Illusion 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
 */
 
 function getCategories($parent) {

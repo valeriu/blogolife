@@ -11,11 +11,8 @@
 					<?php get_template_part( 'content', get_post_format() ); ?>
 					
 					<?php comments_template( '', true ); ?>
-
 				<?php endwhile; ?>
-
 			<?php endif; ?>
-
 			</div><!-- #content -->
 		</section><!-- #primary -->
 

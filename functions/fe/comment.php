@@ -4,8 +4,8 @@
  * Recent Comments
  *
  * @package wplook
- * @subpackage Illision
- * @since Illusion 1.0
+ * @subpackage BlogoLife
+ * @since BlogoLife 1.0
 */
  
 if ( ! function_exists( 'wplook_comment' ) ) :
@@ -16,36 +16,36 @@ function wplook_comment( $comment, $args, $depth ) {
 		case '' :
 	?>
 	
-						<li <?php comment_class(vcard); ?> id="comment-<?php comment_ID(); ?>">
-							<div class="col1 fleft">
-								<div class="postformat">
-									<div class="format-icon"><?php echo get_avatar( $comment, 28 ); ?></div>
-									<div class="left-corner"></div>
-								</div>
-							</div>
-							<div class="col2 fright">
-								<header class="entry-header"><h3 class="entry-title"><?php printf( __( '%s <span class="says">says:</span>', 'wplook' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h3></header>
-								<div class="entry-content">
-								<?php if ( $comment->comment_approved == '0' ) : ?>
-									<div class="comment-awaiting-moderation">
-										<?php _e( 'Your comment is awaiting moderation.', 'wplook' ); ?>
-									</div>
-									<br />
-									<?php endif; ?>
-									<?php comment_text(); ?>
-								</div>
-								<footer class="entry-meta">
-									<div class="date-i fleft">
-										<?php
-							/* translators: 1: date, 2: time */
-							printf( __( '%1$s at %2$s', 'wplook' ), get_comment_date(), get_comment_time() ); ?>
-									</div>
-									<div class="edit-i fright"><?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></div>
-									<div class="clear"></div>
-								</footer>
-							</div>
-							<div class="clear"></div>
-						</li>	
+	<li <?php comment_class(vcard); ?> id="comment-<?php comment_ID(); ?>">
+		<div class="col1 fleft">
+			<div class="postformat">
+				<div class="format-icon"><?php echo get_avatar( $comment, 28 ); ?></div>
+				<div class="left-corner"></div>
+			</div>
+		</div>
+		<div class="col2 fright">
+			<header class="entry-header"><h3 class="entry-title"><?php printf( __( '%s <span class="says">says:</span>', 'wplook' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?></h3></header>
+			<div class="entry-content">
+			<?php if ( $comment->comment_approved == '0' ) : ?>
+				<div class="comment-awaiting-moderation">
+					<?php _e( 'Your comment is awaiting moderation.', 'wplook' ); ?>
+				</div>
+				<br />
+				<?php endif; ?>
+				<?php comment_text(); ?>
+			</div>
+			<footer class="entry-meta">
+				<div class="date-i fleft">
+					<?php
+		/* translators: 1: date, 2: time */
+		printf( __( '%1$s at %2$s', 'wplook' ), get_comment_date(), get_comment_time() ); ?>
+				</div>
+				<div class="edit-i fright"><?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></div>
+				<div class="clear"></div>
+			</footer>
+		</div>
+		<div class="clear"></div>
+	</li>	
 	
 
 	<!-- # comment #-->
@@ -154,6 +154,3 @@ function wplook_comment_form( $args = array(), $post_id = null ) {
 		<?php endif; ?>
 	<?php
 }
-
-
-

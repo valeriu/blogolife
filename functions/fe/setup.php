@@ -11,13 +11,11 @@ add_action( 'after_setup_theme', 'wplook_setup' );
 if ( ! function_exists( 'wplook_setup' ) ):
 function wplook_setup() {
 	
-
 	
 // This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
 // Add default posts and comments RSS feed links to head
 	
-
 	
 function register_my_menus() {
 	register_nav_menus(
@@ -260,10 +258,5 @@ function dashboard_custom_feed_output() {
 		));
 		echo '</div>';
 }
-
-
-
 }
-
-
 ?>

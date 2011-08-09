@@ -7,7 +7,7 @@
  * @subpackage BlogoLife
  * @since BlogoLife 1.0
 */
-
+ 
 get_header(); ?>
 
 	<?php /*

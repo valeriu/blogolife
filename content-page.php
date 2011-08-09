@@ -16,12 +16,6 @@
 
 			<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-
-
-
-
-
-
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="col1 fleft">
 				<div class="postformat">
@@ -74,10 +68,6 @@
 		</div>
 		<div class="clear"></div>
 	</article>	
-	
-	
-				
-					
 					<?php comments_template( '', true ); ?>
 
 				<?php endwhile; ?>

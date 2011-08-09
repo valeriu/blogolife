@@ -18,7 +18,6 @@ function wplook_widgets_init() {
 		'before_title' => '<div class="widget-title"><h3>',
 		'after_title' => '</h3><div class="right-corner"></div></div>'
 	) );
-
 	
 }
 /** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */

@@ -57,7 +57,7 @@ if (is_single()){
 			if ($excerpt == '') 
 echo '<meta name="description" content="'.$title.'" />';
 
-			else 
+		else 
 echo '<meta name="description" content="'.$excerpt.'" />';
 	}
 }
