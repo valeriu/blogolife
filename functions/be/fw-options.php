@@ -73,13 +73,13 @@ array( "name" => "tab_content_0",
 installing one of our themes &#8211; your choice is greatly appreciated!",
 		"type" => "infotext"),
 	
-	array( "name" => "Follow us on:",
+	array( "name" => "Recommend us:",
 		"type" => "subheader"),
 	
-	array("name" => " <script src=\"http://platform.twitter.com/widgets.js\" type=\"text/javascript\"></script> <a href=\"http://twitter.com/share\" class=\"twitter-share-button\" data-via=\"wplook\" data-url=\"http://wplook.com/blogolife\" data-text=\"I use BlogoLife - It is Free, simple and perfect theme for personal blogging.\" >Tweet</a>",
+	array("name" => " <script src=\"http://platform.twitter.com/widgets.js\" type=\"text/javascript\"></script> <a href=\"http://twitter.com/share\" class=\"twitter-share-button\" data-via=\"wplook\" data-url=\"http://wplook.com/blogolife\" data-text=\"I use BlogoLife - It is Free, simple and perfect theme for personal blogging.\" >Tweet</a><p></p>",
 		"type" => "infotext"),
 	
-	array("name" => "<div id=\"fb-root\"></div><script src=\"http://connect.facebook.net/en_US/all.js?ver=3.2.1#xfbml=1\"></script><fb:like href=\"http://wplook.com/blogolife\" send=\"true\" width=\"400\" show_faces=\"true\" action=\"recommend\" ></fb:like>",
+	array("name" => "<div id=\"fb-root\"></div><script src=\"http://connect.facebook.net/en_US/all.js?ver=3.2.1#xfbml=1\"></script><fb:like href=\"http://wplook.com/blogolife\" send=\"true\" width=\"580\" show_faces=\"true\" action=\"recommend\" ></fb:like>",
 		"type" => "infotext"),
 
 array( "name" => "tab_content_0",
