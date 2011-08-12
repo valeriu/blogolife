@@ -29,23 +29,27 @@ array( "name" => "Start Tabs",
 	array( "name" => "General Settings",
 			"id" => "tab_menu_1",
 			"type" => "tab",
-			"icon" => "layout"),
+			"icon" => "layout",
+			"class" => ""),
 	
 	// Social Networking Tab
 	array( "name" => "Social Networking",
 			"id" => "tab_menu_2",
 			"type" => "tab",
-			"icon" => "layout"),
+			"icon" => "layout",
+			"class" => ""),
 	
 	// Other settings Tab
 	array( "name" => "Other Settings",
 			"type" => "tab",
-			"id" => "tab_menu_3"),
+			"id" => "tab_menu_3",
+			"class" => ""),
 	
 	// SEO Tab
 	array( "name" => "SEO",
 			"type" => "tab",
-			"id" => "tab_menu_4"),
+			"id" => "tab_menu_4",
+			"class" => ""),
 	
 
 // General setting Tab
@@ -308,31 +312,30 @@ function wplook_admin_css() {
 
 function wpl_add_admin() {
 	global $options; global $themename; global $shortname;
-	if ( $_GET['page'] == basename(__FILE__) ) {
-		if ( 'save' == $_REQUEST['action'] ) {
-		//if(isset($_GET["action"])) {
-		
-		foreach ($options as $value) {
-			update_option( $value['id'], $_REQUEST[ $value['id'] ] ); 
-		}
-		
-		foreach ($options as $value) {
-			if( isset( $_REQUEST[ $value['id'] ] ) ) { update_option( $value['id'], $_REQUEST[ $value['id'] ] ); 
-			} else { 
-				delete_option( $value['id'] ); 
-			}
-		}
-		
-		header("Location: themes.php?page=fw-options.php&saved=true");
-		die;
-		
-		} else if( 'reset' == $_REQUEST['action'] ) {
-		foreach ($options as $value) {
-			delete_option( $value['id'] ); }
-			header("Location: themes.php?page=fw-options.php&reset=true");
-		die;
-		}
-	}
+	
+	 if ( isset ( $_GET['page'] ) && ( $_GET['page'] == basename(__FILE__) ) ) {
+		 if ( isset ($_REQUEST['action']) && ( 'save' == $_REQUEST['action'] ) ){
+
+ foreach ( $options as $value ) {
+ if ( array_key_exists('id', $value) ) {
+ if ( isset( $_REQUEST[ $value['id'] ] ) ) {
+ update_option( $value['id'], $_REQUEST[ $value['id'] ]  );
+ }
+ else {
+ delete_option( $value['id'] );
+ }
+ }
+ }
+ header("Location: themes.php?page=".basename(__FILE__)."&saved=true");
+ }  else if ( isset ($_REQUEST['action']) && ( 'reset' == $_REQUEST['action'] ) ) {
+ foreach ($options as $value) {
+ if ( array_key_exists('id', $value) ) {
+ delete_option( $value['id'] );
+ }
+ }
+ header("Location: themes.php?page=".basename(__FILE__)."&reset=true");
+ }
+ }
 	
 
 	
@@ -448,7 +451,7 @@ function wpl_admin() {
 	
 	<?php break; case "tabs-close":?>	
 	</div>	
-
+	
 	<?php break; case "tab":?>	
 	<div class="tab<?php echo $value['class']; ?>" id="<?php echo $value['id']; ?>">
 	<div class="link"><?php echo $value['name']; ?></div>
