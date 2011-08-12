@@ -309,38 +309,31 @@ function wplook_admin_css() {
 	</script>
 
 <?php }
-
 function wpl_add_admin() {
 	global $options; global $themename; global $shortname;
-	
-	 if ( isset ( $_GET['page'] ) && ( $_GET['page'] == basename(__FILE__) ) ) {
-		 if ( isset ($_REQUEST['action']) && ( 'save' == $_REQUEST['action'] ) ){
-
- foreach ( $options as $value ) {
- if ( array_key_exists('id', $value) ) {
- if ( isset( $_REQUEST[ $value['id'] ] ) ) {
- update_option( $value['id'], $_REQUEST[ $value['id'] ]  );
- }
- else {
- delete_option( $value['id'] );
- }
- }
- }
- header("Location: themes.php?page=".basename(__FILE__)."&saved=true");
- }  else if ( isset ($_REQUEST['action']) && ( 'reset' == $_REQUEST['action'] ) ) {
- foreach ($options as $value) {
- if ( array_key_exists('id', $value) ) {
- delete_option( $value['id'] );
- }
- }
- header("Location: themes.php?page=".basename(__FILE__)."&reset=true");
- }
- }
-	
-
-	
+	if ( isset ( $_GET['page'] ) && ( $_GET['page'] == basename(__FILE__) ) ) {
+		if ( isset ($_REQUEST['action']) && ( 'save' == $_REQUEST['action'] ) ){
+			foreach ( $options as $value ) {
+				if ( array_key_exists('id', $value) ) {
+					if ( isset( $_REQUEST[ $value['id'] ] ) ) {
+						update_option( $value['id'], $_REQUEST[ $value['id'] ]  );
+					}
+					else {
+						delete_option( $value['id'] );
+					}
+				}
+			}
+			header("Location: themes.php?page=".basename(__FILE__)."&saved=true");
+		}else if ( isset ($_REQUEST['action']) && ( 'reset' == $_REQUEST['action'] ) ) {
+			foreach ($options as $value) {
+				if ( array_key_exists('id', $value) ) {
+					delete_option( $value['id'] );
+				}
+			}
+			header("Location: themes.php?page=".basename(__FILE__)."&reset=true");
+		}
+	}
 	add_theme_page($themename." Options", 'Wplook Panel', 'edit_theme_options', 'fw-options.php', 'wpl_admin', 'http://i.wplook.com/fw-icon.jpg', '1');
-
 }
 
 
