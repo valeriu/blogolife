@@ -6,7 +6,7 @@
  * @subpackage BlogoLife
  * @since BlogoLife 1.0
  */
-error_reporting(E_ALL & ~E_NOTICE);
+//error_reporting(E_ALL & ~E_NOTICE);
 
 // VARIABLES
 $themename = "BlogoLife";									//Theme Name

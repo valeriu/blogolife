@@ -15,7 +15,7 @@ function wplook_comment( $comment, $args, $depth ) {
 		case '' :
 	?>
 	
-	<li <?php comment_class(vcard); ?> id="comment-<?php comment_ID(); ?>">
+	<li <?php comment_class('vcard'); ?> id="comment-<?php comment_ID(); ?>">
 		<div class="col1 fleft">
 			<div class="postformat">
 				<div class="format-icon"><?php echo get_avatar( $comment, 28 ); ?></div>

@@ -15,7 +15,7 @@ foreach ($options as $value) {
 	elseif (isset($value['id'])) { $$value['id'] = get_option( $value['id'] ); }
 }?>
 <!DOCTYPE html>
-<html dir="ltr" <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <title><?php global $page, $paged;

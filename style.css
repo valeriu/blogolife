@@ -707,7 +707,7 @@ input[type=text] {
 	padding-top: 4px;
 }
 /* --- --- --- [ Images ] --- --- --- */
-img.size-auto, img.size-full, img.size-large, img.size-medium, {
+img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, .widget-area img{
 max-width: 100%;
 height:auto;
 }

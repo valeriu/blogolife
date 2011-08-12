@@ -25,11 +25,7 @@ nav, nav ul ul, .postformat, .page-header, .widget-title {
 #wp-calendar a, #wp-calendar #prev a:hover, #wp-calendar #next a:hover {
 	background: #ad3578 url(line.png) bottom left repeat-x;
 }
-<<<<<<< HEAD
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {color: #ad3578;} 
-=======
-.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6 {color: #faa61c;} 
->>>>>>> 5916d2c51c57beb7fa8a597e958a7391208856b9
 /* --- --- [ Corners ] --- --- */
 
 .left-corner {

@@ -20,46 +20,45 @@ foreach ($options as $value) {
 if(	!is_admin()){
 		
 	
-	if (get_option(wpl_css) == 'Pink' )
-	wp_register_style('stylered', get_template_directory_uri().'/images/pink/style.css', 'style', '','all');
-	wp_enqueue_style('stylered');
-	
-	if (get_option(wpl_css) == 'Blue' )
-	wp_register_style('stylered', get_template_directory_uri().'/images/blue/style.css', 'style', '','all');
-	wp_enqueue_style('stylered');
-
-	if (get_option(wpl_css) == 'Black' )
-	wp_register_style('stylered', get_template_directory_uri().'/images/black/style.css', 'style', '','all');
-	wp_enqueue_style('stylered');
-	
-	if (get_option(wpl_css) == 'Orange' )
-	wp_register_style('stylered', get_template_directory_uri().'/images/orange/style.css', 'style', '','all');
-	wp_enqueue_style('stylered');
-	
-	if (get_option(wpl_css) == 'Green' )
-	wp_register_style('stylered', get_template_directory_uri().'/images/green/style.css', 'style', '','all');
-	wp_enqueue_style('stylered');
-
+	if (get_option('wpl_css') == 'Pink' ){
+		wp_register_style('stylered', get_template_directory_uri().'/images/pink/style.css', 'style', '','all');
+		wp_enqueue_style('stylered');
+	}
+	if (get_option('wpl_css') == 'Blue' ){
+		wp_register_style('stylered', get_template_directory_uri().'/images/blue/style.css', 'style', '','all');
+		wp_enqueue_style('stylered');
+	}
+	if (get_option('wpl_css') == 'Black' ){
+		wp_register_style('stylered', get_template_directory_uri().'/images/black/style.css', 'style', '','all');
+		wp_enqueue_style('stylered');
+	}
+	if (get_option('wpl_css') == 'Orange' ){
+		wp_register_style('stylered', get_template_directory_uri().'/images/orange/style.css', 'style', '','all');
+		wp_enqueue_style('stylered');
+	}
+	if (get_option('wpl_css') == 'Green' ){
+		wp_register_style('stylered', get_template_directory_uri().'/images/green/style.css', 'style', '','all');
+		wp_enqueue_style('stylered');
+	}
 
 	wp_register_style('oswald', 'http://fonts.googleapis.com/css?family=Oswald&amp;v2', 'style', '','all');
 	wp_enqueue_style('oswald');
 }
 
 function wplook_meta_description() {
-	if (is_home() ) {
-		if (get_option(wpl_meta_description) != '' )
-echo '<meta name="description" content="'.get_option('wpl_meta_description'). '" />';
+	if (is_home() && get_option('wpl_meta_description') != '') {
+		echo '<meta name="description" content="'.get_option('wpl_meta_description'). '" />';
 	}
 	
-if (is_single()){
-			$excerpt = get_the_excerpt();
-			$title = get_the_title();		
+	if (is_single()){
+		$excerpt = get_the_excerpt();
+		$title = get_the_title();		
 			if ($excerpt == '') 
-echo '<meta name="description" content="'.$title.'" />';
+				echo '<meta name="description" content="'.$title.'" />';
 
-		else 
-echo '<meta name="description" content="'.$excerpt.'" />';
-	}
+			else 
+				echo '<meta name="description" content="'.$excerpt.'" />';
+		}
 }
 
 // Located in header.php 
