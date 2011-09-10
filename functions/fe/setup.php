@@ -62,12 +62,6 @@ wp_create_nav_menu( 'WPLOOK Main Menu', array( 'slug' => 'primary' ) );
 			'thumbnail_url' => '%s/images/headers/ipad-thumbnail.jpg',
 			/* translators: header image description */
 			'description' => __( 'iPad', 'wplook' )
-		),
-		'trainstation' => array(
-			'url' => '%s/images/headers/trainstation.jpg',
-			'thumbnail_url' => '%s/images/headers/trainstation-thumbnails.jpg',
-			/* translators: header image description */
-			'description' => __( 'Train Station', 'wplook' )
 		)
 	) );
 
