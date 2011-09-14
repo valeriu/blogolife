@@ -43,7 +43,7 @@ wp_create_nav_menu( 'WPLOOK Main Menu', array( 'slug' => 'primary' ) );
 	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
 	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
 
-	// Added custom image sizes
+	// Add custom image sizes
 	add_image_size( 'large-feature', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true ); // Used for large feature (header) images
 	// Turn on random header image rotation by default.
 	add_theme_support( 'custom-header', array( 'random-default' => true ) );
