@@ -6,6 +6,7 @@
 * Removed some comments
 * Fixed Wplook Panel
 * Fixed Menu 
+* Added Changelog
 
 
 10.09.2011 - version 1.3
