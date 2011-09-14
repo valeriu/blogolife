@@ -111,10 +111,7 @@ endif; // wplook_header_style
 if ( ! function_exists( 'wplook_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
- *
  * Referenced via add_custom_image_header() in wplook_setup().
- *
- * @since Twenty Eleven 1.0
  */
 function wplook_admin_header_style() {
 ?>

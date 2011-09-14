@@ -43,6 +43,8 @@ if(	!is_admin()){
 
 	wp_register_style('oswald', 'http://fonts.googleapis.com/css?family=Oswald&amp;v2', 'style', '','all');
 	wp_enqueue_style('oswald');
+	
+	wp_enqueue_script( 'html5', 'http://html5shim.googlecode.com/svn/trunk/html5.js', '', '', '' );
 }
 
 function wplook_meta_description() {

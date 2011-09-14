@@ -1,10 +1,11 @@
+
 /*
 Theme Name: BlogoLife
 Theme URI: http://wplook.com/blogolife/
 Author: wplook
 Author URI: http://wplook.com/
 Description: BlogoLife is a simple and perfect theme for personal blogging that supports post formats, and several customization options. The custom background, custom header, and multiple color schemes gives you the possibility to adapt your blog as you wish.
-Version: 1.3
+Version: 1.4
 License: GNU General Public License
 License URI: license.txt
 Tags: black, blue, green, orange, pink, red, white, two-columns, right-sidebar, fixed-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, front-page-post-form, microformats, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blavatar
@@ -12,7 +13,64 @@ Tags: black, blue, green, orange, pink, red, white, two-columns, right-sidebar, 
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
  -------------------------------------------------------------- */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,figure,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+ins,
+kbd,
+q,
+s,
+samp,
+figure,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
 	border: 0;
 	font-family: inherit;
 	font-size: 100%;
@@ -108,9 +166,6 @@ body {
 	margin: 0px;
 }
 
-.social-icons {
-}
-
 .social-icons img {
 	margin: 0 20px 0 0;
 }
@@ -175,14 +230,14 @@ nav a:hover {
 nav ul {
 	list-style: none;
 	margin: 0px 0px;
-	padding: 9px 0;
-	min-height: 22px;
+	padding: 9px 0 0 0;
+	display: inline-block;
 }
 
 nav ul li {
 	float: left;
 	position: relative;
-	margin-right: 20px;
+	margin: 0 20px 5px 0;
 }
 
 nav ul ul {
@@ -244,10 +299,6 @@ nav ul li.current-menu-parent > a {
 #nav-below .nav-next {
 	margin-right: 10px;
 	padding: 9px 0;
-}
-
-/* header-image */
-#header-image {
 }
 
 /* --- --- [ Main ] --- --- */
@@ -706,10 +757,16 @@ input[type=text] {
 .home #content .category-gallery .entry-utility {
 	padding-top: 4px;
 }
+
 /* --- --- --- [ Images ] --- --- --- */
-img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, .widget-area img{
-max-width: 100%;
-height:auto;
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img {
+	max-width: 100%;
+	height:auto;
 }
 
 .alignleft,
@@ -897,7 +954,8 @@ img.aligncenter {
 }
 
 .comment-i a,
-.author-i a {
+.author-i a,
+.date-i a {
 	color: #666;
 	text-decoration: none;
 }

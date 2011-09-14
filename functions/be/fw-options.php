@@ -390,7 +390,7 @@ function wpl_admin() {
 		<div class="clear"></div>
 	</div>
 	<!-- end form -->
-</div>
+</div></div>
 
 
 

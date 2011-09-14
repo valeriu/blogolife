@@ -63,9 +63,7 @@
 		<!-- .entry-content -->
 		<?php endif; ?>
 		<footer class="entry-meta">
-			<div class="date-i fleft">
-				<?php the_time('F jS, Y') ?>
-			</div>
+			<div class="date-i fleft"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'wplook' ), the_title_attribute( 'echo=0' ) ); ?>" rel="nofollow"><?php the_time('F jS, Y') ?></a></div>
 			<div class="comment-i fleft">
 				<?php comments_popup_link( 'No comments yet', '1 comment', '% comments', 'comments-link', 'Comments are off');?>
 			</div>

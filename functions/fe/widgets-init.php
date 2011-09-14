@@ -19,6 +19,6 @@ function wplook_widgets_init() {
 	) );
 	
 }
-/** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */
+/** Register sidebars */
 add_action( 'widgets_init', 'wplook_widgets_init' );
 ?>
