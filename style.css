@@ -1374,7 +1374,7 @@ nav ul ul,
 .entry-title a:hover,
 #copy a:hover,
 .comment-i a:hover,
-.author-i a:hover,
+.author-i a:hover, .date-i a:hover,
 #recentcomments li:hover {
 	border-bottom:  1px dashed #b41423;
 }

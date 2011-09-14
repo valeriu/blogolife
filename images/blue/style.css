@@ -11,7 +11,7 @@ nav, nav ul ul, .postformat, .page-header, .widget-title {
 	background: transparent url(corners.png);
 }
 
-.entry-title a:hover, #copy a:hover, .comment-i a:hover, .author-i a:hover, #recentcomments li:hover  {
+.entry-title a:hover, #copy a:hover, .date-i a:hover, .comment-i a:hover, .author-i a:hover, #recentcomments li:hover  {
 	border-bottom:  1px dashed #3170c9;
 }
 .widget ul li a:hover {
