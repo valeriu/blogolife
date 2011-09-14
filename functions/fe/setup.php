@@ -26,10 +26,6 @@ function register_my_menus() {
 add_action( 'init', 'register_my_menus' );
 
 wp_create_nav_menu( 'WPLOOK Main Menu', array( 'slug' => 'primary' ) );
-	
-
-
-	// The next four constants set how Twenty Eleven supports custom headers.
 
 	// The default header text color
 	define( 'HEADER_TEXTCOLOR', '666' );
@@ -47,7 +43,7 @@ wp_create_nav_menu( 'WPLOOK Main Menu', array( 'slug' => 'primary' ) );
 	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
 	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
 
-	// Add Twenty Eleven's custom image sizes
+	// Added custom image sizes
 	add_image_size( 'large-feature', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true ); // Used for large feature (header) images
 	// Turn on random header image rotation by default.
 	add_theme_support( 'custom-header', array( 'random-default' => true ) );
@@ -72,8 +68,6 @@ endif;
 if ( ! function_exists( 'wplook_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
- *
- * @since Twenty Eleven 1.0
  */
 function wplook_header_style() {
 
@@ -159,7 +153,6 @@ if ( ! function_exists( 'wplook_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  * Referenced via add_custom_image_header() in wplook_setup().
- * via Twenty Eleven theme
  */
 function wplook_admin_header_image() { ?>
 	<div id="headimg">
