@@ -1,5 +1,8 @@
 *** BlogoLife Changelog ***
 
+17.09.2011 - version 1.5
+* Added information about featured images in readme.txt
+
 14.09.2011 - version 1.4
 * wp_head() was moved before the </head> tag
 * Enqueued HTML5 screept

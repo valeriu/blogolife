@@ -1,8 +1,13 @@
+Title*
 BlogoLife - Free HTML5 and CSS3 wordpress theme
 
+Description*
 BlogoLife is a simple and perfect theme for personal blogging that supports post formats, and several customization options. The custom background, custom header, and multiple color schemes gives you the possibility to adapt your blog as you wish.
 
-Theme Features:
+Information*
+Featured images will appearing as custom header images on posts and pages if size of image is more then 960x200px.
+
+Theme Features:*
 Post Format
 Multiple Color Schemes
 Custom Widgets
