@@ -67,12 +67,8 @@ function wplook_meta_description() {
 // Creates the content of the Title tag
 // Credits: Tarski Theme
 function thematic_doctitle() {
-					
-	if ( is_home() || is_front_page() ) { 
-	  $content = __('Latest posts', 'wplook'); 
-	}
 
-	elseif ( is_search() ) { 
+	if ( is_search() ) { 
 	  $content = __('Search Results for:', 'wplook'); 
 	  $content .= ' ' . esc_html(stripslashes(get_search_query()));
 	}
@@ -99,28 +95,17 @@ function thematic_doctitle() {
 	elseif ( is_tag() ) { 
 	  $content = __('Tag Archives:', 'wplook');
 	  $content .= ' ' . single_tag_title( '', false );
-	}
-	elseif (  is_singular()  || is_page() ) { 
-	  $content = ' ';
-	}
-
+	} 
+	
 	elseif ( is_404() ) { 
 	  $content = __('Not Found', 'wplook'); 
 	}
-	elseif (is_author() ) {
-		
-		$content = __('Posts by author', 'wplook');
-		$author =  get_the_author_meta( 'display_name' );
-		$content .= ' ' . $author;
-
-		}
-
 	
-	$elements = array(
-		'content' => $content
-	);
-	  
-   
+	else { 
+		$content = '';
+	}
+	
+	$elements = array("content" => $content);   
 
 	// Filters should return an array
 	$elements = apply_filters('thematic_doctitle', $elements);
@@ -133,11 +118,10 @@ function thematic_doctitle() {
 		  $doctitle = $elements;
 		}
 
-			if (is_singular() ) {
-			$doctitle = $doctitle;
-			}else {
-				$doctitle = "<header class=\"page-header\"><h1 class=\"page-title\">" . $doctitle . "</h1><div class=\"left-corner\"></div></header>";
-			}
+		if ( is_search() || is_category() || is_day() || is_month() || is_year() || is_tag() ) {
+			$doctitle = "<header class=\"page-header\"><h1 class=\"page-title\">" . $doctitle . "</h1><div class=\"left-corner\"></div></header>";
+		}
+		
 
 	echo $doctitle;
 

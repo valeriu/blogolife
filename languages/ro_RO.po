@@ -42,7 +42,7 @@ msgstr "&larr;  Precedente"
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
 msgstr "<span class=\"meta-nav\">&larr;</span> Comentarii mai vechi"
 
-#: functions/fe/setup.php:218
+#: functions/fe/setup.php:202
 #@ wplook
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Posturi mai vechi"
@@ -51,14 +51,14 @@ msgstr "<span class=\"meta-nav\">&larr;</span> Posturi mai vechi"
 #: inc-indexloop.php:25
 #@ wplook
 msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
-msgstr ""
+msgstr "Ne cerem scuze, dar nu au fost găsite rezultate pentru arhiva solicitat. Poate căutarea va ajuta găsi un post cu privire."
 
 #: sidebar.php:12
 #@ wplook
 msgid "Archives"
 msgstr "Arhiva"
 
-#: functions/fe/headerdata.php:80
+#: functions/fe/headerdata.php:77
 #@ wplook
 msgid "Category Archives:"
 msgstr "Posturi din categoria:"
@@ -93,18 +93,18 @@ msgstr "Comentariu"
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Citește mai departe <span class=\"meta-nav\">&rarr;</span>"
 
-#: functions/fe/headerdata.php:85
+#: functions/fe/headerdata.php:82
 #@ wplook
 msgid "Daily Archives:"
-msgstr ""
+msgstr "Arhiva de zi cu zi:"
 
-#: content-aside.php:25
-#: content-audio.php:53
-#: content-chat.php:41
-#: content-gallery.php:73
-#: content-page.php:54
-#: content-quote.php:50
-#: content.php:39
+#: content-aside.php:28
+#: content-audio.php:55
+#: content-chat.php:43
+#: content-gallery.php:71
+#: content-page.php:56
+#: content-quote.php:52
+#: content.php:41
 #: image.php:76
 #@ wplook
 msgid "Edit"
@@ -114,11 +114,6 @@ msgstr "Editează"
 #@ wplook
 msgid "Email"
 msgstr "Email"
-
-#: functions/fe/headerdata.php:71
-#@ wplook
-msgid "Latest posts"
-msgstr "Ultimile însemnări"
 
 #: functions/fe/comment.php:108
 #@ wplook
@@ -135,22 +130,17 @@ msgstr "Lasă un răspuns la %s"
 #, php-format
 #@ wplook
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
-msgstr ""
+msgstr "Conectat ca în <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Dezautentificare\\\">Dezautentificare?</a>"
 
 #: sidebar.php:21
 #@ wplook
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
-#: functions/fe/headerdata.php:90
+#: functions/fe/headerdata.php:87
 #@ wplook
 msgid "Monthly Archives:"
-msgstr ""
-
-#: footer.php:12
-#@ wplook
-msgid "My blog looks good because I use a theme from "
-msgstr "Blogul meu arată bine pentru că utilizez o themă de la "
+msgstr "Arhive lunare:"
 
 #: functions/fe/comment.php:90
 #@ wplook
@@ -160,19 +150,19 @@ msgstr "Nume"
 #: comments.php:20
 #@ wplook
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Comentarii mai noi <span class=\"meta-nav\">&rarr;</span>"
 
-#: functions/fe/setup.php:219
+#: functions/fe/setup.php:203
 #@ wplook
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Posturi mai noi <span class=\"meta-nav\">&rarr;</span>"
 
 #: image.php:88
 #@ wplook
 msgid "Next &rarr;"
-msgstr ""
+msgstr "Înainte &rarr;"
 
-#: functions/fe/headerdata.php:107
+#: functions/fe/headerdata.php:101
 #@ wplook
 msgid "Not Found"
 msgstr "Nu poate fi găsit"
@@ -180,13 +170,13 @@ msgstr "Nu poate fi găsit"
 #: inc-indexloop.php:23
 #@ wplook
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nimic găsit"
 
 #: image.php:26
 #, php-format
 #@ wplook
 msgid "Original size: <a target=\"_blank\" href=\"%1$s\" title=\"Link to full-size image\">%2$s &times; %3$s</a> in <a href=\"%4$s\" title=\"Return to %5$s\" rel=\"gallery\">%5$s</a>"
-msgstr ""
+msgstr "Dimensiunea originală:  <a target=\"_blank\" href=\"%1$s\" title=\"Legătură către dimensiunea originală\">%2$s &times; %3$s</a> in <a href=\"%4$s\" title=\"Revin-o la %5$s\" rel=\"gallery\">%5$s</a>"
 
 #: header.php:29
 #, php-format
@@ -211,64 +201,61 @@ msgstr "Pagina %s"
 msgid "Pages:"
 msgstr "Pagini"
 
+#: content-aside.php:22
 #: content-audio.php:19
+#: content-audio.php:50
 #: content-chat.php:13
+#: content-chat.php:38
 #: content-gallery.php:19
 #: content-gallery.php:56
+#: content-gallery.php:66
 #: content-page.php:25
+#: content-page.php:51
 #: content-quote.php:19
+#: content-quote.php:47
 #: content.php:12
+#: content.php:36
 #: image.php:22
 #, php-format
 #@ wplook
 msgid "Permalink to %s"
-msgstr ""
+msgstr "Legătură permanentă către %s"
 
 #: functions/fe/comment.php:65
 #@ wplook
 msgid "Pingback/Trackback"
-msgstr ""
-
-#: functions/fe/headerdata.php:111
-#@ wplook
-msgid "Posts by author"
-msgstr ""
-
-#: footer.php:12
-#@ wplook
-msgid "Premium Wordpress Themes that looks good"
-msgstr "Premium Wordpress Themes care arată bine"
+msgstr "Pingback/Trackback"
 
 #: footer.php:12
 #@ wplook
 msgid "Proudly powered by"
-msgstr ""
+msgstr "Cu inimă de"
 
 #: functions/fe/comment.php:98
 #, php-format
 #@ wplook
 msgid "Required fields are marked %s"
-msgstr ""
+msgstr "Câmpurile obligatorii sunt marcate cu %s"
 
 #: functions/fe/widgets-init.php:12
 #@ wplook
 msgid "RightSideBar"
 msgstr "ParteaDreaptă"
 
-#: functions/fe/headerdata.php:75
+#: functions/fe/headerdata.php:72
 #@ wplook
 msgid "Search Results for:"
-msgstr ""
+msgstr "Rezultatele cautarii pentru:"
 
 #: functions/fe/comment.php:111
 #@ wplook
 msgid "Send Comment"
 msgstr "Trimite comentariu"
 
-#: functions/fe/headerdata.php:99
+#: functions/fe/headerdata.php:96
 #@ wplook
 msgid "Tag Archives:"
-msgstr ""
+msgstr "Arhiva Etichetelor:"
 
 #: content-audio.php:36
 #: content-chat.php:26
@@ -283,18 +270,12 @@ msgstr "Etichete:"
 #: comments.php:11
 #@ wplook
 msgid "This post is password protected. Enter the password to view any comments."
-msgstr ""
-
-#. translators: header image description
-#: functions/fe/setup.php:70
-#@ wplook
-msgid "Train Station"
-msgstr "Stație de trenuri"
+msgstr "Acest post este protejat de parolă. Introduceţi parola pentru a vizualiza vreun comentariu."
 
 #: functions/fe/setup.php:22
 #@ wplook
 msgid "WPLOOK Main Navigation"
-msgstr ""
+msgstr "WPLOOK Navigarea principala"
 
 #: functions/fe/comment.php:94
 #@ wplook
@@ -304,28 +285,28 @@ msgstr "Site web"
 #: functions/fe/widgets-init.php:14
 #@ wplook
 msgid "Widgets in this area will be shown on the right-hand side."
-msgstr ""
+msgstr "Widget-uri în acestă locație vor fi vizibile pe partea dreaptă."
 
 #: footer.php:12
 #@ wplook
 msgid "WordPress"
 msgstr "WordPress"
 
-#: functions/fe/headerdata.php:94
+#: functions/fe/headerdata.php:91
 #@ wplook
 msgid "Yearly Archives:"
-msgstr ""
+msgstr "Arhiva anuală:"
 
 #: functions/fe/comment.php:102
 #, php-format
 #@ wplook
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr ""
+msgstr "Trebuie să fii <a href=\\\"%s\\\">autentificat</a> pentru a posta un comentariu."
 
 #: functions/fe/comment.php:30
 #@ wplook
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Comentariul tău este pus în coada de aşteptare pentru a fi moderat."
 
 #: functions/fe/comment.php:104
 #@ wplook
@@ -333,7 +314,7 @@ msgid "Your email address will not be published."
 msgstr "Adresa email nu va fi publică."
 
 #. translators: header image description
-#: functions/fe/setup.php:64
+#: functions/fe/setup.php:60
 #@ wplook
 msgid "iPad"
 msgstr "iPad"
@@ -341,7 +322,7 @@ msgstr "iPad"
 #: functions/fe/comment.php:110
 #@ wplook
 msgid "or Cancel reply"
-msgstr ""
+msgstr "sau Renunță"
 
 #: comments.php:15
 #, php-format
@@ -359,38 +340,48 @@ msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
 msgstr[0] "Aceasta galerie conține <a %1$s>% 2 $ s fotografie</a> ."
 msgstr[1] "Aceasta galerie conține <a %1$s>% 2 $ s fotografii</a> ."
 
-#: functions/be/fw-options.php:348
+#: functions/be/fw-options.php:353
 #@ wplook
 msgid "settings reset."
-msgstr ""
+msgstr "Resetare setări."
 
 #: functions/be/fw-setup.php:16
 #@ wplook
 msgid "wplook Panel"
-msgstr ""
+msgstr "wplook Panel"
 
 #: functions/be/fw-setup.php:22
 #@ wplook
 msgid "BlogoLife Options"
-msgstr ""
+msgstr "BlogoLife opțiuni"
 
 #: functions/be/fw-setup.php:28
 #@ wplook
 msgid "wplook Themes"
-msgstr ""
+msgstr "Teme wplook"
 
 #: functions/be/fw-setup.php:34
 #@ wplook
 msgid "wplook News"
-msgstr ""
+msgstr "Știrile wplook"
 
 #: functions/be/fw-setup.php:40
 #@ wplook
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: functions/be/fw-setup.php:46
 #@ wplook
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
+
+#: footer.php:12
+#@ wplook
+msgid "Design by "
+msgstr "Creat de"
+
+#: footer.php:12
+#@ wplook
+msgid "wplook"
+msgstr "wplook"
 

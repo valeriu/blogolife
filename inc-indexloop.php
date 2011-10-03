@@ -7,9 +7,9 @@
  * @since BlogoLife 1.0
  */
 ?>
-<section class="primary">
+<div class="primary">
 	<div id="content">
-	<?php thematic_doctitle();?>
+	<?php thematic_doctitle(); ?>
 <?php if ( have_posts() ) : ?>
 	<?php /* Start the Loop */ ?>
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -28,4 +28,4 @@
 	</article><!-- #post-0 -->
 <?php endif; ?>
 </div><!-- #content -->
-</section><!-- #primary -->
+</div><!-- #primary -->

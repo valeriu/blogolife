@@ -80,25 +80,32 @@ msgstr "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgid "Pages:"
 msgstr "Pages:"
 
-#: content-aside.php:25
-#: content-audio.php:53
-#: content-chat.php:41
-#: content-gallery.php:73
-#: content-page.php:54
-#: content-quote.php:50
-#: content.php:39
+#: content-aside.php:28
+#: content-audio.php:55
+#: content-chat.php:43
+#: content-gallery.php:71
+#: content-page.php:56
+#: content-quote.php:52
+#: content.php:41
 #: image.php:76
 #@ wplook
 msgid "Edit"
 msgstr "Edit"
 
+#: content-aside.php:22
 #: content-audio.php:19
+#: content-audio.php:50
 #: content-chat.php:13
+#: content-chat.php:38
 #: content-gallery.php:19
 #: content-gallery.php:56
+#: content-gallery.php:66
 #: content-page.php:25
+#: content-page.php:51
 #: content-quote.php:19
+#: content-quote.php:47
 #: content.php:12
+#: content.php:36
 #: image.php:22
 #, php-format
 #@ wplook
@@ -143,17 +150,7 @@ msgstr "Proudly powered by"
 msgid "WordPress"
 msgstr "WordPress"
 
-#: footer.php:12
-#@ wplook
-msgid "My blog looks good because I use a theme from "
-msgstr "My blog looks good because I use a theme from "
-
-#: footer.php:12
-#@ wplook
-msgid "Premium Wordpress Themes that looks good"
-msgstr "Premium Wordpress Themes that looks good"
-
-#: functions/be/fw-options.php:348
+#: functions/be/fw-options.php:353
 #@ wplook
 msgid "settings reset."
 msgstr "settings reset."
@@ -275,50 +272,40 @@ msgstr "or Cancel reply"
 msgid "Send Comment"
 msgstr "Send Comment"
 
-#: functions/fe/headerdata.php:71
-#@ wplook
-msgid "Latest posts"
-msgstr "Latest posts"
-
-#: functions/fe/headerdata.php:75
+#: functions/fe/headerdata.php:72
 #@ wplook
 msgid "Search Results for:"
 msgstr "Search Results for:"
 
-#: functions/fe/headerdata.php:80
+#: functions/fe/headerdata.php:77
 #@ wplook
 msgid "Category Archives:"
 msgstr "Category Archives:"
 
-#: functions/fe/headerdata.php:85
+#: functions/fe/headerdata.php:82
 #@ wplook
 msgid "Daily Archives:"
 msgstr "Daily Archives:"
 
-#: functions/fe/headerdata.php:90
+#: functions/fe/headerdata.php:87
 #@ wplook
 msgid "Monthly Archives:"
 msgstr "Monthly Archives:"
 
-#: functions/fe/headerdata.php:94
+#: functions/fe/headerdata.php:91
 #@ wplook
 msgid "Yearly Archives:"
 msgstr "Yearly Archives:"
 
-#: functions/fe/headerdata.php:99
+#: functions/fe/headerdata.php:96
 #@ wplook
 msgid "Tag Archives:"
 msgstr "Tag Archives:"
 
-#: functions/fe/headerdata.php:107
+#: functions/fe/headerdata.php:101
 #@ wplook
 msgid "Not Found"
 msgstr "Not Found"
-
-#: functions/fe/headerdata.php:111
-#@ wplook
-msgid "Posts by author"
-msgstr "Posts by author"
 
 #: functions/fe/setup.php:22
 #@ wplook
@@ -326,23 +313,17 @@ msgid "WPLOOK Main Navigation"
 msgstr "WPLOOK Main Navigation"
 
 #. translators: header image description
-#: functions/fe/setup.php:64
+#: functions/fe/setup.php:60
 #@ wplook
 msgid "iPad"
 msgstr "iPad"
 
-#. translators: header image description
-#: functions/fe/setup.php:70
-#@ wplook
-msgid "Train Station"
-msgstr "Train Station"
-
-#: functions/fe/setup.php:218
+#: functions/fe/setup.php:202
 #@ wplook
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr "<span class=\"meta-nav\">&larr;</span> Older posts"
 
-#: functions/fe/setup.php:219
+#: functions/fe/setup.php:203
 #@ wplook
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Newer posts <span class=\"meta-nav\">&rarr;</span>"
@@ -393,4 +374,14 @@ msgstr "Archives"
 #@ wplook
 msgid "Meta"
 msgstr "Meta"
+
+#: footer.php:12
+#@ wplook
+msgid "Design by "
+msgstr "Design by "
+
+#: footer.php:12
+#@ wplook
+msgid "wplook"
+msgstr "wplook"
 

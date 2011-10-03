@@ -102,8 +102,8 @@ array( "name" => "tab_content_1",
 		"type" => "heading",
 		"icon" => "layout"),
 	
-	array( "name" => "Theme Stylesheet",
-		"desc" => "Select your themes color.",
+	array( "name" => "Color scheme",
+		"desc" => "Select your theme color.",
 		"id" => $shortname."_css",
 		"std" => "",
 		"class" => "hidden",
@@ -115,6 +115,15 @@ array( "name" => "tab_content_1",
 							'f' => 'Green'),
 		"type" => "select"),
 	
+	array( "name" => "Main Navigation",
+		"desc" => "Set the main navigation to be visible or not",
+		"id" => $shortname."_menu",
+		"std" => "",
+		"class" => "hidden",
+		"options" => array(	'a' => 'Display',
+							'b' => 'Hide'),
+		"type" => "select"),
+		
 	array( "name" => "<img src='$be_pathimages/icons/rss.png' />RSS",
 		"desc" => "Url of your RSS. You may include your RSS from Feedburner",
 		"id" => $shortname."_rss",
@@ -356,7 +365,7 @@ function wpl_admin() {
 
 		<!-- [ Top Menu ]-->
 		<div class="top_menu_fm">
-			<a title="Product help and support center" target="_blank" class="support_fm" href="http://wplook.com/support">Support</a>
+			<a title="Product help and support center" target="_blank" class="support_fm" href="http://wordpress.org/tags/blogolife?forum_id=5">Support</a>
 		</div>
 
 

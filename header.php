@@ -46,11 +46,9 @@ foreach ($options as $value) {
 	<h2 id="site-description"><?php bloginfo('description'); ?></h2>
 </hgroup>
 <div class="header-desc fright"><p><?php echo stripslashes($wpl_header_desc); ?></p></div>
-
+<div class="clear"></div>
 <div class="social-icons fright">
-<?php if ($wpl_rss != '') { ?>
-<a href="<?php echo $wpl_rss; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/rss.png" width="22" height="22" alt="<?php echo $wpl_rss; ?>" /></a>
-<?php } ?>
+
 <?php if ($wpl_twitter != '') { ?>
 <a href="<?php echo $wpl_twitter; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/twitter.png" width="22" height="22" alt="<?php echo $wpl_twitter; ?>" /></a>
 <?php } ?>
@@ -83,14 +81,19 @@ foreach ($options as $value) {
 <?php if ($wpl_dribbble != '') {	?>
 <a href="<?php echo $wpl_dribbble; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/dribbble.png" width="22" height="22" alt="<?php echo $wpl_dribbble; ?>" /></a>
 <?php } ?>
+<?php if ($wpl_rss != '') { ?>
+<a href="<?php echo $wpl_rss; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/rss.png" width="22" height="22" alt="<?php echo $wpl_rss; ?>" /></a>
+<?php } ?>
 </div><div class="clear"></div>
 </header>
 
+<?php if ($wpl_menu == 'Display') { ?>
 <nav>
 	<?php wp_nav_menu( array('depth' => '3', 'theme_location' => 'primary' )); ?>
 	<div class="left-corner"></div>
 	<div class="right-corner"></div>
 </nav>
+<?php } ?>
 <div id="header-image">
 			
 <?php

@@ -1,5 +1,14 @@
 *** BlogoLife Changelog ***
 
+1.10.2011 – version 1.6
+* Added additional option to show/hide Main Navigation
+* Added translation for German (Thanks Erik Krämer http://webmaster-zentrale.de), French (Thanks Diana http://adpixel.eu) and Romanian
+* Fixed Latest Post Title on home page
+* Fixed Comments off
+* Fixed header design
+* Fixed footer design 
+* Changed url for support page  
+
 17.09.2011 - version 1.5
 * Added information about featured images in readme.txt
 
@@ -10,7 +19,6 @@
 * Fixed Wplook Panel
 * Fixed Menu 
 * Added Changelog
-
 
 10.09.2011 - version 1.3
 * Fixing Debugging
