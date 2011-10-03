@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BlogoLife v1.6\n"
+"Project-Id-Version: BlogoLife v1.0 - Spanish\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2011-09-30 20:36+0000\n"
-"Last-Translator: valeriu <valeriu@tihai.md>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2011-09-30 20:41+0100\n"
+"Last-Translator: Avería <otraboladecristal@gmail.com>\n"
+"Language-Team: La otra bola de cristal <Avería>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,30 +23,30 @@ msgstr ""
 #: inc-indexloop.php:25
 #@ wplook
 msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
-msgstr ""
+msgstr "Lo siento pero el archivo que buscas no existe. Prueba de nuevo con otras palabras"
 
 #: comments.php:11
 #@ wplook
 msgid "This post is password protected. Enter the password to view any comments."
-msgstr ""
+msgstr "Esta entrada está protegida con contraseña. Introduce la contraseña para ver los comentarios."
 
 #: comments.php:15
 #, php-format
 #@ wplook
 msgid "One Response"
 msgid_plural "%1$s Responses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "1 comentario"
+msgstr[1] "%1$s Comentarios"
 
 #: comments.php:19
 #@ wplook
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> Comentarios antiguos"
 
 #: comments.php:20
 #@ wplook
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Comentarios recientes <span class=\"meta-nav\">&rarr;</span>"
 
 #: content-aside.php:18
 #: content-audio.php:28
@@ -61,7 +61,7 @@ msgstr ""
 #: content.php:30
 #@ wplook
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Si te interesa, sigue leyendo... <span class=\"meta-nav\">&rarr;</span>"
 
 #: content-aside.php:19
 #: content-audio.php:29
@@ -79,6 +79,18 @@ msgstr ""
 #@ wplook
 msgid "Pages:"
 msgstr "Páginas:"
+
+#: content-aside.php:28
+#: content-audio.php:55
+#: content-chat.php:43
+#: content-gallery.php:71
+#: content-page.php:56
+#: content-quote.php:52
+#: content.php:41
+#: image.php:76
+#@ wplook
+msgid "Edit"
+msgstr "Editar"
 
 #: content-aside.php:22
 #: content-audio.php:19
@@ -98,19 +110,7 @@ msgstr "Páginas:"
 #, php-format
 #@ wplook
 msgid "Permalink to %s"
-msgstr ""
-
-#: content-aside.php:28
-#: content-audio.php:55
-#: content-chat.php:43
-#: content-gallery.php:71
-#: content-page.php:56
-#: content-quote.php:52
-#: content.php:41
-#: image.php:76
-#@ wplook
-msgid "Edit"
-msgstr "Editar"
+msgstr "Enlace a... %s"
 
 #: content-audio.php:33
 #: content-chat.php:23
@@ -120,7 +120,7 @@ msgstr "Editar"
 #: content.php:23
 #@ wplook
 msgid "Category:"
-msgstr ""
+msgstr "Categoría:"
 
 #: content-audio.php:36
 #: content-chat.php:26
@@ -130,60 +130,50 @@ msgstr ""
 #: content.php:24
 #@ wplook
 msgid "Tag:"
-msgstr ""
+msgstr "Etiquetas:"
 
 #: content-gallery.php:56
 #, php-format
 #@ wplook
 msgid "This gallery contains <a %1$s>%2$s photo</a>."
 msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "La galería contiene <a %1$s>%2$s imagen</a>."
+msgstr[1] "La galería contiene <a %1$s>%2$s imágenes</a>."
 
 #: footer.php:12
 #@ wplook
 msgid "Proudly powered by"
-msgstr ""
+msgstr "Gestionado con"
 
 #: footer.php:12
 #@ wplook
 msgid "WordPress"
-msgstr ""
-
-#: footer.php:12
-#@ wplook
-msgid "Design by "
-msgstr ""
-
-#: footer.php:12
-#@ wplook
-msgid "wplook"
-msgstr "wplook"
+msgstr "WordPress"
 
 #: functions/be/fw-options.php:353
 #@ wplook
 msgid "settings reset."
-msgstr ""
+msgstr "Resetear propiedades."
 
 #: functions/be/fw-setup.php:16
 #@ wplook
 msgid "wplook Panel"
-msgstr ""
+msgstr "wplook Panel"
 
 #: functions/be/fw-setup.php:22
 #@ wplook
 msgid "BlogoLife Options"
-msgstr ""
+msgstr "BlogoLife Opciones"
 
 #: functions/be/fw-setup.php:28
 #@ wplook
 msgid "wplook Themes"
-msgstr ""
+msgstr "wplook Temas"
 
 #: functions/be/fw-setup.php:34
 #@ wplook
 msgid "wplook News"
-msgstr ""
+msgstr "wplook Noticias"
 
 #: functions/be/fw-setup.php:40
 #@ wplook
@@ -199,19 +189,19 @@ msgstr "Twitter"
 #, php-format
 #@ wplook
 msgid "%s <span class=\"says\">says:</span>"
-msgstr ""
+msgstr "%s <span class=\"says\">comentó:</span>"
 
 #: functions/fe/comment.php:30
 #@ wplook
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Comentario pendiente de aprobar."
 
 #. translators: 1: date, 2: time
 #: functions/fe/comment.php:40
 #, php-format
 #@ wplook
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s - %2$s"
 
 #: functions/fe/comment.php:65
 #@ wplook
@@ -226,162 +216,172 @@ msgstr "Nombre"
 #: functions/fe/comment.php:92
 #@ wplook
 msgid "Email"
-msgstr "E-mail"
+msgstr "Email"
 
 #: functions/fe/comment.php:94
 #@ wplook
 msgid "Website"
-msgstr "Sitio web"
+msgstr "Web"
 
 #: functions/fe/comment.php:98
 #, php-format
 #@ wplook
 msgid "Required fields are marked %s"
-msgstr ""
+msgstr "Los campos obligatorios están marcados con %s"
 
 #: functions/fe/comment.php:101
 #@ wplook
 msgid "Comment"
-msgstr "Comentario"
+msgstr "Tu comentario"
 
 #: functions/fe/comment.php:102
 #, php-format
 #@ wplook
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr ""
+msgstr "Debes estar <a href=\"%s\">registrado</a> para dejar un comentario."
 
 #: functions/fe/comment.php:103
 #, php-format
 #@ wplook
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
-msgstr ""
+msgstr "Logueado como <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Salir de esta cuenta\">Estás seguro que quieres salir?</a>"
 
 #: functions/fe/comment.php:104
 #@ wplook
 msgid "Your email address will not be published."
-msgstr ""
+msgstr "Tu dirección de correo no será publicada."
 
 #: functions/fe/comment.php:108
 #@ wplook
 msgid "Leave a Comment"
-msgstr ""
+msgstr "¿Algo que añadir?"
 
 #: functions/fe/comment.php:109
 #, php-format
 #@ wplook
 msgid "Leave a Reply to %s"
-msgstr ""
+msgstr "Deja un comentario %s"
 
 #: functions/fe/comment.php:110
 #@ wplook
 msgid "or Cancel reply"
-msgstr ""
+msgstr "o cancela tu respuesta"
 
 #: functions/fe/comment.php:111
 #@ wplook
 msgid "Send Comment"
-msgstr ""
+msgstr "Enviar"
 
 #: functions/fe/headerdata.php:72
 #@ wplook
 msgid "Search Results for:"
-msgstr ""
+msgstr "Resultados de la búsqueda para:"
 
 #: functions/fe/headerdata.php:77
 #@ wplook
 msgid "Category Archives:"
-msgstr ""
+msgstr "Archivos de la categoría:"
 
 #: functions/fe/headerdata.php:82
 #@ wplook
 msgid "Daily Archives:"
-msgstr ""
+msgstr "Archivo diario:"
 
 #: functions/fe/headerdata.php:87
 #@ wplook
 msgid "Monthly Archives:"
-msgstr ""
+msgstr "Archivo mensual:"
 
 #: functions/fe/headerdata.php:91
 #@ wplook
 msgid "Yearly Archives:"
-msgstr ""
+msgstr "Archivo anual:"
 
 #: functions/fe/headerdata.php:96
 #@ wplook
 msgid "Tag Archives:"
-msgstr ""
+msgstr "Archivo de la etiqueta:"
 
 #: functions/fe/headerdata.php:101
 #@ wplook
 msgid "Not Found"
-msgstr ""
+msgstr "No encontrado"
 
 #: functions/fe/setup.php:22
 #@ wplook
 msgid "WPLOOK Main Navigation"
-msgstr ""
+msgstr "WPLOOK Menú"
 
 #. translators: header image description
 #: functions/fe/setup.php:60
 #@ wplook
 msgid "iPad"
-msgstr ""
+msgstr "iPad"
 
 #: functions/fe/setup.php:202
 #@ wplook
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> Entradas antiguas"
 
 #: functions/fe/setup.php:203
 #@ wplook
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Entradas recientes <span class=\"meta-nav\">&rarr;</span>"
 
 #: functions/fe/widgets-init.php:12
 #@ wplook
 msgid "RightSideBar"
-msgstr ""
+msgstr "Barra lateral derecha"
 
 #: functions/fe/widgets-init.php:14
 #@ wplook
 msgid "Widgets in this area will be shown on the right-hand side."
-msgstr ""
+msgstr "Los widgets de este área de mostrarán a la derecha."
 
 #: header.php:29
 #, php-format
 #@ wplook
 msgid "Page %s"
-msgstr ""
+msgstr "Página %s"
 
 #: image.php:26
 #, php-format
 #@ wplook
 msgid "Original size: <a target=\"_blank\" href=\"%1$s\" title=\"Link to full-size image\">%2$s &times; %3$s</a> in <a href=\"%4$s\" title=\"Return to %5$s\" rel=\"gallery\">%5$s</a>"
-msgstr ""
+msgstr "Tamaño origial: <a target=\"_blank\" href=\"%1$s\" title=\"Tamaño compelto\">%2$s &times; %3$s</a> en <a href=\"%4$s\" title=\"Volver a la %5$s\" rel=\"galería\">%5$s</a>"
 
 #: image.php:87
 #@ wplook
 msgid "&larr; Previous"
-msgstr ""
+msgstr "&larr; Atrás"
 
 #: image.php:88
 #@ wplook
 msgid "Next &rarr;"
-msgstr ""
+msgstr "Siguiente &rarr;"
 
 #: inc-indexloop.php:23
 #@ wplook
 msgid "Nothing Found"
-msgstr ""
+msgstr "No encontrado"
 
 #: sidebar.php:12
 #@ wplook
 msgid "Archives"
-msgstr ""
+msgstr "Archivos"
 
 #: sidebar.php:21
 #@ wplook
 msgid "Meta"
 msgstr "Meta"
+
+#: footer.php:12
+#@ wplook
+msgid "Design by "
+msgstr "Diseño por"
+
+#: footer.php:12
+#@ wplook
+msgid "wplook"
+msgstr "wplook"
 

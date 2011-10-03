@@ -2,7 +2,11 @@
 
 1.10.2011 – version 1.6
 * Added additional option to show/hide Main Navigation
-* Added translation for German (Thanks Erik Krämer http://webmaster-zentrale.de), French (Thanks Diana http://adpixel.eu) and Romanian
+* Added translation for:
+		German (Thanks Erik Krämer http://webmaster-zentrale.de );
+		French (Thanks Diana http://adpixel.eu )
+		Spanish (Thanks Avería http://laotraboladecristal.com )
+		Romanian (Thanks Valeriu Tihai http://valeriu.tihai.md )
 * Fixed Latest Post Title on home page
 * Fixed Comments off
 * Fixed header design

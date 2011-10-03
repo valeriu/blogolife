@@ -27,6 +27,6 @@ Theme Translation:
 French – Diana http://adpixel.eu
 German – Erik Krämer http://webmaster-zentrale.de
 Romanian – Valeriu Tihai http://valeriu.tihai.md
-espanol http://laotraboladecristal.com
+Spanish – Avería http://laotraboladecristal.com
 
 Follow Theme Updates at http://wplook.com/blogolife
