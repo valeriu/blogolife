@@ -66,7 +66,7 @@ function wplook_meta_description() {
 // Located in header.php 
 // Creates the content of the Title tag
 // Credits: Tarski Theme
-function thematic_doctitle() {
+function wplook_doctitle() {
 
 	if ( is_search() ) { 
 	  $content = __('Search Results for:', 'wplook'); 
@@ -108,7 +108,7 @@ function thematic_doctitle() {
 	$elements = array("content" => $content);   
 
 	// Filters should return an array
-	$elements = apply_filters('thematic_doctitle', $elements);
+	$elements = apply_filters('wplook_doctitle', $elements);
 	
 	// But if they don't, it won't try to implode
 		if(is_array($elements)) {

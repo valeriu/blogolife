@@ -220,8 +220,8 @@ function wplook_get_author() { ?>
  * Display feed in dashboard
  */
 
-add_action('wp_dashboard_setup', 'my_dashboard_widgets');
-function my_dashboard_widgets() {
+add_action('wp_dashboard_setup', 'wplook_dashboard_widgets');
+function wplook_dashboard_widgets() {
 	global $wp_meta_boxes;
 	unset(
 		$wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins'],

@@ -24,9 +24,9 @@ Threaded Comments
 Gravatar ready
 
 Theme Translation:
-French ñ Diana http://adpixel.eu
-German ñ Erik Kr‰mer http://webmaster-zentrale.de
-Romanian ñ Valeriu Tihai http://valeriu.tihai.md
-Spanish ñ AverÌa http://laotraboladecristal.com
+French - Diana http://adpixel.eu
+German - Erik Kr√§mer http://webmaster-zentrale.de
+Romanian - Valeriu Tihai http://valeriu.tihai.md
+Spanish - Aver√≠a http://laotraboladecristal.com
 
 Follow Theme Updates at http://wplook.com/blogolife

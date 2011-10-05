@@ -9,7 +9,7 @@
 ?>
 <div class="primary">
 	<div id="content">
-	<?php thematic_doctitle(); ?>
+	<?php wplook_doctitle(); ?>
 <?php if ( have_posts() ) : ?>
 	<?php /* Start the Loop */ ?>
 	<?php while ( have_posts() ) : the_post(); ?>
