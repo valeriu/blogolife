@@ -8,6 +8,7 @@
  */
 ?>
 <a name="comments"></a>
+<?php if ( comments_open() ) : ?>
 <div class="comments"><?php if ( post_password_required() ) : ?><p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'wplook' ); ?></p></div>
 <!-- #comments -->
 <?php 	return; 	endif; ?>
@@ -21,6 +22,7 @@
 	<div class="left-corner"></div>
 	<div class="clear"></div>
 </nav>
+ <?php endif; ?>
  
 <!-- .navigation -->
 <?php endif; // check for comment navigation ?>
