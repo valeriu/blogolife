@@ -130,7 +130,7 @@ msgstr "Lasă un răspuns la %s"
 #, php-format
 #@ wplook
 msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
-msgstr "Conectat ca în <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Dezautentificare\\\">Dezautentificare?</a>"
+msgstr "Conectat ca <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Dezautentificare\">Dezautentificare?</a>"
 
 #: sidebar.php:21
 #@ wplook
@@ -275,7 +275,7 @@ msgstr "Acest post este protejat de parolă. Introduceţi parola pentru a vizual
 #: functions/fe/setup.php:22
 #@ wplook
 msgid "WPLOOK Main Navigation"
-msgstr "WPLOOK Navigarea principala"
+msgstr "WPLOOK Navigare principală"
 
 #: functions/fe/comment.php:94
 #@ wplook
@@ -301,7 +301,7 @@ msgstr "Arhiva anuală:"
 #, php-format
 #@ wplook
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
-msgstr "Trebuie să fii <a href=\\\"%s\\\">autentificat</a> pentru a posta un comentariu."
+msgstr "Trebuie să fii <a href=\"%s\">autentificat</a> pentru a posta un comentariu."
 
 #: functions/fe/comment.php:30
 #@ wplook
