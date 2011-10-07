@@ -1,4 +1,6 @@
 *** BlogoLife Changelog ***
+7.10.2011 - version 1.8
+* Fixed 404 page
 
 7.10.2011 - version 1.7
 * Fixed menu
