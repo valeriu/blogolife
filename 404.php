@@ -10,7 +10,7 @@ get_header(); ?>
 
 <section class="primary">
 <div id="content">
-	<?php thematic_doctitle();?>
+	<?php wplook_doctitle();?>
 <article id="post-0" class="post no-results not-found">
 	<div class="col1 fleft">
 	<div class="postformat"><div class="format-icon"></div><div class="left-corner"></div></div></div>
