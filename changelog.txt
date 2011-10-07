@@ -1,5 +1,10 @@
 *** BlogoLife Changelog ***
 
+7.10.2011 - version 1.7
+* Fixed menu
+* Fixed header image
+* Fixed search
+
 1.10.2011 - version 1.6
 * Added additional option to show/hide Main Navigation
 * Added translation for:

@@ -87,15 +87,14 @@ foreach ($options as $value) {
 </div><div class="clear"></div>
 </header>
 
-<?php if ($wpl_menu == 'Display') { ?>
+<?php if ($wpl_menu == '' || $wpl_menu == 'Display') { ?>
 <nav>
 	<?php wp_nav_menu( array('depth' => '3', 'theme_location' => 'primary' )); ?>
 	<div class="left-corner"></div>
 	<div class="right-corner"></div>
 </nav>
 <?php } ?>
-<div id="header-image">
-			
+<div id="header-image">	
 <?php
 				//Code from 2011 theme by wordpress theme team
 				//Check to see if the header image has been removed
@@ -112,17 +111,13 @@ foreach ($options as $value) {
 						// Houston, we have a new header image!
 						echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
 					else : ?>
-					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 				<?php endif; // end check for featured image or standard header ?>
 			</a>
 			<?php endif; // end check for removed header image ?>
-
-			<?php
-				// Has the text been hidden?
+			<?php // Has the text been hidden?
 				if ( 'blank' == get_header_textcolor() ) :
 			?>
-
 <?php endif; ?>
-
 </div>
 <div id="main">
