@@ -118,7 +118,7 @@ function wplook_doctitle() {
 		  $doctitle = $elements;
 		}
 
-		if ( is_search() || is_category() || is_day() || is_month() || is_year() || is_tag() ) {
+		if ( is_search() || is_category() || is_day() || is_month() || is_year() || is_404() || is_tag() ) {
 			$doctitle = "<header class=\"page-header\"><h1 class=\"page-title\">" . $doctitle . "</h1><div class=\"left-corner\"></div></header>";
 		}
 		
