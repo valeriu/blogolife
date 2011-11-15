@@ -1,6 +1,6 @@
 *** BlogoLife Changelog ***
 
-15.11.2011 - version 1.8
+15.11.2011 - version 1.9
 * Fixed 
  	* menu for IE9
  	* Margins for paragraphs
