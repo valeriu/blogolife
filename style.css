@@ -317,6 +317,13 @@ article {
 	line-height: 35px;
 	padding: 10px 20px 20px 10px;
 }
+blockquote {
+	background: #f8f8f8 url(images/q.png) bottom right no-repeat;
+	font-size: 19px;
+	font-style: italic;
+	line-height: 35px;
+	padding: 10px 20px 20px 10px;
+}
 .entry-header {
 	background: transparent url(images/entry-header.png) top left repeat-x;
 	border-bottom:  1px solid #c5d1d9;
@@ -343,6 +350,7 @@ article {
 }
 .entry-content p {
 	line-height:25px;
+	margin-bottom: 10px;
 }
 .entry-content b, .entry-content strong {
 	font-weight: bold;

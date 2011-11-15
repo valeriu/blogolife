@@ -1,11 +1,20 @@
 *** BlogoLife Changelog ***
+
+15.11.2011 - version 1.8
+* Fixed 
+ 	* menu for IE9
+ 	* Margins for paragraphs
+	* blockquote for Standard format
+
 7.10.2011 - version 1.8
-* Fixed 404 page
+* Fixed 
+	* 404 page
 
 7.10.2011 - version 1.7
-* Fixed menu
-* Fixed header image
-* Fixed search
+* Fixed 
+	* menu
+	* header image
+	* search
 
 1.10.2011 - version 1.6
 * Added additional option to show/hide Main Navigation
