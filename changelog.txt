@@ -8,7 +8,8 @@
 
 * Added
 	* Link to Suport page
-	* 
+	* New Icon Set
+	* Google +
 
 15.11.2011 - version 1.9
 * Fixed 
