@@ -37,7 +37,7 @@ msgstr "%s <span class=\"says\">spune:</span>"
 msgid "&larr; Previous"
 msgstr "&larr;  Precedente"
 
-#: comments.php:19
+#: comments.php:20
 #@ wplook
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
 msgstr "<span class=\"meta-nav\">&larr;</span> Comentarii mai vechi"
@@ -103,7 +103,7 @@ msgstr "Arhiva de zi cu zi:"
 #: content-chat.php:43
 #: content-gallery.php:71
 #: content-page.php:56
-#: content-quote.php:52
+#: content-quote.php:54
 #: content.php:41
 #: image.php:76
 #@ wplook
@@ -147,7 +147,7 @@ msgstr "Arhive lunare:"
 msgid "Name"
 msgstr "Nume"
 
-#: comments.php:20
+#: comments.php:21
 #@ wplook
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Comentarii mai noi <span class=\"meta-nav\">&rarr;</span>"
@@ -267,7 +267,7 @@ msgstr "Arhiva Etichetelor:"
 msgid "Tag:"
 msgstr "Etichete:"
 
-#: comments.php:11
+#: comments.php:12
 #@ wplook
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Acest post este protejat de parolă. Introduceţi parola pentru a vizualiza vreun comentariu."
@@ -324,7 +324,7 @@ msgstr "iPad"
 msgid "or Cancel reply"
 msgstr "sau Renunță"
 
-#: comments.php:15
+#: comments.php:16
 #, php-format
 #@ wplook
 msgid "One Response"
@@ -337,8 +337,8 @@ msgstr[1] "%1$s Răspunsuri"
 #@ wplook
 msgid "This gallery contains <a %1$s>%2$s photo</a>."
 msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
-msgstr[0] "Aceasta galerie conține <a %1$s>% 2 $ s fotografie</a> ."
-msgstr[1] "Aceasta galerie conține <a %1$s>% 2 $ s fotografii</a> ."
+msgstr[0] "Aceasta galerie conține <a %1$s>%2$s fotografie</a> ."
+msgstr[1] "Aceasta galerie conține <a %1$s>%2$s fotografii</a> ."
 
 #: functions/be/fw-options.php:353
 #@ wplook
@@ -384,4 +384,48 @@ msgstr "Creat de"
 #@ wplook
 msgid "wplook"
 msgstr "wplook"
+
+#: content-aside.php:24
+#: content-audio.php:52
+#: content-chat.php:40
+#: content-gallery.php:68
+#: content-page.php:53
+#: content-quote.php:50
+#: content.php:38
+#@ wplook
+msgid "No comments"
+msgstr "Fără comentarii"
+
+#: content-aside.php:24
+#: content-audio.php:52
+#: content-chat.php:40
+#: content-gallery.php:68
+#: content-page.php:53
+#: content-quote.php:50
+#: content.php:38
+#@ wplook
+msgid "1 comment"
+msgstr "Un comentariu"
+
+#: content-aside.php:24
+#: content-audio.php:52
+#: content-chat.php:40
+#: content-gallery.php:68
+#: content-page.php:53
+#: content-quote.php:50
+#: content.php:38
+#@ wplook
+msgid "% comments"
+msgstr "% comentarii"
+
+#: content-aside.php:24
+#: content-audio.php:52
+#: content-chat.php:40
+#: content-gallery.php:68
+#: content-page.php:53
+#: content-quote.php:50
+#: content.php:38
+#@ wplook
+msgid "Comments off"
+msgstr "Comentarii închise"
 

@@ -535,6 +535,7 @@ input[type=text] {
 	margin-right: 20px;
 	margin-top: -4px;
 }
+.gallery-thumb {width:150px; height:150px;}
 .home #content .format-gallery .entry-utility, .home #content .category-gallery .entry-utility {
 	padding-top: 4px;
 }
@@ -949,7 +950,6 @@ aside h3 {
 #searchform {
 	margin: 10px 0 20px 10px;
 	height: 27px;
-	width: 250px;
 	position: relative;
 }
 #searchform label {
@@ -1044,3 +1044,5 @@ nav, nav ul ul, .postformat, .page-header, .widget-title {
 	height: 9px;
 	background-position: 9px 9px;
 }
+/* --- --- [ Other from plugins ] --- --- */
+#disqus_thread {width: 600px; float: right;}

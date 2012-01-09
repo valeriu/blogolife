@@ -25,12 +25,12 @@ msgstr ""
 msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
 msgstr "Lo siento pero el archivo que buscas no existe. Prueba de nuevo con otras palabras"
 
-#: comments.php:11
+#: comments.php:12
 #@ wplook
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Esta entrada está protegida con contraseña. Introduce la contraseña para ver los comentarios."
 
-#: comments.php:15
+#: comments.php:16
 #, php-format
 #@ wplook
 msgid "One Response"
@@ -38,12 +38,12 @@ msgid_plural "%1$s Responses"
 msgstr[0] "1 comentario"
 msgstr[1] "%1$s Comentarios"
 
-#: comments.php:19
+#: comments.php:20
 #@ wplook
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
 msgstr "<span class=\"meta-nav\">&larr;</span> Comentarios antiguos"
 
-#: comments.php:20
+#: comments.php:21
 #@ wplook
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Comentarios recientes <span class=\"meta-nav\">&rarr;</span>"

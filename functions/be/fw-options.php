@@ -365,7 +365,7 @@ function wpl_admin() {
 
 		<!-- [ Top Menu ]-->
 		<div class="top_menu_fm">
-			<a title="Product help and support center" target="_blank" class="support_fm" href="http://wordpress.org/tags/blogolife?forum_id=5">Support</a>
+			<a title="Product help and support center" target="_blank" class="support_fm" href="http://wplook.com/support">Support</a>
 		</div>
 
 

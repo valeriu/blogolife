@@ -25,12 +25,12 @@ msgstr ""
 msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
 msgstr "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
 
-#: comments.php:11
+#: comments.php:12
 #@ wplook
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "This post is password protected. Enter the password to view any comments."
 
-#: comments.php:15
+#: comments.php:16
 #, php-format
 #@ wplook
 msgid "One Response"
@@ -38,12 +38,12 @@ msgid_plural "%1$s Responses"
 msgstr[0] "One Response"
 msgstr[1] "%1$s Responses"
 
-#: comments.php:19
+#: comments.php:20
 #@ wplook
 msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
 msgstr "<span class=\"meta-nav\">&larr;</span> Older Comments"
 
-#: comments.php:20
+#: comments.php:21
 #@ wplook
 msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
@@ -85,7 +85,7 @@ msgstr "Pages:"
 #: content-chat.php:43
 #: content-gallery.php:71
 #: content-page.php:56
-#: content-quote.php:52
+#: content-quote.php:54
 #: content.php:41
 #: image.php:76
 #@ wplook
@@ -377,11 +377,55 @@ msgstr "Meta"
 
 #: footer.php:12
 #@ wplook
-msgid "Design by "
-msgstr "Design by "
+msgid "wplook"
+msgstr "wplook"
+
+#: content-aside.php:24
+#: content-audio.php:52
+#: content-chat.php:40
+#: content-gallery.php:68
+#: content-page.php:53
+#: content-quote.php:50
+#: content.php:38
+#@ wplook
+msgid "No comments"
+msgstr ""
+
+#: content-aside.php:24
+#: content-audio.php:52
+#: content-chat.php:40
+#: content-gallery.php:68
+#: content-page.php:53
+#: content-quote.php:50
+#: content.php:38
+#@ wplook
+msgid "1 comment"
+msgstr ""
+
+#: content-aside.php:24
+#: content-audio.php:52
+#: content-chat.php:40
+#: content-gallery.php:68
+#: content-page.php:53
+#: content-quote.php:50
+#: content.php:38
+#@ wplook
+msgid "% comments"
+msgstr ""
+
+#: content-aside.php:24
+#: content-audio.php:52
+#: content-chat.php:40
+#: content-gallery.php:68
+#: content-page.php:53
+#: content-quote.php:50
+#: content.php:38
+#@ wplook
+msgid "Comments off"
+msgstr ""
 
 #: footer.php:12
 #@ wplook
-msgid "wplook"
-msgstr "wplook"
+msgid "Design by"
+msgstr ""
 
