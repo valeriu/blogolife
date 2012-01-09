@@ -1,0 +1,387 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BlogoLife v1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2011-10-30 16:01+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:18
+#: inc-indexloop.php:25
+#@ wplook
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Omlouváme se, ale požadovaná stránka nebyla nalezena. Vyhledávání vám možná pomůže najít podobnou stránku."
+
+#: comments.php:12
+#@ wplook
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Tato stránka je chráněna heslem. Pro prohlížení, zadejte heslo, prosím."
+
+#: comments.php:16
+#, php-format
+#@ wplook
+msgid "One Response"
+msgid_plural "%1$s Responses"
+msgstr[0] "Jedna odpověď"
+msgstr[1] "%1$s odpovědí"
+
+#: comments.php:20
+#@ wplook
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr "<span class=\"meta-nav\">&larr;</span> Starší komentáře"
+
+#: comments.php:21
+#@ wplook
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Novější komentáře <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-aside.php:18
+#: content-audio.php:28
+#: content-audio.php:45
+#: content-chat.php:18
+#: content-chat.php:33
+#: content-gallery.php:27
+#: content-gallery.php:43
+#: content-quote.php:26
+#: content-quote.php:42
+#: content.php:18
+#: content.php:30
+#@ wplook
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Pokračovat <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-aside.php:19
+#: content-audio.php:29
+#: content-audio.php:46
+#: content-chat.php:19
+#: content-chat.php:34
+#: content-gallery.php:28
+#: content-gallery.php:60
+#: content-page.php:28
+#: content-quote.php:27
+#: content-quote.php:43
+#: content.php:19
+#: content.php:31
+#: image.php:69
+#@ wplook
+msgid "Pages:"
+msgstr "Stránky:"
+
+#: content-aside.php:28
+#: content-audio.php:55
+#: content-chat.php:43
+#: content-gallery.php:71
+#: content-page.php:56
+#: content-quote.php:52
+#: content.php:41
+#: image.php:76
+#@ wplook
+msgid "Edit"
+msgstr "Upravit"
+
+#: content-aside.php:22
+#: content-audio.php:19
+#: content-audio.php:50
+#: content-chat.php:13
+#: content-chat.php:38
+#: content-gallery.php:19
+#: content-gallery.php:56
+#: content-gallery.php:66
+#: content-page.php:25
+#: content-page.php:51
+#: content-quote.php:19
+#: content-quote.php:47
+#: content.php:12
+#: content.php:36
+#: image.php:22
+#, php-format
+#@ wplook
+msgid "Permalink to %s"
+msgstr "Permalink na %s"
+
+#: content-audio.php:33
+#: content-chat.php:23
+#: content-gallery.php:32
+#: content-page.php:34
+#: content-quote.php:31
+#: content.php:23
+#@ wplook
+msgid "Category:"
+msgstr "Rubrika:"
+
+#: content-audio.php:36
+#: content-chat.php:26
+#: content-gallery.php:34
+#: content-page.php:41
+#: content-quote.php:33
+#: content.php:24
+#@ wplook
+msgid "Tag:"
+msgstr "Štítek:"
+
+#: content-gallery.php:56
+#, php-format
+#@ wplook
+msgid "This gallery contains <a %1$s>%2$s photo</a>."
+msgid_plural "This gallery contains <a %1$s>%2$s photos</a>."
+msgstr[0] "V této galerii je <a %1$s>%2$s obrazek</a>."
+msgstr[1] "V této galerii je <a %1$s>%2$s obrázků</a>."
+
+#: footer.php:12
+#@ wplook
+msgid "Proudly powered by"
+msgstr "Používáme"
+
+#: footer.php:12
+#@ wplook
+msgid "WordPress"
+msgstr "WordPress"
+
+#: functions/be/fw-options.php:353
+#@ wplook
+msgid "settings reset."
+msgstr "reset nastavení."
+
+#: functions/be/fw-setup.php:16
+#@ wplook
+msgid "wplook Panel"
+msgstr "wplook Panel"
+
+#: functions/be/fw-setup.php:22
+#@ wplook
+msgid "BlogoLife Options"
+msgstr "Volby BlogoLife"
+
+#: functions/be/fw-setup.php:28
+#@ wplook
+msgid "wplook Themes"
+msgstr "Témata wplook"
+
+#: functions/be/fw-setup.php:34
+#@ wplook
+msgid "wplook News"
+msgstr "Zprávy wplook"
+
+#: functions/be/fw-setup.php:40
+#@ wplook
+msgid "Facebook"
+msgstr "Facebook"
+
+#: functions/be/fw-setup.php:46
+#@ wplook
+msgid "Twitter"
+msgstr "Twitter"
+
+#: functions/fe/comment.php:26
+#, php-format
+#@ wplook
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">napsal:</span>"
+
+#: functions/fe/comment.php:30
+#@ wplook
+msgid "Your comment is awaiting moderation."
+msgstr "Váš komentář čeká na schválení."
+
+#. translators: 1: date, 2: time
+#: functions/fe/comment.php:40
+#, php-format
+#@ wplook
+msgid "%1$s at %2$s"
+msgstr "%1$s na %2$s"
+
+#: functions/fe/comment.php:65
+#@ wplook
+msgid "Pingback/Trackback"
+msgstr "Pingback/Trackback"
+
+#: functions/fe/comment.php:90
+#@ wplook
+msgid "Name"
+msgstr "Jméno"
+
+#: functions/fe/comment.php:92
+#@ wplook
+msgid "Email"
+msgstr "Email"
+
+#: functions/fe/comment.php:94
+#@ wplook
+msgid "Website"
+msgstr "Webová stránka"
+
+#: functions/fe/comment.php:98
+#, php-format
+#@ wplook
+msgid "Required fields are marked %s"
+msgstr "Povinná pole jsou označena %s"
+
+#: functions/fe/comment.php:101
+#@ wplook
+msgid "Comment"
+msgstr "Komentář"
+
+#: functions/fe/comment.php:102
+#, php-format
+#@ wplook
+msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
+msgstr "Pokud chcete přidat komentář, musíte být <a href=\"%s\">přihlášen(a)</a>."
+
+#: functions/fe/comment.php:103
+#, php-format
+#@ wplook
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Log out of this account\">Log out?</a>"
+msgstr "Jste přihlášeni jako <a href=\"%1$s\">%2$s</a>. <a href=\"%3$s\" title=\"Odhlásit se z účtu\">Odhlásit?</a>"
+
+#: functions/fe/comment.php:104
+#@ wplook
+msgid "Your email address will not be published."
+msgstr "Vaše emailová adresa nebude zveřejněna."
+
+#: functions/fe/comment.php:108
+#@ wplook
+msgid "Leave a Comment"
+msgstr "Přidat komentář"
+
+#: functions/fe/comment.php:109
+#, php-format
+#@ wplook
+msgid "Leave a Reply to %s"
+msgstr "Odpozvědět na %s"
+
+#: functions/fe/comment.php:110
+#@ wplook
+msgid "or Cancel reply"
+msgstr "nebo zrušit Odpověď"
+
+#: functions/fe/comment.php:111
+#@ wplook
+msgid "Send Comment"
+msgstr "Přidat komentář"
+
+#: functions/fe/headerdata.php:72
+#@ wplook
+msgid "Search Results for:"
+msgstr "Výsledky hledání výrazu:"
+
+#: functions/fe/headerdata.php:77
+#@ wplook
+msgid "Category Archives:"
+msgstr "Rubrika:"
+
+#: functions/fe/headerdata.php:82
+#@ wplook
+msgid "Daily Archives:"
+msgstr "Archiv po dnech:"
+
+#: functions/fe/headerdata.php:87
+#@ wplook
+msgid "Monthly Archives:"
+msgstr "Archiv po mesících:"
+
+#: functions/fe/headerdata.php:91
+#@ wplook
+msgid "Yearly Archives:"
+msgstr "Archiv po rocích:"
+
+#: functions/fe/headerdata.php:96
+#@ wplook
+msgid "Tag Archives:"
+msgstr "Archiv štítků:"
+
+#: functions/fe/headerdata.php:101
+#@ wplook
+msgid "Not Found"
+msgstr "Nenalezeno"
+
+#: functions/fe/setup.php:22
+#@ wplook
+msgid "WPLOOK Main Navigation"
+msgstr "Hlavní navigace WPLOOK"
+
+#. translators: header image description
+#: functions/fe/setup.php:60
+#@ wplook
+msgid "iPad"
+msgstr "iPad"
+
+#: functions/fe/setup.php:202
+#@ wplook
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Starší příspěvky"
+
+#: functions/fe/setup.php:203
+#@ wplook
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Novější příspěvky <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions/fe/widgets-init.php:12
+#@ wplook
+msgid "RightSideBar"
+msgstr "RightSideBar"
+
+#: functions/fe/widgets-init.php:14
+#@ wplook
+msgid "Widgets in this area will be shown on the right-hand side."
+msgstr "Widgety v této oblasti budou zobrazeny  na pravé straně."
+
+#: header.php:29
+#, php-format
+#@ wplook
+msgid "Page %s"
+msgstr "Stránka %s"
+
+#: image.php:26
+#, php-format
+#@ wplook
+msgid "Original size: <a target=\"_blank\" href=\"%1$s\" title=\"Link to full-size image\">%2$s &times; %3$s</a> in <a href=\"%4$s\" title=\"Return to %5$s\" rel=\"gallery\">%5$s</a>"
+msgstr "Původní velikost: <a target=\"_blank\" href=\"%1$s\" title=\"Odkaz na obrázek v původní velikosti\">%2$s &times; %3$s</a> v <a href=\"%4$s\" title=\"Návrat na %5$s\" rel=\"gallery\">%5$s</a>"
+
+#: image.php:87
+#@ wplook
+msgid "&larr; Previous"
+msgstr "&larr; Předchozí"
+
+#: image.php:88
+#@ wplook
+msgid "Next &rarr;"
+msgstr "Další &rarr;"
+
+#: inc-indexloop.php:23
+#@ wplook
+msgid "Nothing Found"
+msgstr "Nenalezeno"
+
+#: sidebar.php:12
+#@ wplook
+msgid "Archives"
+msgstr "Archivy"
+
+#: sidebar.php:21
+#@ wplook
+msgid "Meta"
+msgstr "Meta"
+
+#: footer.php:12
+#@ wplook
+msgid "Design by "
+msgstr "Design od "
+
+#: footer.php:12
+#@ wplook
+msgid "wplook"
+msgstr "wplook"
+
