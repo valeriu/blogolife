@@ -54,6 +54,8 @@ foreach ($options as $value) {
 <?php } ?>
 <?php if ($wpl_facebook != '') { ?><a href="<?php echo $wpl_facebook; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/facebook.png" width="22" height="22" alt="<?php echo $wpl_facebook; ?>" /></a>
 <?php } ?>
+<?php if ($wpl_facebook != '') { ?><a href="<?php echo $wpl_google_plus; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/google-plus.png" width="22" height="22" alt="<?php echo $wpl_google_plus; ?>" /></a>
+<?php } ?>
 <?php if ($wpl_linkedin != '') { ?>
 <a href="<?php echo $wpl_linkedin; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/linkedin.png" width="22" height="22" alt="<?php echo $wpl_linkedin; ?>" /></a>
 <?php } ?>

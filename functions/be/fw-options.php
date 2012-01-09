@@ -170,6 +170,12 @@ array( "name" => "<img src='$be_pathimages/icons/twitter.png' />Twitter",
 		"id" => $shortname."_twitter",
 		"std" => "",
 		"type" => "text"),
+
+array( "name" => "<img src='$be_pathimages/icons/google-plus.png' width='16'/>Google +",
+		"desc" => "Insert the full URL of your <a href='https://plus.google.com/103223108676176192383/posts' target='_blank'>Google +</a> profile.",
+		"id" => $shortname."_google_plus",
+		"std" => "",
+		"type" => "text"),
 	
 	array( "name" => "<img src='$be_pathimages/icons/facebook.png' />Facebook",
 		"desc" => "Insert the full URL of your <a href='http://facebook.com' target='_blank'>Facebook</a> profile, page or group.",

@@ -1,5 +1,15 @@
 *** BlogoLife Changelog ***
 
+10.01.2012 - version 2.0
+* Fixed
+	* Translation for comments
+	* Fixed date
+	*
+
+* Added
+	* Link to Suport page
+	* 
+
 15.11.2011 - version 1.9
 * Fixed 
  	* menu for IE9
