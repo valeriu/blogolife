@@ -10,6 +10,7 @@
 	* Link to Suport page
 	* New Icon Set
 	* Google +
+	* Translation for CZ and BR
 
 15.11.2011 - version 1.9
 * Fixed 
