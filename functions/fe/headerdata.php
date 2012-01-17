@@ -17,42 +17,45 @@ foreach ($options as $value) {
 
 // additional js and css
 
-if(	!is_admin()){
-		
-	
+function wpl_css_include () {
 	if (get_option('wpl_css') == 'Pink' ){
-		wp_register_style('stylered', get_template_directory_uri().'/images/pink/style.css', 'style', '','all');
-		wp_enqueue_style('stylered');
-	}
-	if (get_option('wpl_css') == 'Blue' ){
-		wp_register_style('stylered', get_template_directory_uri().'/images/blue/style.css', 'style', '','all');
-		wp_enqueue_style('stylered');
-	}
-	if (get_option('wpl_css') == 'Black' ){
-		wp_register_style('stylered', get_template_directory_uri().'/images/black/style.css', 'style', '','all');
-		wp_enqueue_style('stylered');
-	}
-	if (get_option('wpl_css') == 'Orange' ){
-		wp_register_style('stylered', get_template_directory_uri().'/images/orange/style.css', 'style', '','all');
-		wp_enqueue_style('stylered');
-	}
-	if (get_option('wpl_css') == 'Green' ){
-		wp_register_style('stylered', get_template_directory_uri().'/images/green/style.css', 'style', '','all');
-		wp_enqueue_style('stylered');
-	}
+		wp_register_style('style-pink', get_template_directory_uri().'/images/pink/style.css', 'style', '','all');
+		wp_enqueue_style('style-pink'); }
 
-	wp_register_style('oswald', 'http://fonts.googleapis.com/css?family=Oswald&amp;v2', 'style', '','all');
-	wp_enqueue_style('oswald');
-	
-	wp_enqueue_script( 'html5', 'http://html5shim.googlecode.com/svn/trunk/html5.js', '', '', '' );
+		if (get_option('wpl_css') == 'Blue' ){
+		wp_register_style('style-blue', get_template_directory_uri().'/images/blue/style.css', 'style', '','all');
+		wp_enqueue_style('style-blue');}
+
+		if (get_option('wpl_css') == 'Black' ){
+		wp_register_style('style-black', get_template_directory_uri().'/images/black/style.css', 'style', '','all');
+		wp_enqueue_style('style-black');}
+
+		if (get_option('wpl_css') == 'Orange' ){
+		wp_register_style('style-orange', get_template_directory_uri().'/images/orange/style.css', 'style', '','all');
+		wp_enqueue_style('style-orange');}
+
+		if (get_option('wpl_css') == 'Green' ){
+		wp_register_style('style-green', get_template_directory_uri().'/images/green/style.css', 'style', '','all');
+		wp_enqueue_style('style-green');}
+		
+		wp_register_style('oswald', 'http://fonts.googleapis.com/css?family=Oswald&amp;v2', 'style', '','all');
+		wp_enqueue_style('oswald');
 }
+add_action( 'wp_enqueue_scripts', 'wpl_css_include' );
+
+function wpl_scripts_include() {
+	wp_enqueue_script( 'html5', 'http://html5shim.googlecode.com/svn/trunk/html5.js', '', '', '' );
+	}   
+
+add_action('wp_enqueue_scripts', 'wpl_scripts_include');
+
 
 function wplook_meta_description() {
 	if (is_home() && get_option('wpl_meta_description') != '') {
 		echo '<meta name="description" content="'.get_option('wpl_meta_description'). '" />';
 	}
 	
-	if (is_single()){
+	if (is_single() || is_page()){
 		$excerpt = get_the_excerpt();
 		$title = get_the_title();		
 			if ($excerpt == '') 

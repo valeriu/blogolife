@@ -183,7 +183,7 @@ add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'  ) );
 	// Add support for custom backgrounds
 	
-define('BACKGROUND_IMAGE', '/wp-content/themes/blogolife/images/bg.png');
+define('BACKGROUND_IMAGE', '%s/images/bg.png');
 define('BACKGROUND_COLOR', 'f3f3f3');
 
 add_custom_background();
@@ -242,5 +242,56 @@ function dashboard_custom_feed_output() {
 		));
 		echo '</div>';
 }
+function wplook_get_date() {
+echo date_i18n(get_option('date_format'));
 }
-?>
+function wplook_get_time() {
+echo date_i18n(get_option('time_format'));
+}
+function wplook_get_date_time() {
+echo date_i18n(get_option('date_format'));
+_e(' at ', 'wplook');
+echo date_i18n(get_option('time_format')); }
+
+////////////////////
+	function wpl_sidebar_add_custom_box() {
+
+			 add_meta_box('wpl_sidebar', 'Sidebars', 'wpl_sidebars_custom_box','page', 'side', 'high');
+
+			 add_meta_box('wpl_sidebar', 'Sidebars', 'wpl_sidebars_custom_box','post', 'side', 'high');
+
+		}
+
+		/* Use the admin_menu action to define the custom boxes */
+
+	add_action('admin_menu', 'wpl_sidebar_add_custom_box');
+		/* prints the custom field in the new custom post section */
+		function wpl_sidebars_custom_box() {
+			 //get post meta value
+			 global $post;
+			  $enable_sidebar = get_post_meta($post->ID,'wpl_enable_sidebar',true)  ;
+			 ?>
+<div id="sidebar_box">
+	<p>
+		<label for=""><?php _e( 'Enable Sidebar:' , 'wplook' ); ?></label>      
+     <label for="sidebar_yes"><?php _e( 'Yes' , 'wplook' ); ?></label><input type="radio" id="sidebar_yes" name="enable_sidebar" value="true" <?php if($enable_sidebar=="true" || trim($enable_sidebar) =="" ) echo "checked='checked'"; ?> />
+     <label for="sidebar_no"><?php _e( 'No' , 'wplook' ); ?></label><input type="radio" id="sidebar_no" name="enable_sidebar" value="false" <?php if($enable_sidebar=="false") echo "checked='checked'"; ?>/>
+	</p>
+</div>
+<?php
+		}
+
+		/* use save_post action to handle data entered */
+		add_action('save_post', 'wpl_sidebars_save_postdata');
+		/* when the post is saved, save the custom data */
+		function wpl_sidebars_save_postdata($post_id) {
+			 // do not save if this is an auto save routine
+			 if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+		$_POST["enable_sidebar"] = (!isset($_POST["enable_sidebar"])) ? '' : $_POST["enable_sidebar"];
+			   update_post_meta($post_id, "wpl_enable_sidebar", $_POST["enable_sidebar"]);
+
+	}
+
+
+
+}?>

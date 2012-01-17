@@ -69,12 +69,32 @@ array( "name" => "tab_content_0",
 		"icon" => "layout"),
 
 	// Home
-	array( "name" => "Welcome",
+	array( "name" => "Dear blogger,",
 		"type" => "heading",
 		"icon" => "layout"),
 	
-	array("name" => "First of all, we would like to thank you for choosing wplook Themes and
-installing one of our themes &#8211; your choice is greatly appreciated!",
+	array("name" => "
+		 <div class=\"buy-message\"><p>First of all thank you for choosing one of Wplook Themes namely <strong>BlogoLife</strong>, your choice is greatly appreciated!</p>
+
+<p>If you are satisfied with this theme (but not enough) we recommend you to get <a href=\"http://wplook.com/blogolifebuy\" title=\"BlogoLife PRO\">BlogoLife PRO</a> with nice and attractive features as:</p> 
+<ul>
+<li><strong>Integration with Nivo Slider</strong> - the world's most awesome jQuery image slider which makes it super easy to create and manage multiple sliders on your blog. You can create as many sliders as you need and include them in your posts and pages using a simple shortcode.</li>
+<li><strong>Author Widget</strong> - an interesting module to get yourself  known.</li>
+<li><strong>Easy to navigate between posts</strong> - with this new feature you and your visitors will navigate easier and with pleasure through the blog.</li>
+<li><strong>Tabs widget</strong> - an attractive widget for your blog. 3 in 1 is the perfect match to make your blog more comfortable and more efficient in using your sidebar's space.</li>
+<li><strong>Stylished post formats and post status</strong> - a great eye catching of Post Formats and post status enclosed in the dashboard and stylized with care for you.</li>
+<li><strong>Share your content and analyze it in Google Analytics</strong> - this feature will give you the possibility to suit your needs in terms of social marketing.</li> 
+</ul>
+
+
+<p>Moreover, you will always receive timely and prompt answers at our <a href=\"http://wplook.com/support\">Support Forum</a>. </p>
+
+<p>We remain at your disposal for any further information you may need.</p>
+
+<p>Hope you will enjoy it.</p></div>
+		  
+		  
+		  ",
 		"type" => "infotext"),
 	
 	array( "name" => "Recommend us:",
@@ -124,7 +144,7 @@ array( "name" => "tab_content_1",
 							'b' => 'Hide'),
 		"type" => "select"),
 		
-	array( "name" => "<img src='$be_pathimages/icons/rss.png' />RSS",
+	array( "name" => "<img src='$be_pathimages/icons/rss.png' width='16' />RSS",
 		"desc" => "Url of your RSS. You may include your RSS from Feedburner",
 		"id" => $shortname."_rss",
 		"std" => "",
@@ -363,7 +383,6 @@ function wpl_admin() {
 		<div class="header_fm">
 			<div class="logo_fm">wplook</div>
 			<div class="frame_vers_fm">
-				<div class="framework_version_fm">Framework version <strong><?php echo $fwver;?></strong></div>
 				<div class="theme_version_fm"><?php echo $themename;?> <strong><?php echo $themever;?></strong></div>
 				<div class="clear"></div>
 			</div>
@@ -371,8 +390,10 @@ function wpl_admin() {
 
 		<!-- [ Top Menu ]-->
 		<div class="top_menu_fm">
-			<a title="Product help and support center" target="_blank" class="support_fm" href="http://wplook.com/support?utm_source=Blog&utm_medium=theme&utm_campaign=BlogoLife">Support</a>
+			<a title="BlogoLife PRO" target="_blank" class="blogolife-pro" href="http://wplook.com/blogolifebuy">BlogoLife PRO</a>
+            <a title="Product help and support center" target="_blank" class="support_fm" href="http://wplook.com/support">Support</a>
 		</div>
+        
 
 
 	<form method="post">

@@ -19,7 +19,7 @@
 		<?php wp_link_pages( array( 'before' => '<div class="clear"></div><div class="page-link"><span>' . __( 'Pages:', 'wplook' ) . '</span>', 'after' => '</div>' ) ); ?></div><!-- .entry-content -->
 <?php endif; ?>	
 <footer class="entry-meta">
-	<div class="date-i fleft"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'wplook' ), the_title_attribute( 'echo=0' ) ); ?>" rel="nofollow"><?php the_time('F j, Y') ?></a></div>
+	<div class="date-i fleft"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'wplook' ), the_title_attribute( 'echo=0' ) ); ?>" rel="nofollow"><?php wplook_get_date_time();?></a></div>
 	<?php if ( comments_open() ) : ?>
 	<div class="comment-i fleft"><?php comments_popup_link(__('No comments', 'wplook'), __('1 comment', 'wplook'), __('% comments', 'wplook'), 'comments-link', __('Comments off', 'wplook')); ?></div>
 	<?php endif; ?>

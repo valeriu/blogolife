@@ -70,7 +70,7 @@
 						</div><!-- .entry-description -->
 					</div><!-- .entry-content -->
 			<footer class="entry-meta">
-				<div class="date-i fleft"><?php the_time('F j, Y') ?></div>
+				<div class="date-i fleft"><?php wplook_get_date_time();?></div>
 				
 				<div class="author-i fleft"><?php wplook_get_author();?></div>
 				<?php edit_post_link( __( 'Edit', 'wplook' ), '<div class="edit-i fright">', '</div>' ); ?>

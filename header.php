@@ -39,7 +39,7 @@ foreach ($options as $value) {
 <?php wp_head(); ?>
 	</head>
 <body <?php body_class('two-column right-sidebar'); ?>>
-<div id="page">
+<div id="page"<?php if (is_single() || is_page() ) { $sidebar = get_post_meta($post->ID,'wpl_enable_sidebar',true);  if($sidebar=="false") echo ' class="template-full-widch"'; } ?>>
 	<header id="branding">
 <hgroup class="fleft">
 	<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> - <?php bloginfo('description'); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
@@ -50,41 +50,43 @@ foreach ($options as $value) {
 <div class="social-icons fright">
 
 <?php if ($wpl_twitter != '') { ?>
-<a href="<?php echo $wpl_twitter; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/twitter.png" width="22" height="22" alt="<?php echo $wpl_twitter; ?>" /></a>
+<a href="<?php echo $wpl_twitter; ?>" target="_blank" title="<?php _e('Twitter', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/twitter.png" width="22" height="22" /></a>
 <?php } ?>
-<?php if ($wpl_facebook != '') { ?><a href="<?php echo $wpl_facebook; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/facebook.png" width="22" height="22" alt="<?php echo $wpl_facebook; ?>" /></a>
+<?php if ($wpl_google_plus != '') { ?>
+<a href="<?php echo $wpl_google_plus; ?>" target="_blank" title="<?php _e('Google +', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/google-plus.png" width="22" height="22" /></a>
 <?php } ?>
-<?php if ($wpl_google_plus != '') { ?><a href="<?php echo $wpl_google_plus; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/google-plus.png" width="22" height="22" alt="<?php echo $wpl_google_plus; ?>" /></a>
+<?php if ($wpl_facebook != '') { ?>
+<a href="<?php echo $wpl_facebook; ?>" target="_blank" title="<?php _e('FaceBook', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/facebook.png" width="22" height="22" /></a>
 <?php } ?>
 <?php if ($wpl_linkedin != '') { ?>
-<a href="<?php echo $wpl_linkedin; ?>" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/linkedin.png" width="22" height="22" alt="<?php echo $wpl_linkedin; ?>" /></a>
+<a href="<?php echo $wpl_linkedin; ?>" target="_blank" title="<?php _e('Linkedin', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/icons/linkedin.png" width="22" height="22" /></a>
 <?php } ?>
 <?php if ($wpl_tumblr != '') {	?>
-<a href="<?php echo $wpl_tumblr; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/tumblr.png" width="22" height="22" alt="<?php echo $wpl_tumblr; ?>" /></a>
+<a href="<?php echo $wpl_tumblr; ?>" target="_blank" title="<?php _e('Tumblr', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/tumblr.png" width="22" height="22" /></a>
 <?php } ?>
 <?php if ($wpl_delicious != '') {	?>
-<a href="<?php echo $wpl_delicious; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/delicious.png" width="22" height="22" alt="<?php echo $wpl_delicious; ?>" /></a>
+<a href="<?php echo $wpl_delicious; ?>" target="_blank" target="_blank" title="<?php _e('Delicious', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/delicious.png" width="22" height="22" /></a>
 <?php } ?>
 <?php if ($wpl_digg != '') {	?>
-<a href="<?php echo $wpl_digg; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/digg.png" width="22" height="22" alt="<?php echo $wpl_digg; ?>" /></a>
+<a href="<?php echo $wpl_digg; ?>" target="_blank" title="<?php _e('Digg', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/digg.png" width="22" height="22" /></a>
 <?php } ?>	
 <?php if ($wpl_stumbleupon != '') {	?>
-<a href="<?php echo $wpl_stumbleupon; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/stumbleupon.png" width="22" height="22" alt="<?php echo $wpl_stumbleupon; ?>" /></a>
+<a href="<?php echo $wpl_stumbleupon; ?>" target="_blank" title="<?php _e('Stumbleupon', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/stumbleupon.png" width="22" height="22" /></a>
 <?php } ?>
 <?php if ($wpl_flickr != '') {	?>
-<a href="<?php echo $wpl_flickr; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/flickr.png" width="22" height="22" alt="<?php echo $wpl_flickr; ?>" /></a>
+<a href="<?php echo $wpl_flickr; ?>" target="_blank"  title="<?php _e('Flickr', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/flickr.png" width="22" height="22" /></a>
 <?php } ?>
 <?php if ($wpl_picasa != '') {	?>
-<a href="<?php echo $wpl_picasa; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/picasa.png" width="22" height="22" alt="<?php echo $wpl_picasa; ?>" /></a>
+<a href="<?php echo $wpl_picasa; ?>" target="_blank" title="<?php _e('Picasa', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/picasa.png" width="22" height="22" /></a>
 <?php } ?>	
 <?php if ($wpl_youtube != '') {	?>
-<a href="<?php echo $wpl_youtube; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/youtube.png" width="22" height="22" alt="<?php echo $wpl_youtube; ?>" /></a>
+<a href="<?php echo $wpl_youtube; ?>" target="_blank" title="<?php _e('YouTube', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/youtube.png" width="22" height="22" /></a>
 <?php } ?>
 <?php if ($wpl_dribbble != '') {	?>
-<a href="<?php echo $wpl_dribbble; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/dribbble.png" width="22" height="22" alt="<?php echo $wpl_dribbble; ?>" /></a>
+<a href="<?php echo $wpl_dribbble; ?>" target="_blank" title="<?php _e('Dribble', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/dribbble.png" width="22" height="22" /></a>
 <?php } ?>
 <?php if ($wpl_rss != '') { ?>
-<a href="<?php echo $wpl_rss; ?>" target="_blank"><img src="<?php echo get_template_directory_uri() ?>/images/icons/rss.png" width="22" height="22" alt="<?php echo $wpl_rss; ?>" /></a>
+<a href="<?php echo $wpl_rss; ?>" target="_blank" title="<?php _e('Subscribe to RSS', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/rss.png" width="22" height="22" /></a>
 <?php } ?>
 </div><div class="clear"></div>
 </header>

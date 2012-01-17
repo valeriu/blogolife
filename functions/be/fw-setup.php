@@ -18,34 +18,56 @@ function wplook_bar_menu() {
 	'meta' => array('title' => 'wplook Options Panel', 'class' => 'wplookpanel') ) );
 	
 	$wp_admin_bar->add_menu( array(
+	'id' => 'wpl_to',
 	'parent' => 'custom_menu',
-	'title' => __( 'BlogoLife Options', 'wplook' ),
+	'title' => __( 'BlogoLife PRO Options', 'wplook' ),
 	'href' => $admin_dir .'admin.php?page=fw-options.php',
 	'meta' => array('title' => 'BlogoLife - Theme options') ) );
 	
 	$wp_admin_bar->add_menu( array(
+	'id' => 'wpl_wt',
 	'parent' => 'custom_menu',
 	'title' => __( 'wplook Themes', 'wplook' ),
 	'href' => 'http://wplook.com/wordpress-themes',
 	'meta' => array('title' => 'Premium Wordpress Themes from wplook')) );
 	
 	$wp_admin_bar->add_menu( array(
+	'id' => 'wpl_wn',
 	'parent' => 'custom_menu',
 	'title' => __( 'wplook News', 'wplook' ),
 	'href' => 'http://wplook.com/',
 	'meta' => array('title' => 'News and theme updates from wplook') ) );
 
 	$wp_admin_bar->add_menu( array(
+	'id' => 'wpl_fb',
 	'parent' => 'custom_menu',
-	'title' => __( 'Facebook', 'wplook' ),
+	'title' => __( 'Become our fan on Facebook', 'wplook' ),
 	'href' => 'http://www.facebook.com/pages/wplook/217332894973977',
-	'meta' => array('target' => 'blank', 'title' => 'Become a fan on Facebook') ) );
+	'meta' => array('target' => 'blank', 'title' => 'Become our fan on Facebook') ) );
 	
 	$wp_admin_bar->add_menu( array(
+	'id' => 'wpl_tw',
 	'parent' => 'custom_menu',
-	'title' => __( 'Twitter', 'wplook' ),
+	'title' => __( 'Follow us on Twitter', 'wplook' ),
 	'href' => 'http://twitter.com/#!/wplook',
 	'meta' => array('target' => 'blank', 'title' => 'Follow us on Twitter')
 		) );
 }
-add_action('admin_bar_menu', 'wplook_bar_menu', '1000');
+add_action('admin_bar_menu', 'wplook_bar_menu', '999');
+
+
+function wplook_buy_menu() {
+	global $wp_admin_bar;
+	if ( !is_super_admin() || !is_admin_bar_showing() )
+		return;
+				
+	$wp_admin_bar->add_menu( array(
+	'id' => 'custom_buymenu',
+	'title' => __( 'Blogolife PRO', 'wplook' ),
+	'href' => 'http://wplook.com/blogolifebuy',
+	'meta' => array('title' => 'Blogolife PRO', 'class' => 'wplookbuy') ) );
+	
+
+}
+add_action('admin_bar_menu', 'wplook_buy_menu', '1000');
+
