@@ -1,16 +1,17 @@
 *** BlogoLife Changelog ***
 
-10.01.2012 - version 2.0
+18.01.2012 - version 2.0
 * Fixed
 	* Translation for comments
-	* Fixed date
-	*
+	* Date format for post and pages
+	* Compatibility with WordPress 3.3+
 
 * Added
 	* Link to Suport page
 	* New Icon Set
 	* Google +
 	* Translation for CZ and BR
+	* Enable/disable the sidebar for posts
 
 15.11.2011 - version 1.9
 * Fixed 

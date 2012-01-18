@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @package wplook
+ * @package WPlook
  * @subpackage BlogoLife
  * @since BlogoLife 1.0
 */
@@ -13,30 +13,30 @@ function wplook_bar_menu() {
 		
 	$wp_admin_bar->add_menu( array(
 	'id' => 'custom_menu',
-	'title' => __( 'wplook Panel', 'wplook' ),
+	'title' => __( 'WPlook Panel', 'wplook' ),
 	'href' => FALSE,
-	'meta' => array('title' => 'wplook Options Panel', 'class' => 'wplookpanel') ) );
+	'meta' => array('title' => 'WPlook Options Panel', 'class' => 'wplookpanel') ) );
 	
 	$wp_admin_bar->add_menu( array(
 	'id' => 'wpl_to',
 	'parent' => 'custom_menu',
-	'title' => __( 'BlogoLife PRO Options', 'wplook' ),
+	'title' => __( 'BlogoLife Options', 'wplook' ),
 	'href' => $admin_dir .'admin.php?page=fw-options.php',
 	'meta' => array('title' => 'BlogoLife - Theme options') ) );
 	
 	$wp_admin_bar->add_menu( array(
 	'id' => 'wpl_wt',
 	'parent' => 'custom_menu',
-	'title' => __( 'wplook Themes', 'wplook' ),
+	'title' => __( 'WPlook Themes', 'wplook' ),
 	'href' => 'http://wplook.com/wordpress-themes',
-	'meta' => array('title' => 'Premium Wordpress Themes from wplook')) );
+	'meta' => array('title' => 'Premium Wordpress Themes from WPlook')) );
 	
 	$wp_admin_bar->add_menu( array(
 	'id' => 'wpl_wn',
 	'parent' => 'custom_menu',
-	'title' => __( 'wplook News', 'wplook' ),
+	'title' => __( 'WPlook News', 'wplook' ),
 	'href' => 'http://wplook.com/',
-	'meta' => array('title' => 'News and theme updates from wplook') ) );
+	'meta' => array('title' => 'News and theme updates from WPlook') ) );
 
 	$wp_admin_bar->add_menu( array(
 	'id' => 'wpl_fb',
@@ -65,7 +65,7 @@ function wplook_buy_menu() {
 	'id' => 'custom_buymenu',
 	'title' => __( 'Blogolife PRO', 'wplook' ),
 	'href' => 'http://wplook.com/blogolifebuy',
-	'meta' => array('title' => 'Blogolife PRO', 'class' => 'wplookbuy') ) );
+	'meta' => array('title' => 'Learn more about Blogolife PRO', 'class' => 'wplookbuy') ) );
 	
 
 }
