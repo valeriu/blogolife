@@ -243,17 +243,18 @@ function dashboard_custom_feed_output() {
 		echo '</div>';
 }
 function wplook_get_date() {
-echo date_i18n(get_option('date_format'));
+the_time(get_option('date_format'));
 }
 function wplook_get_time() {
-echo date_i18n(get_option('time_format'));
+the_time(get_option('time_format'));
 }
 function wplook_get_date_time() {
-echo date_i18n(get_option('date_format'));
+the_time(get_option('date_format'));
 _e(' at ', 'wplook');
-echo date_i18n(get_option('time_format')); }
+the_time(get_option('time_format'));}
 
-////////////////////
+
+//sidebar
 	function wpl_sidebar_add_custom_box() {
 
 			 add_meta_box('wpl_sidebar', 'Sidebars', 'wpl_sidebars_custom_box','page', 'side', 'high');
