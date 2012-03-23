@@ -457,7 +457,7 @@ function wpl_admin() {
 </select>
 	
 	</div>
-	<div class="desc_fm"><small><?php echo $value['desc']; ?></div>
+	<div class="desc_fm"><small><?php echo $value['desc']; ?></small></div>
 
 	<?php break; case "checkbox": ?>
 	<div class="name_fm"><?php echo $value['name']; ?></div>
