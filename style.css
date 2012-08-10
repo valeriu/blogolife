@@ -1063,3 +1063,27 @@ nav, nav ul ul, .postformat, .page-header, .widget-title {
 }
 /* --- --- [ Other from plugins ] --- --- */
 #disqus_thread {width: 600px; float: right;}
+
+/* --- --- [ Footer Widgets ] --- --- */
+#footer-widget-area {
+	margin: 0 auto;
+	padding: 10px 0;
+	width: 960px;
+	background: #fff;
+	border-left: 1px solid #c5d1d9;
+	border-right: 1px solid #c5d1d9;
+	border-bottom: 1px solid #c5d1d9;
+}
+#footer-widget-area .w1, #footer-widget-area .w2, #footer-widget-area .w3 {
+	float: left;
+	width:305px;
+}
+#footer-widget-area .w1{
+	margin: 0 10px;
+}
+#footer-widget-area .w2{
+	margin: 0 12px 0 2px;
+}
+#footer-widget-area .w3{
+	margin: 0 0px;
+}

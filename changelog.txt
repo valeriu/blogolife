@@ -4,7 +4,9 @@ xx.xx.2012 - version 2.1
 * Fixed
 	* Screenshot image 
 	* Alt for header image
-	
+	* 
+* Added
+	* Footer Widget
 	
 18.01.2012 - version 2.0
 * Fixed
