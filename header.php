@@ -88,6 +88,9 @@ foreach ($options as $value) {
 <?php if ($wpl_rss != '') { ?>
 <a href="<?php echo $wpl_rss; ?>" target="_blank" title="<?php _e('Subscribe to RSS', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/rss.png" width="22" height="22" /></a>
 <?php } ?>
+<?php if ($wpl_pinterest != '') { ?>
+<a href="<?php echo $wpl_pinterest; ?>" target="_blank" title="<?php _e('Pinterest', 'wplook'); ?>"><img src="<?php echo get_template_directory_uri() ?>/images/icons/pinterest.png" width="22" height="22" /></a>
+<?php } ?>
 </div><div class="clear"></div>
 </header>
 

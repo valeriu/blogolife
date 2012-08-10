@@ -257,6 +257,12 @@ array( "name" => "<img src='$be_pathimages/icons/dribbble.png' width='16' />Drib
 		"std" => "",
 		"type" => "text"),
 
+array( "name" => "<img src='$be_pathimages/icons/pinterest.png' width='16' />Pinterest",
+		"desc" => "Insert the full URL of your <a href='http://pinterest.com/' target='_blank'>Pinterest</a> profile.",
+		"id" => $shortname."_pinterest",
+		"std" => "",
+		"type" => "text"),
+		
 array( "name" => "tab_content_2",
 		"type" => "tabcontent-close",
 		"icon" => "layout"),
