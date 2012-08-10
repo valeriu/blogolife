@@ -15,8 +15,16 @@
 	</div><!-- .entry-summary -->
 <?php else : ?>	
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wplook' ) ); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="clear"></div><div class="page-link"><span>' . __( 'Pages:', 'wplook' ) . '</span>', 'after' => '</div>' ) ); ?></div><!-- .entry-content -->
+		<?php
+			if($post->post_excerpt == ''){
+				the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wplook' ) );
+				wp_link_pages( array( 'before' => '<div class="clear"></div><div class="page-link"><span>' . __( 'Pages:', 'wplook' ) . '</span>', 'after' => '</div>' ) );
+			} else {
+				the_excerpt();
+			}
+		?>
+		<div class="clear"></div>
+	</div><!-- .entry-content -->
 <?php endif; ?>	
 <footer class="entry-meta">
 	<div class="date-i fleft"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'wplook' ), the_title_attribute( 'echo=0' ) ); ?>" rel="nofollow"><?php wplook_get_date_time();?></a></div>
