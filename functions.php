@@ -17,8 +17,8 @@ $shortname = "wpl";											//Shortname
 
 // Set path to WPLOOK Framework and theme specific functions
 
-$be_path = TEMPLATEPATH . '/functions/be/';									//BackEnd Path
-$fe_path = TEMPLATEPATH . '/functions/fe/';									//FrontEnd Path
+$be_path = get_template_directory() . '/functions/be/';									//BackEnd Path
+$fe_path = get_template_directory() . '/functions/fe/';									//FrontEnd Path
 $be_pathimages = get_template_directory_uri() . '/functions/be/images';		//BackEnd Path
 $fe_pathimages = get_template_directory_uri() . '';							//FrontEnd Path
 
@@ -34,9 +34,9 @@ require_once ($fe_path . 'comment.php');						// Comments
 
 
 // translation-ready
-	load_theme_textdomain( 'wplook', TEMPLATEPATH . '/languages' );
+	load_theme_textdomain( 'wplook', get_template_directory() . '/languages' );
 	$locale = get_locale();
-	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
+	$locale_file = get_template_directory() . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );	
 ?>
