@@ -34,9 +34,9 @@ require_once ($fe_path . 'comment.php');						// Comments
 
 
 // translation-ready
-	load_theme_textdomain( 'wplook', get_template_directory() . '/languages' );
-	$locale = get_locale();
-	$locale_file = get_template_directory() . "/languages/$locale.php";
-	if ( is_readable( $locale_file ) )
-		require_once( $locale_file );	
+load_theme_textdomain( 'wplook', get_template_directory() . '/languages' );
+$locale = get_locale();
+$locale_file = get_template_directory() . "/languages/$locale.php";
+if ( is_readable( $locale_file ) )
+require_once( $locale_file );	
 ?>

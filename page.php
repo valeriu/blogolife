@@ -11,9 +11,8 @@ get_header();
 get_template_part('content', 'page' ) ;
 
 if($sidebar=="false" ) {
-		echo '<div class="clear"></div>';
-	} else { 
-		get_sidebar();
-	}
-
+	echo '<div class="clear"></div>';
+} else {
+	get_sidebar();
+}
 get_footer(); ?>
