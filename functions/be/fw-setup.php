@@ -42,7 +42,7 @@ function wplook_bar_menu() {
 	'id' => 'wpl_fb',
 	'parent' => 'custom_menu',
 	'title' => __( 'Become our fan on Facebook', 'wplook' ),
-	'href' => 'http://www.facebook.com/pages/wplook/217332894973977',
+	'href' => 'http://www.facebook.com/wplookthemes',
 	'meta' => array('target' => 'blank', 'title' => 'Become our fan on Facebook') ) );
 	
 	$wp_admin_bar->add_menu( array(
