@@ -181,13 +181,17 @@ add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 // Add support for a variety of post formats
 add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video'  ) );
-	// Add support for custom backgrounds
+
+// Add support for custom backgrounds
+$wplook_bg_defaults = array(
+	'default-color'			=> 'f3f3f3',
+	'default-image'			=> 's/images/bg.png',
+	'wp-head-callback'       => '_custom_background_cb',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => ''
+);
+add_theme_support( 'custom-background', $wplook_bg_defaults );
 	
-define('BACKGROUND_IMAGE', '%s/images/bg.png');
-define('BACKGROUND_COLOR', 'f3f3f3');
-
-add_custom_background();
-
 set_post_thumbnail_size( 150, 100, true ); // default Post Thumbnail dimensions (cropped)
 
 
