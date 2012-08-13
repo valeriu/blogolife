@@ -167,7 +167,7 @@ $wplook_ch_defaults = array(
 	'width'                  => 960,
 	'height'                 => 200,
 	'flex-height'            => true,
-	'flex-width'             => true,
+	'flex-width'             => false,
 	'default-text-color'     => '666666',
 	'header-text'            => true,
 	'uploads'                => true,
@@ -179,6 +179,7 @@ add_theme_support( 'custom-header', $wplook_ch_defaults );
 
 // default Post Thumbnail dimensions (cropped)
 set_post_thumbnail_size( 150, 100, true ); 
+add_image_size( 'ch-images', 960, 200, true );
 /**
  * Display navigation to next/previous pages when applicable
  */
