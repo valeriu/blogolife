@@ -27,39 +27,6 @@ add_action( 'init', 'register_my_menus' );
 
 wp_create_nav_menu( 'WPLOOK Main Menu', array( 'slug' => 'primary' ) );
 
-	// The default header text color
-	define( 'HEADER_TEXTCOLOR', '666' );
-
-	// By leaving empty, we allow for random image rotation.
-	define( 'HEADER_IMAGE', '' );
-
-	// The height and width of your custom header.
-	// Add a filter to wplook_header_image_width and wplook_header_image_height to change these values.
-	define( 'HEADER_IMAGE_WIDTH', apply_filters( 'wplook_header_image_width', 960 ) );
-	define( 'HEADER_IMAGE_HEIGHT', apply_filters( 'wplook_header_image_height', 200 ) );
-
-	// We'll be using post thumbnails for custom header images on posts and pages.
-	// We want them to be the size of the header image that we just defined
-	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
-	set_post_thumbnail_size( HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true );
-
-	// Add custom image sizes
-	add_image_size( 'large-feature', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true ); // Used for large feature (header) images
-	// Turn on random header image rotation by default.
-	add_theme_support( 'custom-header', array( 'random-default' => true ) );
-	// Add a way for the custom header to be styled in the admin panel that controls
-	// custom headers. See wplook_admin_header_style(), below.
-	add_custom_image_header( 'wplook_header_style', 'wplook_admin_header_style', 'wplook_admin_header_image' );
-	
-		// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
-	register_default_headers( array(
-		'ipad' => array(
-			'url' => '%s/images/headers/ipad.jpg',
-			'thumbnail_url' => '%s/images/headers/ipad-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'iPad', 'wplook' )
-		)
-	) );
 
 }
 
@@ -185,16 +152,33 @@ add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', '
 // Add support for custom backgrounds
 $wplook_bg_defaults = array(
 	'default-color'			=> 'f3f3f3',
-	'default-image'			=> 's/images/bg.png',
+	// not suported in 3.4 'default-image'			=> '%s/images/bg.png',
+	'default-image' 		=> get_template_directory_uri() . '/images/bg.png',
 	'wp-head-callback'       => '_custom_background_cb',
 	'admin-head-callback'    => '',
 	'admin-preview-callback' => ''
 );
 add_theme_support( 'custom-background', $wplook_bg_defaults );
-	
-set_post_thumbnail_size( 150, 100, true ); // default Post Thumbnail dimensions (cropped)
 
+// Add support for custom header
+$wplook_ch_defaults = array(
+	'default-image'          => '%s/images/headers/ipad.jpg',
+	'random-default'         => true,
+	'width'                  => 960,
+	'height'                 => 200,
+	'flex-height'            => true,
+	'flex-width'             => true,
+	'default-text-color'     => '666666',
+	'header-text'            => true,
+	'uploads'                => true,
+	'wp-head-callback'       => '',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => '',
+);
+add_theme_support( 'custom-header', $wplook_ch_defaults );
 
+// default Post Thumbnail dimensions (cropped)
+set_post_thumbnail_size( 150, 100, true ); 
 /**
  * Display navigation to next/previous pages when applicable
  */
