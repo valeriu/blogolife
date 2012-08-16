@@ -19,13 +19,13 @@ function wplook_setup() {
 	
 function register_my_menus() {
 	register_nav_menus(
-	array('primary' => __( 'WPLOOK Main Navigation', 'wplook' ),) 
+	array('primary' => __( 'WPlook Main Navigation', 'wplook' ),) 
 );
 
 }
 add_action( 'init', 'register_my_menus' );
 
-wp_create_nav_menu( 'WPLOOK Main Menu', array( 'slug' => 'primary' ) );
+wp_create_nav_menu( 'WPlook Main Menu', array( 'slug' => 'primary' ) );
 
 
 }
@@ -217,7 +217,7 @@ function wplook_dashboard_widgets() {
 		$wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary'],
 		$wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']
 	);
-		wp_add_dashboard_widget( 'dashboard_custom_feed', 'wplook news' , 'dashboard_custom_feed_output' );
+		wp_add_dashboard_widget( 'dashboard_custom_feed', 'WPlook news' , 'dashboard_custom_feed_output' );
 }
 function dashboard_custom_feed_output() {
 		echo '<div class="rss-widget rss-wplook">';
