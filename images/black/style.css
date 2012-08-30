@@ -4,7 +4,7 @@
 a, a:hover, #site-title a:hover, .entry-title a:hover, #recentcomments li a, .widget ul li .rsswidget, .edit-i a, .comment-awaiting-moderation  {
 	color: #4a4a4a;
 }
-nav, nav ul ul, .postformat, .page-header, .widget-title {
+nav, nav ul ul, .postformat, .page-header, .widget-title, #top {
 	background: #4a4a4a url(line.png) top left repeat-x;
 }
 .left-corner, .right-corner {
