@@ -8,7 +8,7 @@
  */
 ?>
 </div>
-		</div>
+	</div>
 		<?php 
 		if (is_active_sidebar( 'col1-widgets' ) || is_active_sidebar( 'col2-widgets' ) || is_active_sidebar( 'col3-widgets' )	) { ?>
 			<div id="footer-widget-area">
