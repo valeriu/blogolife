@@ -143,7 +143,7 @@ endif; // wplook_admin_header_image
 if ( ! isset( $content_width ) )
 	$content_width = 565;
 	
-if ( function_exists( 'add_theme_support' ) ) { 
+if ( function_exists( 'add_theme_support' ) ) {
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'automatic-feed-links' );
 // Add support for a variety of post formats
@@ -152,28 +152,27 @@ add_theme_support( 'post-formats', array( 'aside', 'audio', 'chat', 'gallery', '
 // Add support for custom backgrounds
 $wplook_bg_defaults = array(
 	'default-color'			=> 'f3f3f3',
-	// not suported in 3.4 'default-image'			=> '%s/images/bg.png',
 	'default-image' 		=> get_template_directory_uri() . '/images/bg.png',
-	'wp-head-callback'       => '_custom_background_cb',
-	'admin-head-callback'    => '',
-	'admin-preview-callback' => ''
+	'wp-head-callback'		=> '_custom_background_cb',
+	'admin-head-callback'	=> '',
+	'admin-preview-callback'=> ''
 );
 add_theme_support( 'custom-background', $wplook_bg_defaults );
 
 // Add support for custom header
 $wplook_ch_defaults = array(
-	'default-image'          => '%s/images/headers/ipad.jpg',
-	'random-default'         => true,
-	'width'                  => 960,
-	'height'                 => 200,
-	'flex-height'            => true,
-	'flex-width'             => false,
-	'default-text-color'     => '666666',
-	'header-text'            => true,
-	'uploads'                => true,
-	'wp-head-callback'       => '',
-	'admin-head-callback'    => '',
-	'admin-preview-callback' => '',
+	'default-image'			=> '%s/images/headers/ipad.jpg',
+	'random-default'		=> true,
+	'width'					=> 960,
+	'height'				=> 200,
+	'flex-height'			=> true,
+	'flex-width'			=> true,
+	'header-text'			=> true,
+	'default-text-color'	=> '000000',
+	'uploads'				=> true,
+	'wp-head-callback'		=> 'wplook_header_style',
+	'admin-head-callback'	=> 'wplook_admin_header_style',
+	'admin-preview-callback'=> 'wplook_admin_header_image',
 );
 add_theme_support( 'custom-header', $wplook_ch_defaults );
 
@@ -264,8 +263,8 @@ the_time(get_option('time_format'));}
 <div id="sidebar_box">
 	<p>
 		<label for=""><?php _e( 'Enable Sidebar:' , 'wplook' ); ?></label>      
-     <label for="sidebar_yes"><?php _e( 'Yes' , 'wplook' ); ?></label><input type="radio" id="sidebar_yes" name="enable_sidebar" value="true" <?php if($enable_sidebar=="true" || trim($enable_sidebar) =="" ) echo "checked='checked'"; ?> />
-     <label for="sidebar_no"><?php _e( 'No' , 'wplook' ); ?></label><input type="radio" id="sidebar_no" name="enable_sidebar" value="false" <?php if($enable_sidebar=="false") echo "checked='checked'"; ?>/>
+		<label for="sidebar_yes"><?php _e( 'Yes' , 'wplook' ); ?></label><input type="radio" id="sidebar_yes" name="enable_sidebar" value="true" <?php if($enable_sidebar=="true" || trim($enable_sidebar) =="" ) echo "checked='checked'"; ?> />
+		<label for="sidebar_no"><?php _e( 'No' , 'wplook' ); ?></label><input type="radio" id="sidebar_no" name="enable_sidebar" value="false" <?php if($enable_sidebar=="false") echo "checked='checked'"; ?>/>
 	</p>
 </div>
 <?php
@@ -275,10 +274,10 @@ the_time(get_option('time_format'));}
 		add_action('save_post', 'wpl_sidebars_save_postdata');
 		/* when the post is saved, save the custom data */
 		function wpl_sidebars_save_postdata($post_id) {
-			 // do not save if this is an auto save routine
-			 if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
+			// do not save if this is an auto save routine
+			if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return $post_id;
 		$_POST["enable_sidebar"] = (!isset($_POST["enable_sidebar"])) ? '' : $_POST["enable_sidebar"];
-			   update_post_meta($post_id, "wpl_enable_sidebar", $_POST["enable_sidebar"]);
+			update_post_meta($post_id, "wpl_enable_sidebar", $_POST["enable_sidebar"]);
 
 	}
 
