@@ -688,19 +688,19 @@ img.alignleft, img.alignright, img.aligncenter {
 }
 .date-i {
 	background: transparent url(images/date.png) left top no-repeat;
-	padding-left: 25px;
+	padding: 2px 0 2px 25px;
 }
 .comment-i {
 	background: transparent url(images/comments.png) left top no-repeat;
-	padding-left: 25px;
+	padding: 2px 0 2px 25px;
 }
 .author-i {
 	background: transparent url(images/author.png) left top no-repeat;
-	padding-left: 20px;
+	padding: 2px 0 2px 25px;
 }
 .edit-i {
 	background: transparent url(images/edit.png) left top no-repeat;
-	padding-left: 20px;
+	padding: 2px 0 2px 25px;
 }
 .edit-i a {
 	text-decoration: none;
