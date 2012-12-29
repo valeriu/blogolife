@@ -10,7 +10,7 @@
 
 // VARIABLES
 $themename = "BlogoLife";									//Theme Name
-$themever = "2.0.1";											//Theme version
+$themever = "2.0.2";											//Theme version
 $fwver = "1.1";												//Framework version
 $shortname = "wpl";											//Shortname 
 

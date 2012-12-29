@@ -205,6 +205,10 @@ h2 {
 .input_fm input[type ="text"], .input_fm textarea {
 	width: 99%;
 }
+.sa-option-field input[type ="text"], .input_fm textarea {
+	width: 79%;
+}
+
 .input_fm select {
 	width: 60%;
 }

@@ -78,6 +78,7 @@ array( "name" => "tab_content_0",
 
 <p>If you are satisfied with this theme (but not enough) we recommend you to get <a href=\"http://wplook.com/blogolifebuy\" title=\"BlogoLife PRO\">BlogoLife PRO</a> with nice and attractive features as:</p> 
 <ul>
+<li><strong>Responsive</strong> - It is adapted to look great across multiple devices and screen resolutions.</li>
 <li><strong>Integration with Nivo Slider</strong> - the world's most awesome jQuery image slider which makes it super easy to create and manage multiple sliders on your blog. You can create as many sliders as you need and include them in your posts and pages using a simple shortcode.</li>
 <li><strong>Author Widget</strong> - an interesting module to get yourself  known.</li>
 <li><strong>Easy to navigate between posts</strong> - with this new feature you and your visitors will navigate easier and with pleasure through the blog.</li>
@@ -144,16 +145,17 @@ array( "name" => "tab_content_1",
 							'b' => 'Hide'),
 		"type" => "select"),
 		
-	array( "name" => "<img src='$be_pathimages/icons/rss.png' width='16' />RSS",
+	array( 
+		"name" => "<img src='$be_pathimages/icons/rss.png' width='16' />RSS",
 		"desc" => "Url of your RSS. You may include your RSS from Feedburner",
 		"id" => $shortname."_rss",
 		"std" => "",
-		"type" => "text"),	
+		"type" => "text"),
 
 	array( "name" => "Favicon URL",
-		"desc" => "Upload your own favicon image (16x16px) via <a href='media-new.php' target='_blank'>Media Uploader</a>. Leave this field blank if you want to display the default favicon or you can create one by acceding <a title='Online Favicon Generator' href='http://www.favicon.cc/' target='_blank'>Favicon generator</a>.",
+		"desc" => "Upload your own favicon image (16x16px). The favicon extension need to be <b>.png</b>. Leave this field blank if you want to display the default favicon or you can create one by acceding <a title='Online Favicon Generator' href='http://www.favicon.cc/' target='_blank'>Favicon generator</a>.",
 		"id" => $shortname."_favicon_url",
-		"type" => "text",
+		"type" => "upload",
 		"std" => "$fe_pathimages/images/favicon.ico"),
 	
 	array( "name" => "<img src='$be_pathimages/icons/analytics.png' />Google Analytics Tracking Code",
@@ -325,31 +327,35 @@ array("name" => "Close Container",
 array( "type" => "close")
 );
 
+/*	----------------------------------------------------------
+	Include JS
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+function wplook_admin_js() {
+	global $pagenow;
+	if ( ($pagenow == 'admin.php' && $_GET['page'] == 'fw-options.php') || ($pagenow == 'themes.php') ) {
+	    wp_register_script( 'wpl-upload', get_template_directory_uri() .'/functions/be/wpl-panel.js', array('jquery','media-upload','thickbox') );	
+		wp_enqueue_script('thickbox');
+		wp_enqueue_style('thickbox');
+		wp_enqueue_script('media-upload');
+		wp_enqueue_script('wpl-upload');
+	}
 
-add_action('admin_head', 'wplook_admin_css');
+}
+add_action( 'admin_enqueue_scripts', 'wplook_admin_js' );
+
+/*	----------------------------------------------------------
+	Include CSS
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 function wplook_admin_css() {
+	global $pagenow;
+	if ( ($pagenow == 'admin.php' && $_GET['page'] == 'fw-options.php') || ($pagenow == 'themes.php') ) {
+		echo ' <link rel="stylesheet" type="text/css" media="screen" href="'.get_bloginfo('template_directory').'/functions/be/css.css" /> ';
+	}	
+}
+add_action('admin_head', 'wplook_admin_css');
 
-	echo ' <link rel="stylesheet" type="text/css" media="screen" href="'.get_bloginfo('template_directory').'/functions/be/css.css" /> ';
-	
-	?>
-	<script language="JavaScript">
-		jQuery.noConflict();
-		jQuery(document).ready(function($) {
-	
-		$(".tabs .tab[id^=tab_menu]").click(function() {
-			var curMenu=$(this);
-			$(".tabs .tab[id^=tab_menu]").removeClass("selected");
-			curMenu.addClass("selected");
-	
-			var index=curMenu.attr("id").split("tab_menu_")[1];
-			$(".curvedContainer .tabcontent").css("display","none");
-			$(".curvedContainer #tab_content_"+index).css("display","block");
-		});
-	});
-	</script>
 
-<?php }
 function wpl_add_admin() {
 	global $options; global $themename; global $shortname;
 	if ( isset ( $_GET['page'] ) && ( $_GET['page'] == basename(__FILE__) ) ) {
@@ -377,13 +383,11 @@ function wpl_add_admin() {
 	add_theme_page($themename." Options", 'Wplook Panel', 'edit_theme_options', 'fw-options.php', 'wpl_admin', 'http://i.wplook.com/fw-icon.jpg', '1');
 }
 
-
-
 function wpl_admin() {
 	global $themename, $shortname, $options, $themever, $fwver, $manualurl;
 	if (isset($_REQUEST["saved"]) && !empty($_REQUEST["saved"])) echo '<div id="message" class="updated fade"><p><strong>'.$themename.' settings saved.</strong></p></div>';
 	if (isset($_REQUEST["reset"]) && !empty($_REQUEST["reset"])) echo '<div id="message" class="error fade"><p><strong>'.$themename.' '.__( 'settings reset.', 'wplook' ).'</strong></p></div>';
-?>
+	?>
 
 	<div id="wrap_fm"><!-- [ Header ]-->
 		<div class="header_fm">
@@ -405,8 +409,8 @@ function wpl_admin() {
 	<form method="post">
 	<?php
 	foreach ($options as $value) {
-	switch ( $value['type'] ) {
-	case "open":
+		switch ( $value['type'] ) {
+			case "open":
 	?> 
 	<?php break; case "title": ?> 
 
@@ -434,12 +438,29 @@ function wpl_admin() {
 	<!-- end form -->
 </div></div>
 
-
+<?php break;case 'upload': ?>
+	<div class="sa-option-box">
+	<div class="name_fm"><?php echo $value['name']; ?></div>
+	<div class="sa-option-field input_fm">
+		<input type="text" name="<?php echo $value['id']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo stripslashes(get_option( $value['id'] )); } else { echo $value['std']; } ?>" class="sa-upload-field" /> <a href="#" class="sa-upload-button button-primary" rel="<?php echo $value['id']; ?>"><?php _e( 'Browse', 'wplook' ); ?></a>
+	</div>
+	<img src="<?php echo stripslashes(get_option( $value['id'] )); ?>">
+	<?php
+		if ( isset( $value['desc'] ) ) {
+			?>
+			<div class="desc_fm"><small><?php echo $value['desc']; ?></small></div>
+			<?php
+		}
+	?>
+	<div class="clear"></div>
+	
+</div>
 
 <?php break;case 'text': ?>
 	<div class="name_fm"><?php echo $value['name']; ?></div>
 	<div class="input_fm"><input name="<?php echo $value['id']; ?>" id="<?php echo $value['id']; ?>" type="<?php echo $value['type']; ?>" value="<?php if ( get_option( $value['id'] ) != "") { echo stripslashes(get_option( $value['id'] )); } else { echo $value['std']; } ?>" /></div>
 	<div class="desc_fm"><small><?php echo $value['desc']; ?></small></div>
+
 
 <?php break; case 'textarea':?>
 	<div class="name_fm"><?php echo $value['name']; ?></div>
