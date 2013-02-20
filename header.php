@@ -18,16 +18,7 @@ foreach ($options as $value) {
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<title><?php global $page, $paged;
-	wp_title( '', true, 'right' );
-	// Add the blog description for the home/front page.
-	$site_name = get_bloginfo( 'name', 'display' );
-	if ( $site_name && ( is_home() || is_front_page() ) )
-		echo " $site_name";
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'wplook' ), max( $paged, $page ) );
-	?></title>
+<title><?php wp_title( '—', true, 'right' ); ?></title>
 <?php wplook_meta_description();?>
 
 <meta name="keywords" content="<?php echo $wpl_meta_keywords; ?>" />
