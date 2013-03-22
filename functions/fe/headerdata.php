@@ -46,6 +46,9 @@ add_action( 'wp_enqueue_scripts', 'wpl_css_include' );
 function wpl_scripts_include() {
 	global $is_IE;
 	if ($is_IE) { wp_enqueue_script( 'html5', 'http://html5shim.googlecode.com/svn/trunk/html5.js', '', '', '' ); } 
+	if (is_singular() && wp_attachment_is_image()) {
+		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', '', '',  'footer' );
+    }
 	}   
 
 add_action('wp_enqueue_scripts', 'wpl_scripts_include');
