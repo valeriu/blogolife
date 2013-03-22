@@ -5,6 +5,8 @@ xx.xx.2013 - version 2.0.3
 	* Strip HTML tags for meta description 
 	* wp_title compatibily with WordPress 3.5+
 	* Load html5shim only on Internet Explorer 
+ * Added
+ 	* Keyboard Image Navigation - adds the ability to navigate through images (gallery) using the left and right arrow keys on your keyboard
 	
 28.12.2012 - version 2.0.2
 * Added
