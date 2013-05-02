@@ -24,6 +24,7 @@ foreach ($options as $value) {
 <meta name="keywords" content="<?php echo $wpl_meta_keywords; ?>" />
 <link rel="shortcut icon" href="<?php echo $wpl_favicon_url; ?>" />
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri() ?>/images/apple-touch-icon.png" />
+<meta name="viewport" content="width=device-width" />
 <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <?php echo stripslashes($wpl_ga_code); ?>

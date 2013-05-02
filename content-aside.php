@@ -9,7 +9,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="col1 fleft"><div class="postformat"><div class="format-icon"></div><div class="left-corner"></div></div></div>
-	<div class="col2 fright">
+	<div class="col2 fleft">
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 			<div class="entry-content">
 					<?php the_excerpt(); ?>

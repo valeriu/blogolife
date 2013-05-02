@@ -12,7 +12,6 @@ Tags: black, blue, green, orange, pink, red, white, two-columns, right-sidebar, 
 
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
  -------------------------------------------------------------- */
- #header-image a img {margin:0px; padding:0px;}
  
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, figure, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
@@ -60,7 +59,8 @@ body {
 #page {
 	border: 1px solid #c5d1d9;
 	margin: 20px auto 0 auto;
-	width: 960px;
+	width:95%;
+	max-width: 960px;
 	background: #ffffff; /* Old browsers */
 }
 #branding {
@@ -69,11 +69,11 @@ body {
 	}
 #branding hgroup {
 	margin: 20px 0 20px 15px;
-	width: 450px;
+	width: 46.875%;
 }
 .header-desc {
-	width: 468px;
-	margin: 25px 20px 10px 0;
+	width: 48.75%;
+	margin: 25px 2.08333333% 10px 0;
 	min-height: 60px;
 }
 .header-widget p {
@@ -82,9 +82,20 @@ body {
 	font-size: 14px;
 	margin: 0px;
 }
+.social-icons {
+	width: 100%;
+	text-align: right;
+}
 .social-icons img {
 	margin: 0 20px 0 0;
 }
+#header-image img{
+	width: 100%;
+	height: auto;
+}
+ #header-image a img {
+ 	margin:0px; padding:0px;
+ }
 
 /* --- --- [Typography] --- --- */
 h1, h2, h3, h4, h5, h6 {
@@ -167,10 +178,14 @@ nav ul li.current_page_item > a, nav ul li.current-menu-ancestor > a, nav ul li.
 	border-bottom: 1px dashed #fff;
 	color:#FFF;
 }
+nav select {
+  display: none;
+}
 /* --- --- [ nav-below ] --- --- */
 #nav-below {
 	margin: 0px 0 20px 0;
 	padding: 0px;
+	width: 97.272727272727%; /* 642 / 660 */ 
 }
 #nav-below a {
 	color: #FFF;
@@ -187,23 +202,32 @@ nav ul li.current_page_item > a, nav ul li.current-menu-ancestor > a, nav ul li.
 	margin-right: 10px;
 	padding: 9px 0;
 }
-/* --- --- [ Main ] --- --- */
-/* --- [ Right Sidebar ] --- */
+.template-full-widch #nav-below{
+	width: 99%
+}
+/*	----------------------------------------------------------
+	Main 
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/*	----------------------------------------------------------
+	Right Sidebar
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 #main {
 	border-top: 1px solid #c5d1d9;
 	margin-top: -4px;
 }
-
+#content{
+	width: 100%;
+}
 .right-sidebar #main {
-	background: #ffffff url(images/right-sidebar-border.png) top right repeat-y;
+	/*background: #ffffff url(images/right-sidebar-border.png) top right repeat-y;*/
 }
 .right-sidebar #content {
-	width: 650px;
 	float: left;
-	margin: 20px 0 0 -10px;
+	margin: 20px 0 0 0px;
 }
 .right-sidebar #secondary {
-	width: 290px;
+	width: 31.25%; /* 300 / 960 */
 	float: right;
 	margin: 20px -10px 0 0;
 }
@@ -213,25 +237,39 @@ nav ul li.current_page_item > a, nav ul li.current-menu-ancestor > a, nav ul li.
 	background: #fff;
 }
 .template-full-widch #content, .right-sidebar .fullimg #content {
-	width:950px;
+	/*width:950px;*/
 }
 .template-full-widch .col2, .fullimg .col2 {
 	width:903px;
 }
 
-.template-full-widch .depth-2 .col2, .fullimg .depth-2 .col2 {	width: 890px;}
-.template-full-widch .depth-3 .col2, .fullimg .depth-3 .col2 {	width: 880px;}
-.template-full-widch .depth-4 .col2, .fullimg .depth-4 .col2 {	width: 870px;}
-.template-full-widch .depth-5 .col2, .fullimg .depth-5 .col2 {	width: 860px;}
-
+.template-full-widch .depth-2 .col2, .fullimg .depth-2 .col2 {	width: 90%; }
+.template-full-widch .depth-3 .col2, .fullimg .depth-3 .col2 {	width: 88.5%;}
+.template-full-widch .depth-4 .col2, .fullimg .depth-4 .col2 {	width: 87%;}
+.template-full-widch .depth-5 .col2, .fullimg .depth-5 .col2 {	width: 85.4%;}
+.primary{
+	width: 68.75%; /* 660 / 960 */
+	border-right: 1px solid #c5d1d9;
+	float: left;
+	margin-left: -10px;
+	min-height: 100%;
+}
+.template-full-widch .primary {
+	width: 100%; /* 660 / 960 */
+	border-right: 0px;
+}
 .page-header {
 	position: relative;
 	margin-bottom: 29px;
+	width: 97.272727272727%; /* 642 / 660 */ 
 }
 .page-header a {
 	text-decoration: none;
 	border-bottom: 1px dashed #fff;
 	color: #f3f3f3;
+}
+.template-full-widch .page-header{
+	width: 99%
 }
 .page-header a:hover {
 	text-decoration: none;
@@ -254,11 +292,30 @@ article {
 	margin-bottom: 20px;
 }
 .col1 {
-	width:  45px;
+	width: 6.81818182%; /* 45 / 660 */
 }
+
 .col2 {
-	width: 603px;
+	width: 90.151552%; /* 595 / 660 */
 	border: 1px solid #c5d1d9;
+	/* margin-right: 2.878787%; */
+}
+.template-full-widch .col1{
+	width: 4.6875%; /* 45 / 960 */
+}
+.template-full-widch .col2 {
+	width: 94.270833333333%; /* 900 / 960 */
+	margin-right: 0px; 
+}
+.single-attachment .primary  {
+	width: 99%; /* 900 / 960 */
+	margin-right: 0px; 
+	border-right: none;
+	background: transparent;
+}
+.single-attachment .fullimg .col2{
+	width: 92.5%; /* 900 / 960 */
+	background: transparent;
 }
 .postformat {
 	position: relative;
@@ -369,6 +426,11 @@ blockquote {
 	line-height:25px;
 	margin-bottom: 10px;
 }
+.entry-content iframe {
+	width: 100%;
+	height: auto!important;
+	min-height: 300px;
+}
 .entry-content b, .entry-content strong {
 	font-weight: bold;
 }
@@ -448,7 +510,9 @@ blockquote {
 .comment-content ul ul, .comment-content ol ol, .comment-content ul ol, .comment-content ol ul {
 	margin-bottom: 0;
 }
-/*elements*/
+/*	----------------------------------------------------------
+	Elements
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 cite, em, i {
 	font-style: italic;
 }
@@ -498,7 +562,9 @@ sup {
 sub {
 	top: .5ex;
 }
-/* Forms */
+/*	----------------------------------------------------------
+	Forms 
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 input[type=text], input[type=password], textarea {
 	background: #fafafa;
 	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -541,8 +607,14 @@ input[type=text] {
 	padding-left: 25px;
 	float: left;
 }
-/* --- --- --- [ Images and Galleries ] --- --- --- */
-/* --- --- --- [ Gallery listing ] --- --- --- */
+
+/*	----------------------------------------------------------
+	Images and Galleries
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/*	----------------------------------------------------------
+	Gallery listing
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 .format-gallery .size-thumbnail img, .category-gallery .size-thumbnail img {
 	border: 1px solid #ced8df;
 	margin-bottom: 0;
@@ -556,7 +628,9 @@ input[type=text] {
 .home #content .format-gallery .entry-utility, .home #content .category-gallery .entry-utility {
 	padding-top: 4px;
 }
-/* --- --- --- [ Images ] --- --- --- */
+/*	----------------------------------------------------------
+	Images
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 img.size-auto, img.size-full, img.size-large, img.size-medium, .attachment img, .widget-area img {
 	max-width: 100%;
 	height:auto;
@@ -587,9 +661,9 @@ img.alignleft, img.alignright, img.aligncenter {
 	background: #F6F6F6;
 	line-height: 18px;
 	margin-bottom: 20px;
-	max-width: 565px !important;
 	padding: 0px;
 	text-align: center;
+	width: 100% !important;
 }
 .wp-caption img {
 	margin: 5px 3px 0;
@@ -628,6 +702,10 @@ img.alignleft, img.alignright, img.aligncenter {
 	max-width: 92%;
 	height: auto;
 }
+.gallery-columns-3 .attachment-thumbnail {
+	max-width: 72%;
+	height: auto;
+}
 .gallery-columns-4 .attachment-thumbnail {
 	max-width: 84%;
 	height: auto;
@@ -646,7 +724,9 @@ img.alignleft, img.alignright, img.aligncenter {
 .gallery br + br {
 	display: none;
 }
-/* --- --- --- [ Attachments ] --- --- --- */
+/*	----------------------------------------------------------
+	Attachments
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 .image-attachment div.attachment {
 	background: #f9f9f9;
 	border: 1px solid #ced8df;
@@ -680,7 +760,9 @@ img.alignleft, img.alignright, img.aligncenter {
 .attachment .entry-content .nav-next a:after {
 	content: '\00a0\2192';
 }
-/* --- --- [ meta icons ] --- --- */
+/*	----------------------------------------------------------
+	meta icons 
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 .date-i, .comment-i, .author-i, .edit-i {
 	font-size: 11px;
 	margin-right:  20px;
@@ -688,19 +770,19 @@ img.alignleft, img.alignright, img.aligncenter {
 }
 .date-i {
 	background: transparent url(images/date.png) left top no-repeat;
-	padding: 2px 0 2px 25px;
+	padding-left: 25px;
 }
 .comment-i {
 	background: transparent url(images/comments.png) left top no-repeat;
-	padding: 2px 0 2px 25px;
+	padding-left: 25px;
 }
 .author-i {
 	background: transparent url(images/author.png) left top no-repeat;
-	padding: 2px 0 2px 25px;
+	padding-left: 20px;
 }
 .edit-i {
 	background: transparent url(images/edit.png) left top no-repeat;
-	padding: 2px 0 2px 25px;
+	padding-left: 20px;
 }
 .edit-i a {
 	text-decoration: none;
@@ -709,45 +791,60 @@ img.alignleft, img.alignright, img.aligncenter {
 	color: #666;
 	text-decoration: none;
 }
-/* --- --- [ Comments ] --- --- */
+.comments {
+	width: 100%; /* 970 / 960 */
+
+}
+.comments .nopassword {
+	margin-left: 40px;
+}
+/*	----------------------------------------------------------
+	Comments 
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 .comment, .pingback, .trackback {
 	margin-bottom: 20px;
 }
-.depth-2 .col2 {
-	width: 590px;
-}
 .depth-2 .col1 {
-	width: 58px;
+	width: 8.923076923077%; /* 58px / 650 */
 	background: red;
 }
-.depth-3 .col2 {
-	width: 580px;
+.depth-2 .col2 {
+	width: 8.923076923077%; /* 58px / 650 */
 }
 .depth-3 .col1 {
-	width: 68px;
-	background: red;
+	width: 10.461538461538%; /* 68px / 650 */
 }
-.depth-4 .col2 {
-	width: 570px;
+
+.depth-3 .col2 {
+	width: 86.769230769231%; /* 564 / 650 */
 }
+
 .depth-4 .col1 {
-	width: 78px;
-	background: red;
+	width: 12%; /* 78px / 650 */
 }
-.depth-5 .col2 {
-	width: 560px;
+
+.depth-4 .col2 {
+	width: 85.230769230769%; /* 554 / 650 */
 }
+
 .depth-5 .col1 {
-	width: 88px;
-	background: red;
+	width: 13.538461538462%; /* 88px / 650 */
+}
+
+.depth-5 .col2 {
+	width: 83.692307692308%; /* 544 / 650 */
 }
 #respond form {
-	margin-left: 30px;
+	margin-left: 4.615384615385%; /* 30 / 650 */
+	width: 93.076923076923%; /* 605 / 650 */
+	
 }
 .comment-awaiting-moderation {
 	font-style: italic;
 }
-/* --- --- --- [ Comments form ] --- --- --- */
+/*	----------------------------------------------------------
+	Comments form
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 #respond .required {
 	color: #ff4b33;
 	font-weight: bold;
@@ -794,7 +891,9 @@ img.alignleft, img.alignright, img.aligncenter {
 	margin-left: 40px;
 	font-size: 12px;
 }
-/* --- --- [ Widget ] --- --- */
+/*	----------------------------------------------------------
+	Widget 
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 aside {
 	margin-bottom:  20px;
@@ -839,9 +938,10 @@ aside h3 {
 	line-height: 20px;
 }
 #copy {
-	width: 950px;
-	margin: 0px auto;
-	padding:5px;
+	width: 95%;
+	max-width: 960px;
+	margin: 0px auto 20px;
+	padding:5px 0;
 	border: 1px solid #c5d1d9;
 	border-top:none;
 	background-color:#FFF;
@@ -881,116 +981,154 @@ aside h3 {
 	text-decoration: none;
 	border: none;
 }
-/* --- --- --- [ Category select ] --- --- --- */
+/*	----------------------------------------------------------
+	Category select
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 #cat {
 	margin: 10px 0 0 10px;
 	width: 250px;
 }
-/* --- --- --- [ Tagcloud ] --- --- --- */
+/*	----------------------------------------------------------
+	Tagcloud
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 .tagcloud {
 	margin: 10px 30px 0 10px;
 }
 .tagcloud a {
 	margin: 5px 10px 5px 0;
 }
-/* --- --- --- [ Calendar ] --- --- --- */
+/*	----------------------------------------------------------
+	Calendar
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+
 #calendar_wrap {
 	margin: 10px 0 0px 10px;
 	color: #666;
 }
+
 #wp-calendar, #wp-calendar th, #wp-calendar td {
 	text-align: center;
 	background: none;
 	border: none;
 }
+
 #wp-calendar {
 	background: none;
 	empty-cells: hide;
-	width: 260px;
+	width: 100%;
+	padding-right: 30px;
 	font: normal 11px / 200% Verdana, Arial, Helvetica, sans-serif;
 }
+
 #wp-calendar th {
 	font-style: normal;
 	font-weight: bold;
 	text-transform: capitalize;
 	border-bottom: 1px solid #666;
 }
+
 #wp-calendar td {
 	text-align: center;
 	background: transparent url(images/entry-meta.png) repeat-x top left;
 	padding: 0px;
 	border-bottom: 1px solid #ccc;
 }
+
 #wp-calendar td:hover {
 	background-color: red;
 }
+
 #wp-calendar a {
 	text-decoration: none;
 	display: block;
 	color: #fff;
 }
+
 #wp-calendar a:hover {
 	background: #c5d1d9;
 	color: #666;
 }
+
 #wp-calendar caption {
 	font-weight: bold;
 	text-align: center;
 }
+
 #wp-calendar #today {
 	background-color: #FFFFFF;
 }
+
 #wp-calendar caption {
 	text-align: center;
 	width: 100%;
 }
+
 #wp-calendar .pad {
 	background-color: #fff;
 }
+
 #wp-calendar #next a {
 	padding-right: 10px;
 	text-align: right;
 	background: #f0f3f5;
 	color: #666;
 }
+
 #wp-calendar #prev a {
 	padding-left: 10px;
 	text-align: left;
 	background: #f0f3f5;
 	color: #666;
 }
+
 #wp-calendar #prev a:hover, #wp-calendar #next a:hover {
 	color: #fff;
 }
+
 #wp-calendar .pad, #wp-calendar .pad:hover {
 	background: #fff;
 }
-/* --- --- --- [ search ] --- --- --- */
+/*	----------------------------------------------------------
+	Search
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
 #searchform {
 	margin: 10px 0 20px 10px;
 	height: 27px;
 	position: relative;
 }
+
 #searchform label {
 	display: none;
 }
+
 #searchform #s {
 	border: 1px solid #ccc;
 	background: none;
 	padding: 5px;
+	width: 65%;
+	float: left;
 }
+
 #searchform #searchsubmit {
 	font-family: 'Oswald', sans-serif;
 	color: #fff;
 	padding: 3px 5px;
 	cursor: pointer;
+	width: 20%;
+	float: left;
+	margin-left: 3%;
 }
+
 #searchform #searchsubmit:hover {
 	border: 1px solid #95a1aa;
 	background: #fff url(images/entry-meta.png);
 	color: #666;
 }
-/* --- --- [ General settings] --- --- */
+/*	----------------------------------------------------------
+	General settings
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 .clear {
 	clear: both;
 }
@@ -1016,7 +1154,9 @@ aside h3 {
 }
 .aligncenter {
 }
-/* CSS Document, default*/
+/*	----------------------------------------------------------
+	CSS Document, default
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 /* color red */ /* #b41423 */
 
 a, a:hover, #site-title a:hover, .entry-title a:hover, #recentcomments li a, .widget ul li .rsswidget, .edit-i a, .comment-awaiting-moderation {
@@ -1046,9 +1186,11 @@ nav, nav ul ul, .postformat, .page-header, .widget-title {
 	color: #b41423;
 }
 #top {
-	background: #b41423 url(images/red/line.png) top left repeat-x; padding: 11px 12px 9px 12px; margin: 0 -5px 0 5px; color: #fff; font-size: 12px;
+	background: #b41423 url(images/red/line.png) top left repeat-x; padding: 11px 12px 9px 12px; margin: 0 -1px 0 5px; color: #fff; font-size: 12px;
 }
-/* --- --- [ Corners ] --- --- */
+/*	----------------------------------------------------------
+	Corners 
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
 
 .left-corner {
 	position: absolute;
@@ -1066,14 +1208,23 @@ nav, nav ul ul, .postformat, .page-header, .widget-title {
 	height: 9px;
 	background-position: 9px 9px;
 }
-/* --- --- [ Other from plugins ] --- --- */
-#disqus_thread {width: 600px; float: right;}
 
-/* --- --- [ Footer Widgets ] --- --- */
+/*	----------------------------------------------------------
+	Other from plugins 
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+#disqus_thread {width: 100%; float: right;}
+
+
+/*	----------------------------------------------------------
+	Footer Widgets
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
 #footer-widget-area {
 	margin: 0 auto;
 	padding: 10px 0;
-	width: 960px;
+	width: 95%;
+	max-width: 960px;
 	background: #fff;
 	border-left: 1px solid #c5d1d9;
 	border-right: 1px solid #c5d1d9;
@@ -1081,14 +1232,80 @@ nav, nav ul ul, .postformat, .page-header, .widget-title {
 }
 #footer-widget-area .w1, #footer-widget-area .w2, #footer-widget-area .w3 {
 	float: left;
-	width:305px;
+	width:31.770833333333%; /* 305 / 960 */
 }
 #footer-widget-area .w1{
+	margin: 0 1.145833333333%; /* 10 / 960 */
 	margin: 0 10px;
 }
 #footer-widget-area .w2{
-	margin: 0 12px 0 2px;
+	margin: 0 1.25% 0 0.208333333333%; /* 12 / 960 */ /* 2 / 960 */
 }
 #footer-widget-area .w3{
 	margin: 0 0px;
+}
+
+/*	----------------------------------------------------------
+	Mobile, SmartPhone, Tablets
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+@media (max-width: 800px) {
+	.header-desc{
+		display: none;
+	}
+	#branding hgroup{
+		width: 100%;
+		text-align: center;
+	}
+	.social-icons{
+		text-align: center;
+	}
+	.primary{
+		width: 100%;
+		border: none;
+	}
+	.right-sidebar #secondary {
+		width: 100%
+	}
+	#footer-widget-area .w1, #footer-widget-area .w2, #footer-widget-area .w3 {
+		width: 92.5%;
+		margin: 10px 20px;;
+	}
+	.postformat img{
+		display: none;
+	}
+	.format-standard .format-icon, .format-image .format-icon, .format-video .format-icon, .format-aside .format-icon, .format-quote .format-icon, .format-gallery .format-icon, .format-link .format-icon, .pingback .format-icon, .trackback .format-icon, .format-audio .format-icon, .format-status .format-icon, .format-chat .format-icon {
+		background: none;
+	}
+	.edit-i{
+		display: none;
+	}
+	nav ul     { display: none; }
+  	nav select { 
+  		display: inline-block; 
+		background-color: #FFFFFF;
+		border: 1px solid #DFDFDF;
+		height: 3em;
+		padding: 9px;
+		width: 98%;
+		margin: 1%;
+	}
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	#top{
+		display: none;
+	}
+	#copy p {
+		margin-right: 10px;
+	}
+	.author-i{ display: none; }
+}
+
+/*	----------------------------------------------------------
+	Print
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+@media print {
+
 }
