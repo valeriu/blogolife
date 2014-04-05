@@ -24,10 +24,8 @@ jQuery(document).ready(function(){
 			window.location = jQuery(this).find("option:selected").val();
 		});
 		 
-	});});
+	});
 
-jQuery(document).ready(function(){
-	
 	/* Scroll top button */
 	jQuery('.scrollup').click(function () {
 			jQuery('body,html').animate({
@@ -35,10 +33,4 @@ jQuery(document).ready(function(){
 			}, 600);
 			return false;
 		});
-
-	//Tabs
-	jQuery(document).ready(function() {
-		jQuery(".widget-title ul.tabs").tabs(".pane");
-	});
-
 });

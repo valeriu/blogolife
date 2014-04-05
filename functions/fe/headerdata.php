@@ -44,7 +44,13 @@ function wpl_css_include () {
 add_action( 'wp_enqueue_scripts', 'wpl_css_include' );
 
 function wpl_scripts_include() {
-	wp_enqueue_script( 'html5', 'http://html5shim.googlecode.com/svn/trunk/html5.js', '', '', '' );
+	global $is_IE;
+	wp_enqueue_script('jquery');
+	if ($is_IE) { wp_enqueue_script( 'html5', 'http://html5shim.googlecode.com/svn/trunk/html5.js', '', '', '' ); } 
+	if (is_singular() && wp_attachment_is_image()) {
+		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', '', '',  'footer' );
+    }
+	wp_enqueue_script( 'base', get_template_directory_uri().'/js/base.js', '', '', 'footer' );
 	}   
 
 add_action('wp_enqueue_scripts', 'wpl_scripts_include');
