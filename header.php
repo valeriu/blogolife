@@ -18,21 +18,13 @@ foreach ($options as $value) {
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<title><?php global $page, $paged;
-	wp_title( '', true, 'right' );
-	// Add the blog description for the home/front page.
-	$site_name = get_bloginfo( 'name', 'display' );
-	if ( $site_name && ( is_home() || is_front_page() ) )
-		echo " $site_name";
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'wplook' ), max( $paged, $page ) );
-	?></title>
+<title><?php wp_title( '—', true, 'right' ); ?></title>
 <?php wplook_meta_description();?>
 
 <meta name="keywords" content="<?php echo $wpl_meta_keywords; ?>" />
 <link rel="shortcut icon" href="<?php echo $wpl_favicon_url; ?>" />
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri() ?>/images/apple-touch-icon.png" />
+<meta name="viewport" content="width=device-width" />
 <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <?php echo stripslashes($wpl_ga_code); ?>
