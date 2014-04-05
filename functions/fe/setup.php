@@ -174,6 +174,14 @@ $wplook_ch_defaults = array(
 	'admin-head-callback'	=> 'wplook_admin_header_style',
 	'admin-preview-callback'=> 'wplook_admin_header_image',
 );
+	register_default_headers( array(
+		'ipad' => array(
+			'url'           => '%s/images/headers/ipad.jpg',
+			'thumbnail_url' => '%s/images/headers/ipad-thumbnail.jpg',
+			'description'   => _x( 'iPad', 'header image description', 'wplook' )
+		),
+	) );
+
 add_theme_support( 'custom-header', $wplook_ch_defaults );
 
 // default Post Thumbnail dimensions (cropped)
