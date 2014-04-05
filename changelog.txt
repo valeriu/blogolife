@@ -1,5 +1,13 @@
 *** BlogoLife Changelog ***
 
+20.04.2014 - version 2.0.2
+* Fixed
+	* Screenshot image 
+
+* Added
+	* Compatibility with WordPress 3.9
+
+
 20.09.2012 - version 2.0.1
 * Fixed
 	* Screenshot image 
